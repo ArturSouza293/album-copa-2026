@@ -1,0 +1,42 @@
+# Sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Logs e temporários
+*.log
+.cache/
+tmp/
+temp/
+
+# Variáveis de ambiente (futuras chaves do Supabase)
+.env
+.env.local
+.env.*.local
+
+# Dependências (se um dia adicionarmos)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Netlify
+.netlify/
+
+# Backups locais do dataset
+*.bak
+*.backup
+album-data-*.js

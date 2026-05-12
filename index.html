@@ -1,0 +1,4005 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Álbum Copa do Mundo 2026 — Coleção</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://flagcdn.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ---------- Tokens ---------- */
+  :root {
+    --bg: #eef2f7;
+    --bg-card: #ffffff;
+    --bg-elevated: #ffffff;
+    --border: #e1e6ee;
+    --border-strong: #c5cdd9;
+    --text: #0f172a;
+    --text-muted: #5d6776;
+    --text-subtle: #98a1b0;
+    --slot-empty-bg: #eef1f5;
+    --slot-empty-border: #dde2ea;
+    --slot-empty-text: #b3bac5;
+    --slot-filled-bg: #059669;
+    --slot-filled-bg-2: #10b981;
+    --slot-filled-text: #ffffff;
+    --accent: #2563eb;
+    --accent-2: #3b82f6;
+    --warning: #dc2626;
+    --warning-bg: #fef3f3;
+    --warning-border: #f5cccc;
+    --gold: #ca8a04;
+    --tooltip-bg: #0f172a;
+    --tooltip-fg: #f8fafc;
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow: 0 2px 6px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15,23,42,0.04);
+    --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.10);
+    --shadow-xl: 0 25px 60px rgba(15, 23, 42, 0.25);
+  }
+  [data-theme="dark"] {
+    --bg: #0a0f1c;
+    --bg-card: #131a2a;
+    --bg-elevated: #1a2336;
+    --border: #1f2a3d;
+    --border-strong: #2e3a52;
+    --text: #e8edf5;
+    --text-muted: #8a94a6;
+    --text-subtle: #5d6776;
+    --slot-empty-bg: #19233a;
+    --slot-empty-border: #243049;
+    --slot-empty-text: #475569;
+    --slot-filled-bg: #10b981;
+    --slot-filled-bg-2: #34d399;
+    --slot-filled-text: #042519;
+    --accent: #60a5fa;
+    --accent-2: #93c5fd;
+    --warning: #f87171;
+    --warning-bg: #2a1414;
+    --warning-border: #5b2424;
+    --gold: #fbbf24;
+    --tooltip-bg: #f8fafc;
+    --tooltip-fg: #0f172a;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 25px 80px rgba(0, 0, 0, 0.7);
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .tabular { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
+
+  .container { max-width: 1640px; margin: 0 auto; padding: 24px; }
+
+  /* ---------- Header ---------- */
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .brand .subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 5px;
+  }
+  .header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .header-search {
+    width: 240px;
+    padding: 8px 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.15s, box-shadow 0.15s, width 0.2s;
+  }
+  .header-search::placeholder { color: var(--text-subtle); }
+  .header-search:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
+    width: 280px;
+  }
+  .theme-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .theme-toggle:hover { border-color: var(--border-strong); color: var(--text); }
+
+  /* ---------- Flag nav ---------- */
+  .flag-nav {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 14px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow-sm);
+  }
+  .flag-nav-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .flag-nav-legend {
+    display: inline-flex;
+    gap: 12px;
+    font-size: 10px;
+    color: var(--text-subtle);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .legend-dot {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .legend-dot::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .legend-dot.high::before  { background: var(--slot-filled-bg); }
+  .legend-dot.mid::before   { background: var(--accent); }
+  .legend-dot.low::before   { background: #f59e0b; }
+  .legend-dot.empty::before { background: var(--warning); }
+
+  .flag-nav-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 8px;
+  }
+  .flag-chip {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background: var(--bg);
+    font-family: inherit;
+    box-shadow: 0 0 0 2px transparent, 0 2px 4px rgba(0,0,0,0.06);
+    transition: transform 0.15s, box-shadow 0.15s;
+    position: relative;
+  }
+  .flag-chip-img-wrap {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    overflow: hidden;
+    background: var(--slot-empty-bg);
+    position: relative;
+  }
+  .flag-chip-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .flag-chip-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .flag-chip-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 7px;
+    background: var(--bg-card);
+    font-size: 10.5px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+  }
+  .flag-chip-code {
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    font-size: 10px;
+  }
+  .flag-chip-pct {
+    color: var(--text);
+    font-weight: 800;
+  }
+  .flag-chip:hover {
+    transform: translateY(-2px) scale(1.04);
+    z-index: 2;
+    box-shadow: 0 0 0 2px var(--accent), 0 8px 16px rgba(0,0,0,0.18);
+  }
+  .flag-chip[data-status="empty"] { box-shadow: 0 0 0 2px var(--warning), 0 1px 2px rgba(0,0,0,0.1); }
+  .flag-chip[data-status="low"]   { box-shadow: 0 0 0 2px #f59e0b, 0 1px 2px rgba(0,0,0,0.1); }
+  .flag-chip[data-status="mid"]   { box-shadow: 0 0 0 2px var(--accent), 0 1px 2px rgba(0,0,0,0.1); }
+  .flag-chip[data-status="high"]  { box-shadow: 0 0 0 2px var(--slot-filled-bg), 0 1px 2px rgba(0,0,0,0.1); }
+  .flag-chip[data-status="empty"]:hover { box-shadow: 0 0 0 3px var(--warning), 0 8px 16px rgba(0,0,0,0.18); }
+  .flag-chip[data-status="low"]:hover   { box-shadow: 0 0 0 3px #f59e0b, 0 8px 16px rgba(0,0,0,0.18); }
+  .flag-chip[data-status="mid"]:hover   { box-shadow: 0 0 0 3px var(--accent), 0 8px 16px rgba(0,0,0,0.18); }
+  .flag-chip[data-status="high"]:hover  { box-shadow: 0 0 0 3px var(--slot-filled-bg), 0 8px 16px rgba(0,0,0,0.18); }
+  .flag-chip[data-status="empty"] .flag-chip-pct { color: var(--warning); }
+  .flag-chip[data-status="low"] .flag-chip-pct   { color: #b45309; }
+  .flag-chip[data-status="mid"] .flag-chip-pct   { color: var(--accent); }
+  .flag-chip[data-status="high"] .flag-chip-pct  { color: var(--slot-filled-bg); }
+
+  /* ---------- Progress Hero (barra de progressão gamificada) ---------- */
+  .progress-hero {
+    background: linear-gradient(135deg, var(--bg-card) 0%, color-mix(in srgb, var(--accent) 5%, var(--bg-card)) 100%);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 24px 22px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .progress-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--accent) 8%, transparent) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .ph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .ph-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .ph-stats {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .ph-stats strong {
+    color: var(--text);
+    font-weight: 800;
+    font-size: 16px;
+  }
+  .ph-sep {
+    color: var(--border-strong);
+    margin: 0 8px;
+    font-weight: 400;
+  }
+
+  .ph-bar-wrap {
+    position: relative;
+    margin: 0 4px 38px;
+  }
+  .ph-bar {
+    position: relative;
+    height: 22px;
+    background: var(--slot-empty-bg);
+    border-radius: 12px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+  }
+  .ph-bar-fill {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    background: linear-gradient(90deg,
+      var(--slot-filled-bg) 0%,
+      var(--slot-filled-bg-2) 60%,
+      #34d399 100%);
+    border-radius: 12px;
+    transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 0 14px color-mix(in srgb, var(--slot-filled-bg-2) 50%, transparent);
+  }
+  .ph-bar-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.45) 50%,
+      transparent 100%);
+    animation: phShimmer 2.6s ease-in-out infinite;
+  }
+  @keyframes phShimmer {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(120%); }
+  }
+  .ph-bar-tick {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    width: 1px;
+    background: rgba(255,255,255,0.35);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .ph-bar-marker {
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    width: 4px;
+    background: var(--text);
+    border-radius: 3px;
+    transition: left 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 0 3px var(--bg-card), 0 2px 8px rgba(0,0,0,0.25);
+    z-index: 3;
+  }
+  .ph-bar-marker-pct {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: var(--bg-card);
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .ph-bar-marker-pct::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: var(--text);
+  }
+
+  .ph-milestones {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    height: 14px;
+  }
+  .ph-ms {
+    position: absolute;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .ph-ms::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 1px;
+    height: 6px;
+    background: var(--border-strong);
+    transform: translateX(-50%);
+  }
+
+  .ph-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .ph-level-tag {
+    font-size: 12.5px;
+    font-weight: 800;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: phLevelPulse 3s ease-in-out infinite;
+  }
+  @keyframes phLevelPulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.04); }
+  }
+  .ph-level-tag.lvl-empty { background: linear-gradient(135deg, var(--text-muted), var(--text-subtle)); }
+  .ph-level-tag.lvl-low   { background: linear-gradient(135deg, var(--warning), #f59e0b); }
+  .ph-level-tag.lvl-mid   { background: linear-gradient(135deg, #f59e0b, #fbbf24); color: #422006; }
+  .ph-level-tag.lvl-high  { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+  .ph-level-tag.lvl-near  { background: linear-gradient(135deg, var(--slot-filled-bg), var(--slot-filled-bg-2)); }
+  .ph-level-tag.lvl-done  { background: linear-gradient(135deg, var(--gold), #fbbf24); color: #422006; }
+
+  .ph-level-next {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .ph-level-next-label { color: var(--text-subtle); }
+  .ph-level-next strong {
+    color: var(--text);
+    font-weight: 800;
+    font-size: 15px;
+    margin: 0 2px;
+  }
+  .ph-level-next-tag {
+    color: var(--text-subtle);
+    font-size: 11.5px;
+  }
+
+  /* ---------- KPIs ---------- */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .kpi-sub {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .kpi.kpi-gold {
+    border-color: color-mix(in srgb, var(--gold) 35%, var(--border));
+    background: linear-gradient(180deg, var(--bg-card) 0%, color-mix(in srgb, var(--gold) 4%, var(--bg-card)) 100%);
+  }
+  .kpi.kpi-gold .kpi-value { color: #b45309; }
+  .kpi.kpi-violet {
+    border-color: color-mix(in srgb, #7c3aed 35%, var(--border));
+    background: linear-gradient(180deg, var(--bg-card) 0%, color-mix(in srgb, #7c3aed 4%, var(--bg-card)) 100%);
+  }
+  [data-theme="dark"] .kpi.kpi-gold .kpi-value { color: var(--gold); }
+  [data-theme="dark"] .kpi.kpi-violet .kpi-value { color: #c4b5fd; }
+  .kpi.kpi-violet .kpi-value { color: #6d28d9; }
+  .kpi-bar-fill.kpi-bar-gold {
+    background: linear-gradient(90deg, #d97706 0%, #fbbf24 100%);
+  }
+  .kpi-bar-fill.kpi-bar-violet {
+    background: linear-gradient(90deg, #6d28d9 0%, #a78bfa 100%);
+  }
+
+  /* ---------- Rankings (página principal) ---------- */
+  .rankings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .ranking-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .ranking-title {
+    font-size: 12.5px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .kpi {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px 18px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .kpi:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-strong);
+  }
+  .kpi:hover::before { opacity: 1; }
+  .kpi.kpi-gold::before    { background: linear-gradient(90deg, #d97706 0%, #fbbf24 100%); }
+  .kpi.kpi-violet::before  { background: linear-gradient(90deg, #6d28d9 0%, #a78bfa 100%); }
+  .kpi-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .kpi-value {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+  .kpi-value .small {
+    font-size: 15px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .kpi-bar {
+    margin-top: 14px;
+    height: 10px;
+    background: var(--slot-empty-bg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+    position: relative;
+  }
+  .kpi-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    border-radius: 6px;
+    transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--slot-filled-bg-2) 45%, transparent);
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi-bar-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+    animation: kpiShimmer 3s ease-in-out infinite;
+  }
+  @keyframes kpiShimmer {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(120%); }
+  }
+  .kpi-bar-fill.kpi-bar-gold {
+    box-shadow: 0 0 8px color-mix(in srgb, var(--gold) 55%, transparent);
+  }
+  .kpi-bar-fill.kpi-bar-violet {
+    box-shadow: 0 0 8px color-mix(in srgb, #a78bfa 55%, transparent);
+  }
+
+  /* ---------- Pack stats ---------- */
+  .pack-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .pack-stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .pack-stat:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+  }
+  .pack-stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .pack-stat-value {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .pack-stat-value .small {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .pack-stat-bar {
+    height: 4px;
+    background: var(--slot-empty-bg);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+  .pack-stat-bar > div {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold) 0%, #f59e0b 100%);
+    border-radius: 2px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .pack-stat.highlight {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--bg-card) 0%, color-mix(in srgb, var(--gold) 8%, var(--bg-card)) 100%);
+  }
+  .pack-stat.highlight .pack-stat-value { color: var(--gold); }
+
+  /* ---------- Special card ---------- */
+  .special-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    gap: 18px;
+    box-shadow: var(--shadow-sm);
+  }
+  .special-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .special-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .special-value {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .special-value .small {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .fwc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+    gap: 3px;
+    flex: 1;
+    margin-top: 2px;
+  }
+  .fwc-cell {
+    aspect-ratio: 1;
+    border-radius: 3px;
+    background: var(--slot-empty-bg);
+    border: 1px solid var(--slot-empty-border);
+    font-size: 8px;
+    font-weight: 700;
+    color: var(--slot-empty-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s;
+    font-variant-numeric: tabular-nums;
+  }
+  .fwc-cell.filled {
+    background: linear-gradient(135deg, var(--gold) 0%, #f59e0b 100%);
+    border-color: var(--gold);
+    color: white;
+  }
+  /* FWC 00 = capa do álbum. Anel branco + glow dourado mais forte */
+  .fwc-cell.fwc-capa {
+    box-shadow: 0 0 0 1.5px var(--bg-card), 0 0 0 2.5px var(--gold);
+    font-weight: 800;
+  }
+  .fwc-cell.fwc-capa.filled {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+    animation: fwcCapaGlow 2.4s ease-in-out infinite;
+  }
+  @keyframes fwcCapaGlow {
+    0%, 100% { box-shadow: 0 0 0 1.5px var(--bg-card), 0 0 0 2.5px var(--gold), 0 0 4px rgba(245, 158, 11, 0.4); }
+    50%      { box-shadow: 0 0 0 1.5px var(--bg-card), 0 0 0 2.5px var(--gold), 0 0 12px rgba(245, 158, 11, 0.85); }
+  }
+  .fwc-cell:hover { transform: scale(1.2); z-index: 2; }
+  .capa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    color: white;
+  }
+  .capa-badge.missing {
+    background: var(--slot-empty-bg);
+    color: var(--text-muted);
+    border: 1px solid var(--slot-empty-border);
+  }
+
+  /* ---------- Filters ---------- */
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    align-items: center;
+  }
+  .filter-group {
+    display: flex;
+    gap: 2px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3px;
+    box-shadow: var(--shadow-sm);
+  }
+  .filter-btn {
+    background: transparent;
+    border: none;
+    padding: 7px 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.12s, color 0.12s;
+  }
+  .filter-btn:hover { color: var(--text); }
+  .filter-btn.active {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: white;
+    box-shadow: 0 2px 6px color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  .filter-select {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .filter-select:hover { border-color: var(--border-strong); }
+  .results-count {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin-left: auto;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- Teams grid ---------- */
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 12px;
+  }
+  .team-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.18s, border-color 0.15s;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-strong);
+  }
+  .team-card.empty {
+    border-color: var(--warning-border);
+    background: var(--warning-bg);
+  }
+  .team-card.complete {
+    border-color: var(--slot-filled-bg);
+    background: linear-gradient(180deg, var(--bg-card) 0%, color-mix(in srgb, var(--slot-filled-bg) 6%, var(--bg-card)) 100%);
+  }
+  .team-card.highlight {
+    animation: pulse 1.5s;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: var(--shadow-sm); }
+    20% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 40%, transparent), var(--shadow-lg); }
+    50% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent), var(--shadow-lg); }
+  }
+
+  .team-flag-header {
+    position: relative;
+    height: 64px;
+    background: var(--slot-empty-bg);
+    overflow: hidden;
+  }
+  .team-flag-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .team-card:hover .team-flag-header img { transform: scale(1.06); }
+  .team-flag-header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.25) 100%);
+  }
+  .team-code-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 3px 7px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+  }
+  .team-code-badge.team-flag-emoji {
+    font-size: 22px;
+    line-height: 1;
+    padding: 4px 7px 3px;
+    letter-spacing: 0;
+    background: rgba(0,0,0,0.45);
+  }
+  .team-status-pct {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.65);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 7px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .team-body {
+    padding: 11px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  .team-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+  }
+  .team-name {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .team-progress {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+  .team-progress .pct {
+    color: var(--text);
+    font-weight: 800;
+  }
+  .tag-empty {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--warning);
+  }
+  .team-bar {
+    height: 4px;
+    background: var(--slot-empty-bg);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .team-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    border-radius: 2px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .team-card.empty .team-bar-fill { background: var(--warning); }
+
+  .slots {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+  .slot {
+    aspect-ratio: 1;
+    border-radius: 4px;
+    background: var(--slot-empty-bg);
+    border: 1px solid var(--slot-empty-border);
+    color: var(--slot-empty-text);
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-variant-numeric: tabular-nums;
+    cursor: default;
+    transition: transform 0.12s, box-shadow 0.12s;
+    position: relative;
+  }
+  .slot.filled {
+    background: linear-gradient(135deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    border-color: var(--slot-filled-bg);
+    color: var(--slot-filled-text);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 56px 24px;
+    color: var(--text-muted);
+    font-size: 13px;
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+  }
+
+  /* Header de grupo (faixa full-width na grid de cards, ordem do álbum) */
+  .group-header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 4px 8px;
+    margin-top: 8px;
+    border-bottom: 2px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  }
+  .group-header:first-child { margin-top: 0; }
+  .group-header-tag {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    white-space: nowrap;
+  }
+  .group-header-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--slot-empty-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 60px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
+  }
+  .group-header-bar > div {
+    height: 100%;
+    background: linear-gradient(90deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    border-radius: 4px;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--slot-filled-bg-2) 45%, transparent);
+  }
+  .group-header-info {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--text);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .group-header-info .small {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  @media (max-width: 720px) {
+    .group-header { gap: 8px; padding: 8px 2px 6px; }
+    .group-header-tag { font-size: 12.5px; padding: 3px 9px; letter-spacing: 0.1em; }
+    .group-header-info { font-size: 12px; }
+  }
+
+  /* ---------- Modal ---------- */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 13, 24, 0.75);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px 20px;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow-y: auto;
+    animation: fadeIn 0.2s ease-out;
+  }
+  .modal-backdrop[hidden] { display: none; }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .modal {
+    background: var(--bg-card);
+    border-radius: 16px;
+    max-width: 920px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    animation: slideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid var(--border);
+  }
+  @keyframes slideIn {
+    from { transform: translateY(24px) scale(0.98); opacity: 0; }
+    to   { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  .modal-flag {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: var(--slot-empty-bg);
+  }
+  .modal-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .modal-flag::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.75) 100%);
+  }
+  .modal-flag-text {
+    position: absolute;
+    bottom: 18px;
+    left: 24px;
+    right: 60px;
+    color: white;
+  }
+  .modal-flag-text .code {
+    font-size: 11px;
+    opacity: 0.85;
+    letter-spacing: 0.16em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  }
+  .modal-flag-text h2 {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  }
+  .modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+    font-family: inherit;
+    line-height: 1;
+    transition: background 0.15s, transform 0.15s;
+    backdrop-filter: blur(4px);
+  }
+  .modal-close:hover {
+    background: rgba(0,0,0,0.8);
+    transform: scale(1.05);
+  }
+
+  .modal-body {
+    padding: 22px 26px 28px;
+  }
+  .modal-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .modal-stat-block {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .modal-stat-num {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .modal-stat-num .small {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .modal-stat-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+  .modal-bar {
+    height: 6px;
+    background: var(--slot-empty-bg);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+  .modal-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    border-radius: 3px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .modal-section { margin-bottom: 22px; }
+  .modal-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .modal-section-title .count {
+    background: var(--slot-empty-bg);
+    color: var(--text);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .modal-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .modal-chip {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 9px;
+    border-radius: 5px;
+    background: var(--slot-empty-bg);
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    border: 1px solid var(--slot-empty-border);
+  }
+
+  /* Sticker grid in modal */
+  .sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  .sticker {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s;
+    cursor: default;
+  }
+  .sticker:hover {
+    transform: translateY(-3px) rotate(-1deg);
+    box-shadow: var(--shadow-lg);
+    z-index: 2;
+  }
+  .sticker .sticker-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sticker .sticker-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 40%, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%),
+      linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+  }
+  .sticker .sticker-label-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 6px 4px 4px;
+    font-size: 8.5px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+  }
+  .sticker .sticker-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 44px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.75);
+    letter-spacing: -0.05em;
+    line-height: 1;
+  }
+  .sticker .sticker-label {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .sticker .sticker-status {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    font-weight: 800;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border: 1.5px solid white;
+  }
+  .sticker.empty {
+    background:
+      repeating-linear-gradient(45deg,
+        var(--slot-empty-bg) 0px, var(--slot-empty-bg) 10px,
+        color-mix(in srgb, var(--slot-empty-bg) 92%, var(--text)) 10px,
+        color-mix(in srgb, var(--slot-empty-bg) 92%, var(--text)) 11px);
+    border: 1.5px dashed var(--slot-empty-border);
+  }
+  .sticker.empty .sticker-number {
+    color: var(--slot-empty-text);
+    text-shadow: none;
+    opacity: 0.7;
+  }
+  .sticker.empty .sticker-label,
+  .sticker.empty .sticker-label-top {
+    color: var(--text-muted);
+    text-shadow: none;
+    background: transparent;
+  }
+  .sticker.empty .sticker-status {
+    background: var(--bg-card);
+    color: var(--text-muted);
+    border: 1.5px solid var(--slot-empty-border);
+    box-shadow: none;
+  }
+
+  .modal-note {
+    font-size: 11px;
+    color: var(--text-subtle);
+    margin-top: 16px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1280px) {
+    .kpis { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 1024px) {
+    .pack-stats { grid-template-columns: repeat(3, 1fr); }
+    .special-card { grid-template-columns: 1fr; gap: 10px; }
+    .fwc-grid { grid-template-columns: repeat(auto-fill, minmax(22px, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .container { padding: 14px 12px; }
+    .app-header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding-bottom: 12px;
+    }
+    .brand h1 { font-size: 17px; }
+    .brand .subtitle { font-size: 11px; line-height: 1.45; }
+    .header-actions { width: 100%; gap: 8px; }
+    .header-search {
+      flex: 1;
+      width: auto;
+      min-width: 0;
+      font-size: 16px;
+      padding: 10px 12px;
+    }
+    .header-search:focus { width: auto; box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent); }
+    .theme-toggle { padding: 10px 14px; font-size: 13px; }
+
+    .kpis { gap: 8px; }
+    .kpi { padding: 12px 14px; }
+    .kpi-value { font-size: 20px; }
+
+    .pack-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .pack-stat { padding: 10px 12px; }
+    .pack-stat-value { font-size: 16px; }
+    .pack-stat-label { font-size: 9.5px; }
+
+    .flag-nav { padding: 10px 12px; }
+    .flag-nav-title { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .flag-nav-legend { flex-wrap: wrap; gap: 8px 10px; }
+    .flag-nav-track { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 6px; }
+    .flag-chip-info { padding: 4px 6px; font-size: 10.5px; }
+    .flag-chip-code { font-size: 9.5px; }
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .rankings-grid { grid-template-columns: 1fr; }
+    .progress-hero { padding: 14px 16px 18px; border-radius: 12px; }
+    .ph-header { gap: 8px; margin-bottom: 14px; }
+    .ph-stats { font-size: 12.5px; width: 100%; }
+    .ph-stats strong { font-size: 14px; }
+    .ph-bar { height: 18px; }
+    .ph-bar-marker-pct { font-size: 11.5px; padding: 3px 8px; }
+    .ph-ms { font-size: 10px; }
+    .ph-bar-wrap { margin-bottom: 34px; }
+    .ph-level-tag { font-size: 11.5px; padding: 5px 11px; }
+    .ph-level-next { font-size: 12px; }
+    .ph-level-next strong { font-size: 13.5px; }
+    .brand h1 { font-size: 19px; }
+    .kpi-value { font-size: 22px; }
+    .kpi-value .small { font-size: 13px; }
+    .team-name { font-size: 13.5px; }
+
+    .filters { gap: 8px; }
+    .filters > * { width: 100%; }
+    .filter-group {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .filter-group::-webkit-scrollbar { display: none; }
+    .filter-btn { flex-shrink: 0; padding: 9px 12px; }
+    .filter-select { max-width: none; padding: 10px 12px; font-size: 14px; }
+    .results-count { margin-left: 0; text-align: center; }
+
+    .teams-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .team-flag-header { height: 56px; }
+    .team-name { font-size: 12.5px; }
+    .team-body { padding: 10px; gap: 7px; }
+    .slot { font-size: 9.5px; }
+
+    .modal-backdrop { padding: 0; }
+    .modal { border-radius: 0; min-height: 100vh; }
+    .modal-flag { height: 160px; }
+    .modal-flag-text { left: 16px; right: 64px; bottom: 14px; }
+    .modal-flag-text h2 { font-size: 26px; }
+    .modal-flag-text .code { font-size: 10px; }
+    .modal-close {
+      width: 42px; height: 42px;
+      font-size: 24px;
+      top: 12px; right: 12px;
+    }
+    .modal-body { padding: 18px 16px 24px; }
+    .modal-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .modal-stat-block { padding: 10px 12px; }
+    .modal-stat-num { font-size: 18px; }
+    .modal-stat-num .small { font-size: 12px; }
+    .modal-stat-label { font-size: 10px; }
+    .modal-section-title { font-size: 10.5px; }
+    .modal-chip { font-size: 10.5px; padding: 4px 8px; }
+
+    .sticker-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .sticker .sticker-number { font-size: 32px; }
+    .sticker .sticker-status {
+      width: 20px; height: 20px;
+      font-size: 11px;
+      top: 6px; right: 6px;
+    }
+    .sticker .sticker-label-top { font-size: 8px; padding: 5px 4px 3px; }
+    .sticker .sticker-label { font-size: 8.5px; bottom: 5px; }
+  }
+  @media (max-width: 480px) {
+    .sticker-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .sticker .sticker-number { font-size: 40px; }
+    .modal-flag-text h2 { font-size: 24px; }
+  }
+  @media (max-width: 360px) {
+    .teams-grid { grid-template-columns: 1fr; }
+    .container { padding: 10px; }
+    .kpis { grid-template-columns: 1fr; }
+    .pack-stats { grid-template-columns: 1fr; }
+    .modal-stats { grid-template-columns: 1fr; }
+    .sticker-grid { grid-template-columns: repeat(2, 1fr); }
+    .flag-nav-track { grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); }
+  }
+
+  /* Touch devices: substituir hover por estado :active (feedback ao tocar) */
+  @media (hover: none) {
+    .team-card:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--border); }
+    .team-card:hover .team-flag-header img { transform: none; }
+    .team-card:active { transform: scale(0.98); transition: transform 0.08s; }
+    .flag-chip:hover { transform: none; }
+    .flag-chip:active { transform: scale(0.94); }
+    .slot:hover { transform: none; box-shadow: none; }
+    .sticker:hover { transform: none; box-shadow: none; }
+    .kpi:hover { transform: none; box-shadow: var(--shadow-sm); }
+    .fwc-cell:hover { transform: none; }
+    .modal-close:hover { transform: none; background: rgba(0,0,0,0.55); }
+    .header-search:focus { width: 100%; }
+    .filter-btn:hover { color: var(--text-muted); }
+    .filter-btn.active:hover { color: white; }
+  }
+
+  /* Evita zoom horizontal em iOS quando teclado abre */
+  @supports (-webkit-touch-callout: none) {
+    body { -webkit-text-size-adjust: 100%; }
+  }
+
+  /* ============================================================
+   * TABS — navegação entre Coleção e Análise
+   * ============================================================ */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+  }
+  .tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 7px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    transition: background 0.18s, color 0.18s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+  }
+  .tab-btn:hover { color: var(--text); background: color-mix(in srgb, var(--bg) 50%, transparent); }
+  .tab-btn:active { transform: scale(0.98); }
+  .tab-btn.active {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: white;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  .tab-badge {
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--slot-empty-bg);
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+  .tab-btn.active .tab-badge {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    backdrop-filter: blur(2px);
+  }
+
+  /* View containers — fade-in ao trocar */
+  .view { animation: viewFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1); }
+  .view[hidden] { display: none; }
+  @keyframes viewFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============================================================
+   * EMPTY SLOT — "?" watermark no compact grid
+   * ============================================================ */
+  .slot-num {
+    position: relative;
+    z-index: 1;
+  }
+  .slot:not(.filled)::after {
+    content: '?';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--slot-empty-text);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: 0;
+    line-height: 1;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .slot:not(.filled):hover::after {
+    opacity: 0.7;
+    transform: scale(1.15);
+  }
+  .slot.filled {
+    animation: slotPop 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  @keyframes slotPop {
+    from { transform: scale(0.6); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+
+  /* ============================================================
+   * EMPTY STICKER — figurinha "mistério" com "?" gigante
+   * ============================================================ */
+  .sticker.empty .sticker-q {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 88px;
+    font-weight: 900;
+    color: var(--slot-empty-text);
+    opacity: 0.55;
+    letter-spacing: 0;
+    line-height: 1;
+    pointer-events: none;
+    text-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    animation: stickerQPulse 2.6s ease-in-out infinite;
+  }
+  @keyframes stickerQPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 0.45; }
+    50%      { transform: translate(-50%, -50%) scale(1.08) rotate(-3deg); opacity: 0.85; }
+  }
+  .sticker.empty:hover .sticker-q {
+    animation-play-state: paused;
+    transform: translate(-50%, -50%) scale(1.18) rotate(8deg);
+    opacity: 0.95;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+
+  /* Shimmer nos cromos colados (passa ao hover) */
+  .sticker-shimmer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -60%;
+    width: 60%;
+    background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+    pointer-events: none;
+    transform: skewX(-15deg);
+    z-index: 3;
+  }
+  .sticker.filled:hover .sticker-shimmer {
+    animation: shimmerSweep 0.85s ease-out;
+  }
+  @keyframes shimmerSweep {
+    from { left: -60%; }
+    to   { left: 160%; }
+  }
+
+  /* ============================================================
+   * ANÁLISE — cartões e gráficos
+   * ============================================================ */
+  .analysis-header {
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .analysis-h {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .analysis-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .analysis-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s, box-shadow 0.15s;
+    animation: cardFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  @keyframes cardFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .analysis-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+  .analysis-card.full-width { grid-column: 1 / -1; }
+
+  .analysis-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .analysis-title-accent {
+    color: var(--accent);
+  }
+
+  .analysis-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .analysis-stat {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .analysis-stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .analysis-stat-value {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-top: 4px;
+  }
+  .analysis-stat-value .small {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .analysis-stat-value.gold { color: var(--gold); }
+  .analysis-note {
+    font-size: 11.5px;
+    color: var(--text-subtle);
+    margin-top: 12px;
+    line-height: 1.55;
+    padding: 8px 10px;
+    background: var(--bg);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* Distribuição (histograma horizontal) */
+  .dist-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 56px;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .dist-row:last-child { margin-bottom: 0; }
+  .dist-label {
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dist-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dist-dot.empty  { background: var(--warning); }
+  .dist-dot.low    { background: #f59e0b; }
+  .dist-dot.mid    { background: var(--accent); }
+  .dist-dot.high   { background: var(--slot-filled-bg-2); }
+  .dist-dot.almost { background: var(--slot-filled-bg); }
+  .dist-bar-track {
+    height: 14px;
+    background: var(--slot-empty-bg);
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+  }
+  .dist-bar-fill {
+    height: 100%;
+    border-radius: 7px;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .dist-bar-fill.empty  { background: linear-gradient(90deg, var(--warning), color-mix(in srgb, var(--warning) 70%, white)); }
+  .dist-bar-fill.low    { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .dist-bar-fill.mid    { background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+  .dist-bar-fill.high   { background: linear-gradient(90deg, var(--slot-filled-bg), var(--slot-filled-bg-2)); }
+  .dist-bar-fill.almost { background: linear-gradient(90deg, var(--slot-filled-bg-2), #34d399); }
+  .dist-count {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+  }
+  .dist-count .small { color: var(--text-muted); font-weight: 500; font-size: 11px; }
+
+  /* Ranking (top/bottom 5) */
+  .rank-list { display: flex; flex-direction: column; gap: 6px; }
+  .rank-row {
+    display: grid;
+    grid-template-columns: 24px 28px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 9px 12px;
+    background: var(--bg);
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: transform 0.15s, background 0.15s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .rank-row:hover {
+    transform: translateX(3px);
+    border-color: var(--border);
+  }
+  .rank-pos {
+    font-weight: 800;
+    color: var(--text-subtle);
+    font-size: 12.5px;
+    text-align: center;
+  }
+  .rank-flag {
+    width: 28px; height: 21px;
+    border-radius: 3px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .rank-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .rank-stat {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: var(--text-muted);
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .rank-stat .pct {
+    color: var(--text);
+    margin-left: 2px;
+  }
+
+  /* Confederação */
+  .conf-list { display: flex; flex-direction: column; gap: 0; }
+  .conf-row {
+    display: grid;
+    grid-template-columns: 110px max-content 1fr max-content;
+    gap: 14px;
+    align-items: center;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+  }
+  .conf-row:first-child { border-top: 0; padding-top: 0; }
+  .conf-name {
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  .conf-teams {
+    color: var(--text-muted);
+    font-size: 11.5px;
+    font-weight: 500;
+  }
+  .conf-bar-track {
+    height: 8px;
+    background: var(--slot-empty-bg);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .conf-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    border-radius: 4px;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .conf-stat {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    text-align: right;
+    min-width: 100px;
+  }
+  .conf-stat .pct { color: var(--accent); }
+  .conf-stat .small { color: var(--text-muted); font-weight: 500; font-size: 11px; }
+
+  /* Frequência por número */
+  .freq-grid {
+    display: grid;
+    grid-template-columns: repeat(20, minmax(0, 1fr));
+    gap: 5px;
+  }
+  .freq-cell {
+    aspect-ratio: 1 / 1.15;
+    border-radius: 6px;
+    background: var(--slot-empty-bg);
+    border: 1px solid var(--slot-empty-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 2px;
+    transition: transform 0.12s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .freq-cell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--slot-filled-bg) 0%, var(--slot-filled-bg-2) 100%);
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .freq-cell:hover { transform: translateY(-2px) scale(1.06); z-index: 2; }
+  .freq-cell.heat::before { opacity: var(--heat); }
+  .freq-cell-num {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+  }
+  .freq-cell.heat[data-heat="high"] .freq-cell-num { color: rgba(255, 255, 255, 0.85); }
+  .freq-cell-count {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
+    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+    position: relative;
+    z-index: 1;
+  }
+  .freq-cell.heat[data-heat="high"] .freq-cell-count { color: white; }
+
+  .freq-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 10.5px;
+    color: var(--text-muted);
+    justify-content: flex-end;
+  }
+  .freq-legend-bar {
+    width: 100px;
+    height: 8px;
+    background: linear-gradient(90deg, var(--slot-empty-bg), var(--slot-filled-bg-2));
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  /* Responsivo da análise */
+  @media (max-width: 1024px) {
+    .freq-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .analysis-grid { grid-template-columns: 1fr; gap: 10px; }
+    .analysis-card { padding: 14px 16px; }
+    .analysis-h { font-size: 18px; }
+    .analysis-sub { font-size: 12px; }
+    .analysis-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .analysis-stat-value { font-size: 17px; }
+    .dist-row { grid-template-columns: 100px 1fr 50px; gap: 8px; font-size: 11px; }
+    .conf-row { grid-template-columns: 80px 1fr; gap: 8px; padding: 10px 0; }
+    .conf-row > .conf-bar-track { grid-column: 1 / -1; }
+    .conf-row > .conf-stat { grid-column: 1 / -1; text-align: left; }
+    .conf-row > .conf-teams { display: none; }
+    .freq-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
+    .freq-cell-num { font-size: 9px; }
+    .freq-cell-count { font-size: 12px; }
+    .tabs { padding: 3px; }
+    .tab-btn { padding: 9px 12px; font-size: 12px; }
+    .tab-badge { display: none; }
+  }
+  @media (max-width: 480px) {
+    .freq-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .freq-cell-count { font-size: 14px; }
+    .freq-cell-num { font-size: 10px; }
+  }
+
+  /* ============================================================
+   * CROMOS ESPECIAIS — #1 (logo da seleção, gold) e #13 (foto do
+   * time, violeta). Os mais cobiçados em cada página do álbum.
+   * ============================================================ */
+
+  /* ---- Compact slots: borda colorida e brilho ao colar ---- */
+  .slot[data-special] {
+    border-width: 1.5px;
+    overflow: visible;
+  }
+  .slot[data-special]:not(.filled) { border-style: dashed; }
+
+  .slot[data-special="logo"] { border-color: #f59e0b; }
+  .slot[data-special="logo"]:not(.filled) {
+    border-color: color-mix(in srgb, #f59e0b 55%, var(--slot-empty-border));
+    background: color-mix(in srgb, #fbbf24 10%, var(--slot-empty-bg));
+  }
+  .slot[data-special="logo"]:not(.filled)::after { color: #b45309; opacity: 0.45; }
+  .slot[data-special="logo"].filled {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #fde047 100%);
+    border-color: #d97706;
+    color: #422006;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.45);
+    animation: slotGoldGlow 2.6s ease-in-out infinite;
+  }
+  @keyframes slotGoldGlow {
+    0%, 100% { box-shadow: 0 0 4px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255,255,255,0.5); }
+    50%      { box-shadow: 0 0 14px rgba(245, 158, 11, 0.8), inset 0 1px 0 rgba(255,255,255,0.6); }
+  }
+
+  .slot[data-special="photo"] { border-color: #7c3aed; }
+  .slot[data-special="photo"]:not(.filled) {
+    border-color: color-mix(in srgb, #7c3aed 55%, var(--slot-empty-border));
+    background: color-mix(in srgb, #8b5cf6 10%, var(--slot-empty-bg));
+  }
+  .slot[data-special="photo"]:not(.filled)::after { color: #7c3aed; opacity: 0.45; }
+  .slot[data-special="photo"].filled {
+    background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #c4b5fd 100%);
+    border-color: #5b21b6;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+    animation: slotVioletGlow 2.6s ease-in-out infinite 0.4s;
+  }
+  @keyframes slotVioletGlow {
+    0%, 100% { box-shadow: 0 0 4px rgba(124, 58, 237, 0.4), inset 0 1px 0 rgba(255,255,255,0.5); }
+    50%      { box-shadow: 0 0 14px rgba(124, 58, 237, 0.8), inset 0 1px 0 rgba(255,255,255,0.6); }
+  }
+
+  /* ---- Big modal stickers ---- */
+  .sticker.sticker-logo {
+    box-shadow: 0 0 0 2px #f59e0b, 0 8px 24px rgba(245, 158, 11, 0.30);
+  }
+  .sticker.sticker-photo {
+    box-shadow: 0 0 0 2px #7c3aed, 0 8px 24px rgba(124, 58, 237, 0.30);
+  }
+
+  /* Faixa superior tingida da cor do especial (cromos colados) */
+  .sticker.sticker-logo.filled .sticker-label-top {
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.85) 0%, rgba(245, 158, 11, 0.0) 100%);
+    color: #fef3c7;
+    letter-spacing: 0.18em;
+    font-size: 9.5px;
+  }
+  .sticker.sticker-photo.filled .sticker-label-top {
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.85) 0%, rgba(124, 58, 237, 0.0) 100%);
+    color: #ede9fe;
+    letter-spacing: 0.18em;
+    font-size: 9.5px;
+  }
+
+  /* Empty (mistério) com hachuras na cor do especial */
+  .sticker.sticker-logo.empty {
+    border-color: #f59e0b;
+    background:
+      repeating-linear-gradient(45deg,
+        color-mix(in srgb, #fbbf24 10%, var(--slot-empty-bg)) 0px,
+        color-mix(in srgb, #fbbf24 10%, var(--slot-empty-bg)) 10px,
+        color-mix(in srgb, #fbbf24 18%, var(--slot-empty-bg)) 10px,
+        color-mix(in srgb, #fbbf24 18%, var(--slot-empty-bg)) 11px);
+  }
+  .sticker.sticker-logo.empty .sticker-q { color: #d97706; }
+  .sticker.sticker-logo.empty .sticker-label-top { color: #b45309; font-weight: 800; letter-spacing: 0.15em; }
+
+  .sticker.sticker-photo.empty {
+    border-color: #7c3aed;
+    background:
+      repeating-linear-gradient(45deg,
+        color-mix(in srgb, #8b5cf6 10%, var(--slot-empty-bg)) 0px,
+        color-mix(in srgb, #8b5cf6 10%, var(--slot-empty-bg)) 10px,
+        color-mix(in srgb, #8b5cf6 18%, var(--slot-empty-bg)) 10px,
+        color-mix(in srgb, #8b5cf6 18%, var(--slot-empty-bg)) 11px);
+  }
+  .sticker.sticker-photo.empty .sticker-q { color: #7c3aed; }
+  .sticker.sticker-photo.empty .sticker-label-top { color: #6d28d9; font-weight: 800; letter-spacing: 0.15em; }
+
+  /* Badge circular com ícone (escudo / grupo) */
+  .sticker-special-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    border: 2px solid white;
+    transition: transform 0.2s;
+  }
+  .sticker:hover .sticker-special-badge {
+    transform: scale(1.1) rotate(-6deg);
+  }
+  .sticker.sticker-logo .sticker-special-badge {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    color: #422006;
+  }
+  .sticker.sticker-photo .sticker-special-badge {
+    background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+    color: white;
+  }
+  .sticker.empty .sticker-special-badge {
+    background: var(--bg-card);
+    border-color: currentColor;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  }
+  .sticker.sticker-logo.empty .sticker-special-badge { color: #d97706; }
+  .sticker.sticker-photo.empty .sticker-special-badge { color: #7c3aed; }
+  .sticker-special-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+
+  /* Sparkle dourado/violeta nos cromos especiais colados (sutil pulso na borda) */
+  .sticker.sticker-logo.filled,
+  .sticker.sticker-photo.filled {
+    animation: specialBorderPulse 3s ease-in-out infinite;
+  }
+  .sticker.sticker-logo.filled { --pulse-color: 245, 158, 11; }
+  .sticker.sticker-photo.filled { --pulse-color: 124, 58, 237; }
+  @keyframes specialBorderPulse {
+    0%, 100% { box-shadow: 0 0 0 2px rgb(var(--pulse-color)), 0 8px 24px rgba(var(--pulse-color), 0.30); }
+    50%      { box-shadow: 0 0 0 3px rgb(var(--pulse-color)), 0 12px 32px rgba(var(--pulse-color), 0.55); }
+  }
+
+  /* Responsivo dos cromos especiais (badge menor em mobile) */
+  @media (max-width: 720px) {
+    .sticker-special-badge { width: 26px; height: 26px; top: 6px; left: 6px; border-width: 1.5px; }
+    .sticker-special-icon { width: 14px; height: 14px; }
+    .sticker.sticker-logo.filled .sticker-label-top,
+    .sticker.sticker-photo.filled .sticker-label-top { font-size: 8.5px; }
+  }
+
+  /* ============================================================
+   * ABA "ESTATÍSTICAS"
+   * ============================================================ */
+  .stats-section { margin-bottom: 22px; animation: cardFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+  .stats-section-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 10px;
+    padding-left: 4px;
+  }
+  .stats-vs {
+    color: var(--accent);
+    margin: 0 4px;
+    font-weight: 900;
+  }
+
+  .stats-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+  }
+  .stats-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .stats-card:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+  .stats-card-gold {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--bg-card) 0%, color-mix(in srgb, var(--gold) 6%, var(--bg-card)) 100%);
+  }
+  .stats-card-gold .stats-card-value { color: var(--gold); }
+  .stats-card-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .stats-card-value {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-top: 6px;
+  }
+  .stats-card-value .small {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .stats-card-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  /* Você vs Mercado — barras horizontais comparativas */
+  .vs-row {
+    display: grid;
+    grid-template-columns: 240px 1fr 110px;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 12.5px;
+  }
+  .vs-row:last-child { margin-bottom: 0; }
+  .vs-label { font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .vs-badge {
+    font-size: 9.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px 7px;
+    border-radius: 999px;
+  }
+  .vs-badge.good { background: color-mix(in srgb, var(--slot-filled-bg) 20%, transparent); color: var(--slot-filled-bg); }
+  .vs-badge.bad  { background: color-mix(in srgb, var(--warning) 18%, transparent); color: var(--warning); }
+  .vs-bar-track {
+    height: 16px;
+    background: var(--slot-empty-bg);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .vs-bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .vs-bar-fill.good     { background: linear-gradient(90deg, var(--slot-filled-bg), var(--slot-filled-bg-2)); }
+  .vs-bar-fill.neutral  { background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+  .vs-bar-fill.warn     { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .vs-bar-fill.bad      { background: linear-gradient(90deg, var(--warning), color-mix(in srgb, var(--warning) 70%, white)); }
+  .vs-bar-fill.min      { background: linear-gradient(90deg, var(--text-subtle), var(--text-muted)); }
+  .vs-value {
+    text-align: right;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Raridades */
+  .stats-rarities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+  }
+  .stats-rarities-grid .analysis-card { animation: cardFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+  .rarity-big {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-top: 4px;
+  }
+  .rarity-big .small { font-size: 14px; color: var(--text-muted); font-weight: 500; }
+  .rarity-bar {
+    height: 6px;
+    background: var(--slot-empty-bg);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .rarity-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), #fbbf24);
+    border-radius: 3px;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .rarity-table {
+    width: 100%;
+    font-size: 12.5px;
+    border-collapse: collapse;
+    margin-top: 6px;
+  }
+  .rarity-table th {
+    text-align: left;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .rarity-table td {
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+  }
+  .rarity-table tr { cursor: pointer; transition: background 0.12s; }
+  .rarity-table tr:hover td { background: var(--bg); }
+  .rarity-table tr:last-child td { border-bottom: 0; }
+  .rarity-table tr.row-warn td { color: var(--warning); }
+  .rarity-table tr.row-warn td:first-child { font-weight: 800; }
+  .pct-warn { color: var(--warning); font-weight: 800; }
+
+  /* Canais Exclusivos */
+  .stats-channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+  }
+  .channel-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--text-muted);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .channel-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .channel-card.crit-alta   { border-left-color: var(--warning); }
+  .channel-card.crit-media  { border-left-color: #f59e0b; }
+  .channel-card.crit-baixa  { border-left-color: var(--slot-filled-bg); }
+  .channel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .channel-title { font-size: 14px; font-weight: 800; letter-spacing: -0.015em; }
+  .channel-badge {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .channel-badge.crit-alta  { background: color-mix(in srgb, var(--warning) 14%, transparent); color: var(--warning); }
+  .channel-badge.crit-media { background: color-mix(in srgb, #f59e0b 18%, transparent); color: #b45309; }
+  .channel-badge.crit-baixa { background: color-mix(in srgb, var(--slot-filled-bg) 18%, transparent); color: var(--slot-filled-bg); }
+  .channel-stat {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 4px 0 6px;
+  }
+  .channel-stat .small { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+  .channel-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+
+  /* ============================================================
+   * ABA "PROJEÇÃO"
+   * ============================================================ */
+  .chart-wrap {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--bg);
+    padding: 12px 8px 4px;
+    margin-bottom: 12px;
+  }
+  .proj-chart { width: 100%; height: auto; display: block; }
+  .chart-tick {
+    fill: var(--text-muted);
+    font-size: 11px;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+  .chart-axis {
+    fill: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'Inter', system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .chart-current {
+    fill: var(--text);
+    font-size: 11.5px;
+    font-weight: 800;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+  .chart-pulse {
+    animation: chartPulse 2s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  @keyframes chartPulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.18); }
+  }
+
+  /* Tabela de marcos */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .marcos-table {
+    width: 100%;
+    font-size: 13px;
+    border-collapse: collapse;
+  }
+  .marcos-table th {
+    text-align: left;
+    font-size: 10.5px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    white-space: nowrap;
+  }
+  .marcos-table td {
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .marcos-table td:first-child { font-weight: 800; color: var(--accent); }
+  .marcos-table tr:last-child td { border-bottom: 0; }
+  .marcos-table tr.row-warn td { background: color-mix(in srgb, var(--warning) 6%, transparent); color: var(--warning); }
+  .marcos-table tr.row-warn td:first-child { color: var(--warning); }
+  .marcos-table .row-note {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 500;
+    white-space: normal;
+    min-width: 200px;
+  }
+  .marcos-table tr.row-warn .row-note { color: var(--warning); font-weight: 600; }
+
+  /* Cenários A / B / C */
+  .proj-cenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .cenario-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: transform 0.18s, box-shadow 0.18s;
+    animation: cardFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  .cenario-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .cenario-rec {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 5%, var(--bg-card)) 0%, var(--bg-card) 100%);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent), var(--shadow);
+  }
+  .cenario-tag {
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.08em;
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+  .cenario-key {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .cenario-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .cenario-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .cenario-stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .cenario-stat-value {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-top: 2px;
+  }
+  .cenario-stat-value .small { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+  .cenario-stat-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .cenario-prob.good    { color: var(--slot-filled-bg); }
+  .cenario-prob.neutral { color: var(--accent); }
+  .cenario-prob.bad     { color: var(--warning); }
+  .cenario-prob-bar {
+    height: 4px;
+    background: var(--slot-empty-bg);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+  .cenario-prob-bar > div {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cenario-prob-bar > div.good    { background: var(--slot-filled-bg); }
+  .cenario-prob-bar > div.neutral { background: var(--accent); }
+  .cenario-prob-bar > div.bad     { background: var(--warning); }
+  .cenario-comp {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  .cenario-comp-list {
+    list-style: none;
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.7;
+  }
+  .cenario-comp-list li::before {
+    content: '·';
+    color: var(--accent);
+    font-weight: 800;
+    margin-right: 6px;
+  }
+
+  /* Ritmo necessário */
+  .ritmo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .ritmo-stat {
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+
+  /* ============================================================
+   * ABA "NOTÍCIAS"
+   * ============================================================ */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .news-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--text-subtle);
+    transition: transform 0.15s, box-shadow 0.15s;
+    animation: cardFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  .news-item:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .news-item.news-critica { border-left-color: var(--warning); }
+  .news-item.news-alta    { border-left-color: #f59e0b; }
+  .news-item.news-media   { border-left-color: var(--accent); }
+
+  .news-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .news-relevance {
+    font-size: 9.5px;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 999px;
+    letter-spacing: 0.1em;
+  }
+  .news-critica-tag { background: color-mix(in srgb, var(--warning) 16%, transparent); color: var(--warning); }
+  .news-alta-tag    { background: color-mix(in srgb, #f59e0b 18%, transparent); color: #b45309; }
+  .news-media-tag   { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); }
+  .news-meta {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .news-title {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .news-summary {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .news-insight {
+    background: linear-gradient(135deg,
+      color-mix(in srgb, var(--accent) 8%, var(--bg-card)) 0%,
+      color-mix(in srgb, var(--accent) 4%, var(--bg-card)) 100%);
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    border-left-width: 3px;
+    border-radius: 8px;
+    padding: 11px 14px;
+    margin-bottom: 12px;
+  }
+  .news-insight-tag {
+    font-size: 9.5px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .news-insight p {
+    font-size: 12.5px;
+    color: var(--text);
+    line-height: 1.55;
+    font-weight: 500;
+  }
+  .news-link {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .news-link:hover { background: var(--accent); color: white; }
+
+  /* ============================================================
+   * RESPONSIVO — abas/views
+   * ============================================================ */
+  @media (max-width: 1024px) {
+    .vs-row { grid-template-columns: 200px 1fr 90px; }
+    .proj-cenarios-grid { grid-template-columns: 1fr; }
+    .ritmo-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .tabs { flex-wrap: wrap; gap: 2px; padding: 3px; }
+    .tab-btn { padding: 9px 10px; font-size: 11.5px; flex: 1 1 auto; min-width: 75px; }
+    .tab-btn .tab-label { font-size: 11.5px; }
+
+    .vs-row { grid-template-columns: 1fr; gap: 4px; }
+    .vs-row .vs-value { text-align: left; }
+
+    .stats-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-card-value { font-size: 18px; }
+    .stats-card-sub { font-size: 10.5px; }
+
+    .stats-rarities-grid { grid-template-columns: 1fr; }
+
+    .stats-channels-grid { grid-template-columns: 1fr; }
+    .channel-card { padding: 14px 16px; }
+
+    .ritmo-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .marcos-table { font-size: 12px; }
+    .marcos-table th, .marcos-table td { padding: 8px 10px; }
+    .marcos-table .row-note { display: none; }
+
+    .news-title { font-size: 14.5px; }
+    .news-summary { font-size: 12.5px; }
+  }
+  @media (max-width: 480px) {
+    .stats-cards-grid { grid-template-columns: 1fr; }
+    .ritmo-grid { grid-template-columns: 1fr; }
+    .chart-tick { font-size: 9px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="app-header">
+    <div class="brand">
+      <h1>Álbum Copa do Mundo 2026</h1>
+      <div class="subtitle" id="subtitle"></div>
+    </div>
+    <div class="header-actions">
+      <input type="search" id="search" class="header-search" placeholder="Buscar país (nome ou código FIFA)" autocomplete="off">
+      <button class="theme-toggle" id="themeToggle" type="button">Modo escuro</button>
+    </div>
+  </header>
+
+  <section class="progress-hero" id="progressHero"></section>
+
+  <nav class="tabs" id="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="album" type="button" role="tab">
+      <span class="tab-label">Álbum</span>
+      <span class="tab-badge" id="tabBadgeAlbum">48</span>
+    </button>
+    <button class="tab-btn" data-tab="stats" type="button" role="tab">
+      <span class="tab-label">Estatísticas</span>
+      <span class="tab-badge tab-badge-accent">você</span>
+    </button>
+  </nav>
+
+  <div class="view view-collection" id="viewCollection">
+  <nav class="flag-nav">
+    <div class="flag-nav-title">
+      <span>Acesso rápido — 48 seleções</span>
+      <span class="flag-nav-legend">
+        <span class="legend-dot empty">não iniciada</span>
+        <span class="legend-dot low">&lt; 50%</span>
+        <span class="legend-dot mid">50–74%</span>
+        <span class="legend-dot high">≥ 75%</span>
+      </span>
+    </div>
+    <div class="flag-nav-track" id="flagNav"></div>
+  </nav>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="rankings-grid">
+    <div class="ranking-card">
+      <div class="ranking-title">▲ Top 5 mais completas</div>
+      <div class="rank-list" id="rankTop"></div>
+    </div>
+    <div class="ranking-card">
+      <div class="ranking-title">▼ Top 5 menos completas</div>
+      <div class="rank-list" id="rankBottom"></div>
+    </div>
+  </section>
+
+  <section class="special-card" id="special"></section>
+
+  <div class="filters">
+    <div class="filter-group" id="statusFilter">
+      <button class="filter-btn active" data-filter="all" type="button">Todas</button>
+      <button class="filter-btn" data-filter="almost" type="button">Quase completas (≥ 75%)</button>
+      <button class="filter-btn" data-filter="starter" type="button">Iniciantes (&lt; 25%)</button>
+      <button class="filter-btn" data-filter="empty" type="button">Não iniciadas</button>
+    </div>
+    <select id="sort" class="filter-select" aria-label="Ordenar">
+      <option value="album">Ordem do álbum</option>
+      <option value="alpha">Ordem alfabética</option>
+      <option value="desc">Mais completas</option>
+      <option value="asc">Menos completas</option>
+    </select>
+    <span class="results-count" id="resultsCount"></span>
+  </div>
+
+  <section class="teams-grid" id="teams"></section>
+  </div>
+
+  <!-- ============================================================
+       Aba 2: ESTATÍSTICAS
+       ============================================================ -->
+  <div class="view view-stats" id="viewStats" hidden>
+    <div class="analysis-header">
+      <h2 class="analysis-h">Estatísticas</h2>
+      <p class="analysis-sub">Suas métricas pessoais, comparação com o mercado, raridades disputadas e canais não usados.</p>
+    </div>
+    <div class="stats-section">
+      <div class="stats-section-title">VOCÊ</div>
+      <div class="stats-cards-grid" id="statsVoce"></div>
+    </div>
+    <div class="stats-section">
+      <div class="stats-section-title">VOCÊ <span class="stats-vs">vs</span> MERCADO</div>
+      <div class="analysis-card" id="statsVsMercado"></div>
+    </div>
+    <div class="stats-section">
+      <div class="stats-section-title">RARIDADES</div>
+      <div class="stats-rarities-grid" id="statsRaridades"></div>
+    </div>
+    <div class="stats-section">
+      <div class="stats-section-title">CANAIS EXCLUSIVOS NÃO USADOS</div>
+      <div class="stats-channels-grid" id="statsCanais"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-backdrop" id="modal" hidden role="dialog" aria-modal="true">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script>
+/* ============================================================
+ * ESTRUTURA DE DADOS — ALBUM
+ * ============================================================
+ *
+ * ALBUM.meta:
+ *   totalCromos, totalEspeciais, cromosPorPacote, precoPacote,
+ *   totalSelecoes, ultimaAtualizacao, totalColado (referência manual,
+ *   o site recalcula em runtime).
+ *
+ * ALBUM.selecoes[i]:
+ *   nome      string  — nome em português
+ *   codigo    string  — código FIFA de 3 letras (BRA, ARG...)
+ *   bandeira  string  — emoji da bandeira (fallback)
+ *   coladas   number[]— números 1..20 já colados
+ *
+ * ALBUM.especiais:
+ *   fwcTimes.coladas       array com índices 0..19 dos cromos especiais já colados.
+ *                          A FWC 00 é a capa do álbum, FWC 01..19 são as outras
+ *                          metalizadas (logos FIFA, troféu, mascotes, lendas).
+ *   fwcTimes.total         20  (FWC 00 a 19, inclusive)
+ *
+ * ============================================================
+ * COMO ATUALIZAR QUANDO COLAR UMA FIGURINHA NOVA
+ * ============================================================
+ * 1) Encontre a seleção em ALBUM.selecoes pelo `codigo`.
+ * 2) Adicione o número (1..20) ao array `coladas`. Duplicatas e
+ *    números fora do range são ignorados.
+ * 3) Atualize ALBUM.meta.ultimaAtualizacao.
+ * 4) Salve o arquivo e recarregue o navegador.
+ *
+ * Para FWC Times: adicione o número (1..48) em
+ * ALBUM.especiais.fwcTimes.coladas.
+ *
+ * Os totais e barras são SEMPRE recalculados em runtime —
+ * a fonte da verdade são os arrays `coladas`.
+ * ============================================================ */
+
+const ALBUM = {
+  meta: {
+    totalCromos: 980,
+    totalEspeciais: 68,
+    cromosPorPacote: 7,
+    precoPacote: 7,
+    totalSelecoes: 48,
+    ultimaAtualizacao: "2026-05-11",
+    totalColado: 525,
+    pacotesAbertos: 105
+  },
+  // Ordem oficial dos grupos da Copa 2026 (A → L, 4 seleções por grupo).
+  selecoes: [
+    // GRUPO A
+    { nome: "México",             codigo: "MEX", grupo: "A", bandeira: "🇲🇽", coladas: [2,3,5,6,7,8,9,10,11,12,14,15,16,19,20] },
+    { nome: "África do Sul",      codigo: "RSA", grupo: "A", bandeira: "🇿🇦", coladas: [1,2,4,5,6,7,8,9,10,11,14,16,18,20] },
+    { nome: "Coreia do Sul",      codigo: "KOR", grupo: "A", bandeira: "🇰🇷", coladas: [3,5,9,10,11,12,13,14,15,18,19] },
+    { nome: "República Tcheca",   codigo: "CZE", grupo: "A", bandeira: "🇨🇿", coladas: [1,2,3,4,5,7,8,9,11,12,14,15] },
+    // GRUPO B
+    { nome: "Canadá",             codigo: "CAN", grupo: "B", bandeira: "🇨🇦", coladas: [2,3,5,6,7,8,9,11,13,14,18] },
+    { nome: "Bósnia e Herzegovina", codigo: "BIH", grupo: "B", bandeira: "🇧🇦", coladas: [2,5,8,10,11,12,15,16,17] },
+    { nome: "Catar",              codigo: "QAT", grupo: "B", bandeira: "🇶🇦", coladas: [1,2,4,6,8,9,11,12,14,17,18] },
+    { nome: "Suíça",              codigo: "SUI", grupo: "B", bandeira: "🇨🇭", coladas: [1,2,3,4,5,6,9,12,13,14,15,18] },
+    // GRUPO C
+    { nome: "Brasil",             codigo: "BRA", grupo: "C", bandeira: "🇧🇷", coladas: [1,2,3,5,6,9,10,12,14,15,17,18,19,20] },
+    { nome: "Marrocos",           codigo: "MAR", grupo: "C", bandeira: "🇲🇦", coladas: [1,4,11,12,14,15,16,17,18,20] },
+    { nome: "Haiti",              codigo: "HAI", grupo: "C", bandeira: "🇭🇹", coladas: [1,2,3,5,6,9,10,15,18,19,20] },
+    { nome: "Escócia",            codigo: "SCO", grupo: "C", bandeira: "🏴",   coladas: [2,3,6,7,10,11,12,13,14,15,19,20] },
+    // GRUPO D
+    { nome: "Estados Unidos",     codigo: "USA", grupo: "D", bandeira: "🇺🇸", coladas: [1,4,6,8,10,13,17,19] },
+    { nome: "Paraguai",           codigo: "PAR", grupo: "D", bandeira: "🇵🇾", coladas: [3,4,8,13,15,16,17,18] },
+    { nome: "Austrália",          codigo: "AUS", grupo: "D", bandeira: "🇦🇺", coladas: [2,3,5,6,8,9,11,12,13,14,15,16,17,18,20] },
+    { nome: "Turquia",            codigo: "TUR", grupo: "D", bandeira: "🇹🇷", coladas: [1,4,6,7,10,14,15,16,18,20] },
+    // GRUPO E
+    { nome: "Alemanha",           codigo: "GER", grupo: "E", bandeira: "🇩🇪", coladas: [4,5,9,12,14,15,17,18,19] },
+    { nome: "Curaçao",            codigo: "CUW", grupo: "E", bandeira: "🇨🇼", coladas: [1,2,4,7,8,12,14,17,18] },
+    { nome: "Costa do Marfim",    codigo: "CIV", grupo: "E", bandeira: "🇨🇮", coladas: [1,3,5,7,8,9,11,13,16,17,18,19,20] },
+    { nome: "Equador",            codigo: "ECU", grupo: "E", bandeira: "🇪🇨", coladas: [2,3,6,8,9,10,11,12,16,17,20] },
+    // GRUPO F
+    { nome: "Holanda",            codigo: "NED", grupo: "F", bandeira: "🇳🇱", coladas: [1,2,5,6,8,9,14,18,19,20] },
+    { nome: "Japão",              codigo: "JPN", grupo: "F", bandeira: "🇯🇵", coladas: [1,2,4,6,7,10,11,12,15,16,20] },
+    { nome: "Suécia",             codigo: "SWE", grupo: "F", bandeira: "🇸🇪", coladas: [2,6,17,19] },
+    { nome: "Tunísia",            codigo: "TUN", grupo: "F", bandeira: "🇹🇳", coladas: [3,5,7,11,14,16,18,20] },
+    // GRUPO G
+    { nome: "Bélgica",            codigo: "BEL", grupo: "G", bandeira: "🇧🇪", coladas: [4,5,7,9,11,12,13,15,17,20] },
+    { nome: "Egito",              codigo: "EGY", grupo: "G", bandeira: "🇪🇬", coladas: [2,3,5,6,7,9,10,11,13,14,15,16] },
+    { nome: "Irã",                codigo: "IRN", grupo: "G", bandeira: "🇮🇷", coladas: [1,2,3,4,7,8,11,12,15,16,17,19,20] },
+    { nome: "Nova Zelândia",      codigo: "NZL", grupo: "G", bandeira: "🇳🇿", coladas: [4,7,9,10,11,15,16,19,20] },
+    // GRUPO H
+    { nome: "Espanha",            codigo: "ESP", grupo: "H", bandeira: "🇪🇸", coladas: [2,3,5,6,7,9,11,14,16,17,18,19,20] },
+    { nome: "Cabo Verde",         codigo: "CPV", grupo: "H", bandeira: "🇨🇻", coladas: [2,6,7,8,10,12,15,16,19,20] },
+    { nome: "Arábia Saudita",     codigo: "KSA", grupo: "H", bandeira: "🇸🇦", coladas: [1,3,7,11,13,14,16,20] },
+    { nome: "Uruguai",            codigo: "URU", grupo: "H", bandeira: "🇺🇾", coladas: [1,5,9,13,14,15,16,18,19] },
+    // GRUPO I
+    { nome: "França",             codigo: "FRA", grupo: "I", bandeira: "🇫🇷", coladas: [1,2,4,7,8,9,14,15,19] },
+    { nome: "Senegal",            codigo: "SEN", grupo: "I", bandeira: "🇸🇳", coladas: [1,2,3,7,9,10,11,16,17,18,19,20] },
+    { nome: "Iraque",             codigo: "IRQ", grupo: "I", bandeira: "🇮🇶", coladas: [] },
+    { nome: "Noruega",            codigo: "NOR", grupo: "I", bandeira: "🇳🇴", coladas: [1,3,5,7,8,9,10,11,12,13,14,15,16,18,19] },
+    // GRUPO J
+    { nome: "Argentina",          codigo: "ARG", grupo: "J", bandeira: "🇦🇷", coladas: [1,2,4,7,8,11,12,13,14,16,17,20] },
+    { nome: "Argélia",            codigo: "ALG", grupo: "J", bandeira: "🇩🇿", coladas: [2,4,6,8,11,12,13,17,20] },
+    { nome: "Áustria",            codigo: "AUT", grupo: "J", bandeira: "🇦🇹", coladas: [1,2,3,5,6,7,10,11,12,15,16,19,20] },
+    { nome: "Jordânia",           codigo: "JOR", grupo: "J", bandeira: "🇯🇴", coladas: [1,2,3,6,10,12,15,18,19] },
+    // GRUPO K
+    { nome: "Portugal",           codigo: "POR", grupo: "K", bandeira: "🇵🇹", coladas: [1,2,3,5,6,7,8,10,11,12,14,15,16,18,19] },
+    { nome: "Colômbia",           codigo: "COL", grupo: "K", bandeira: "🇨🇴", coladas: [2,3,7,8,9,11,12,13,14,15,16,17,18,19] },
+    { nome: "RD Congo",           codigo: "COD", grupo: "K", bandeira: "🇨🇩", coladas: [5,6,7,8,14,18,19] },
+    { nome: "Uzbequistão",        codigo: "UZB", grupo: "K", bandeira: "🇺🇿", coladas: [5,7,9,13,14,15,16,17,19] },
+    // GRUPO L
+    { nome: "Inglaterra",         codigo: "ENG", grupo: "L", bandeira: "🏴",   coladas: [1,3,4,5,7,8,9,12,13,14,15,16,17,20] },
+    { nome: "Croácia",            codigo: "CRO", grupo: "L", bandeira: "🇭🇷", coladas: [3,4,5,7,8,11,13,14,16,18,20] },
+    { nome: "Gana",               codigo: "GHA", grupo: "L", bandeira: "🇬🇭", coladas: [3,4,7,8,11,12,14,16,17,18,20] },
+    { nome: "Panamá",             codigo: "PAN", grupo: "L", bandeira: "🇵🇦", coladas: [1,2,3,5,8,9,10,13,14,15,18,19,20] }
+  ],
+  especiais: {
+    // FWC vão de 00 (capa) até 19 — 20 cromos no total.
+    fwcTimes: { coladas: [0, 2, 3, 4, 9, 11, 13, 16, 17, 19], total: 20 }
+  }
+};
+
+/* ============================================================
+ * STATS — Métricas pessoais e benchmarks de mercado.
+ * Lê do album-data.js. Recalcule dinamicamente ou edite manualmente.
+ * ============================================================ */
+const STATS = {
+  pessoal: {
+    inicioColecao: "2026-05-01",
+    metaPrazo: { de: "2026-06-11", ate: "2026-07-19", descricao: "Durante a Copa do Mundo" },
+    diasColecionando: 8,
+    diasAteInicioCopa: 33,
+    diasAteFimCopa: 71,
+    canaisUsados: ["pacotes_banca", "trocas_amigos"],
+    pacotesComprados: 105,
+    cromosComprados: 735,
+    investimentoReais: 735,
+    totalColado: 525,
+    coladasViaPacote_estimado: 502,
+    coladasViaTroca_estimado: 23,
+    repetidasGeradas_estimado: 233,
+    eficienciaPacote: 0.683,
+    eficienciaTotal: 0.714,
+    custoPorColada: 1.40,
+    velocidadeMediaDiaria: 53,
+    cromosFaltantes: 455,
+    cromosFaltantesIRQ: 20,
+    cromosFaltantesEspeciais: 58,
+    progressoPercentual: 0.5357
+  },
+  comparacaoMercado: {
+    custoMedianoSemTroca: 7098,
+    custoTipicoComTroca: 1400,
+    custoMinimoTeorico: 980,
+    seuCustoProjetadoSemTroca: 4300,
+    seuCustoProjetadoComTroca: 850,
+    economiaJaRealizada_vs_mediano: 6363,
+    fonte: "Itatiaia, Placar, ClubeDaCopa, TechKnow (abr-mai/2026)"
+  },
+  raridades: {
+    metalizadas: {
+      total: 68, jaColadas: 10, taxaAparicao: 0.083, esperadoEm80Pacotes: 8.7,
+      composicao: { escudosSelecoes: 48, logosFifaCopa: 2, trofeu: 1, mascotes: 3, lendas: 14 }
+    },
+    extraStickers: {
+      total: 80, taxaAparicao: 0.01, foraDoAlbum: true, esperadoEm80Pacotes: 0.9,
+      jogadores: ["Messi","Cristiano Ronaldo","Vinícius Jr.","Mbappé","Lamine Yamal","Haaland","Bellingham","Salah","Modrić"]
+    },
+    selecoesMaisDisputadas: {
+      lista: ["Iraque","Cabo Verde","Curaçao","Uzbequistão"],
+      motivo: "Estreantes na Copa — alta retenção por colecionadores especializados",
+      seuStatus: {
+        IRQ: { coladas: 0,  total: 20, percent: 0 },
+        CPV: { coladas: 10, total: 20, percent: 0.50 },
+        CUW: { coladas: 9,  total: 20, percent: 0.45 },
+        UZB: { coladas: 9,  total: 20, percent: 0.45 }
+      }
+    }
+  },
+  canaisExclusivos: {
+    mcDonalds: {
+      figurinhasExclusivas: 28, pacoteCusto: 5, cromosPorPacote: 5,
+      destaque: "Figurinha #13 de cada seleção (foto do time) é EXCLUSIVA McDonald's",
+      voceJaUsou: false, criticidade: "ALTA",
+      recomendacao: "Sem McDonald's é matematicamente impossível fechar as 48 #13 só por banca."
+    },
+    cocaCola: {
+      figurinhasExclusivas: 12,
+      ondeEncontrar: "Rótulos de Coca-Cola Zero 600ml destacáveis",
+      categoria: "Time dos Sonhos",
+      voceJaUsou: false, criticidade: "MEDIA",
+      recomendacao: "12 cromos exclusivos não saem em pacote nenhum."
+    },
+    paniniSiteOficial: {
+      vendaIndividualFigurinha: true, inicioVenda: "2026-07-01",
+      criticidade: "BAIXA",
+      recomendacao: "Reservar para Iraque e últimas especiais."
+    }
+  }
+};
+
+/* ============================================================
+ * HELPERS — Utilitários para cálculos derivados.
+ * ============================================================ */
+const HELPERS = {
+  cromosEsperadosPorPacotes: (pacotes, total = 980) => {
+    const n = pacotes * 7;
+    return Math.round(total * (1 - Math.exp(-n / total)));
+  },
+  pacotesParaMarco: (alvo, atual = 457, total = 980) => {
+    if (alvo >= total) return Infinity;
+    const cromos = -total * Math.log((total - alvo) / total) -
+                   (-total * Math.log((total - atual) / total));
+    return Math.ceil(cromos / 7);
+  },
+  percentSelecao: (selecao) => (selecao.coladas.length / 20),
+  totalColadoCalculado: (album) =>
+    album.selecoes.reduce((acc, s) => acc + s.coladas.length, 0) +
+    (album.especiais?.fwcTimes?.coladas?.length || 0),
+  filtros: {
+    quaseCompletas: (sel) => sel.coladas.length >= 15,
+    iniciantes: (sel) => sel.coladas.length < 5 && sel.coladas.length > 0,
+    naoIniciadas: (sel) => sel.coladas.length === 0
+  }
+};
+
+/* ============================================================
+ * MAPEAMENTO FIFA → ISO 3166-1 (para flagcdn.com)
+ * ============================================================ */
+const FLAG_ISO = {
+  GER: 'de', ALG: 'dz', ARG: 'ar', KSA: 'sa', AUS: 'au',
+  AUT: 'at', BEL: 'be', BIH: 'ba', BRA: 'br', CPV: 'cv',
+  CAN: 'ca', COL: 'co', COD: 'cd', KOR: 'kr', CIV: 'ci',
+  CRO: 'hr', CUW: 'cw', CZE: 'cz', EGY: 'eg', ECU: 'ec',
+  SCO: 'gb-sct', ESP: 'es', FRA: 'fr', GHA: 'gh', HAI: 'ht',
+  NED: 'nl', ENG: 'gb-eng', IRN: 'ir', IRQ: 'iq', JPN: 'jp',
+  JOR: 'jo', MAR: 'ma', MEX: 'mx', NOR: 'no', NZL: 'nz',
+  PAN: 'pa', PAR: 'py', POR: 'pt', QAT: 'qa', SEN: 'sn',
+  SWE: 'se', SUI: 'ch', TUN: 'tn', TUR: 'tr', URU: 'uy',
+  USA: 'us', UZB: 'uz', RSA: 'za'
+};
+
+function flagUrl(codigo, w = 80) {
+  const iso = FLAG_ISO[codigo];
+  if (!iso) return '';
+  return `https://flagcdn.com/w${w}/${iso}.png`;
+}
+
+/* ============================================================
+ * STATS DERIVADAS
+ * ============================================================ */
+const TOTAL_PER_TEAM = 20;
+
+function computeTeamStats(team) {
+  const valid = new Set(team.coladas.filter(n => Number.isInteger(n) && n >= 1 && n <= TOTAL_PER_TEAM));
+  const colado = valid.size;
+  const pct = (colado / TOTAL_PER_TEAM) * 100;
+  return {
+    colado,
+    total: TOTAL_PER_TEAM,
+    pct,
+    isEmpty: colado === 0,
+    isComplete: colado === TOTAL_PER_TEAM,
+    almostComplete: pct >= 75,
+    starter: pct > 0 && pct < 25
+  };
+}
+
+function computeAlbumStats() {
+  const teams = ALBUM.selecoes;
+  let totalColadoTeams = 0, teamsStarted = 0, teamsComplete = 0;
+  for (const t of teams) {
+    const c = new Set(t.coladas.filter(n => n >= 1 && n <= TOTAL_PER_TEAM)).size;
+    totalColadoTeams += c;
+    if (c > 0) teamsStarted++;
+    if (c === TOTAL_PER_TEAM) teamsComplete++;
+  }
+  const fwcColado = new Set(ALBUM.especiais.fwcTimes.coladas).size;
+  // FWC 00 é a capa — já incluída em fwcTimes.coladas, não soma separado.
+  const totalColadoFull = totalColadoTeams + fwcColado;
+  return {
+    totalColadoTeams,
+    totalColadoFull,
+    totalAlbum: ALBUM.meta.totalCromos,
+    pct: (totalColadoFull / ALBUM.meta.totalCromos) * 100,
+    teamsStarted, teamsComplete, teamsTotal: teams.length,
+    fwcColado, fwcTotal: ALBUM.especiais.fwcTimes.total
+  };
+}
+
+function statusFromStats(stats) {
+  if (stats.isEmpty) return 'empty';
+  if (stats.pct >= 75) return 'high';
+  if (stats.pct >= 50) return 'mid';
+  return 'low';
+}
+
+/** Estatísticas de pacotes (eficiência, gasto, custo por colada).
+ *  Só faz sentido se ALBUM.meta.pacotesAbertos estiver definido. */
+function computePackStats() {
+  const albumStats = computeAlbumStats();
+  const pacotes = ALBUM.meta.pacotesAbertos || 0;
+  const cromosPorPacote = ALBUM.meta.cromosPorPacote;
+  const precoPacote = ALBUM.meta.precoPacote;
+  const cromosComprados = pacotes * cromosPorPacote;
+  const novas = albumStats.totalColadoFull;
+  const repetidas = Math.max(0, cromosComprados - novas);
+  const eficiencia = cromosComprados > 0 ? (novas / cromosComprados) * 100 : 0;
+  const gasto = pacotes * precoPacote;
+  const custoPorColada = novas > 0 ? gasto / novas : 0;
+  return { pacotes, cromosComprados, novas, repetidas, eficiencia, gasto, custoPorColada };
+}
+
+/* ============================================================
+ * RENDER
+ * ============================================================ */
+const FILTER_FNS = {
+  all:     () => true,
+  almost:  s => s.pct >= 75 && !s.isEmpty,
+  starter: s => s.pct < 25 && !s.isEmpty,
+  empty:   s => s.isEmpty
+};
+
+const SORT_FNS = {
+  album: (a, b) => a.idx - b.idx,                  // preserva a ordem do ALBUM.selecoes (= ordem do álbum físico)
+  alpha: (a, b) => a.team.nome.localeCompare(b.team.nome, 'pt-BR'),
+  desc:  (a, b) => b.stats.colado - a.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR'),
+  asc:   (a, b) => a.stats.colado - b.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR')
+};
+
+const state = { search: '', filter: 'all', sort: 'album' };
+
+function normalize(str) {
+  return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function renderHeader() {
+  const m = ALBUM.meta;
+  document.getElementById('subtitle').textContent =
+    `Atualizado em ${m.ultimaAtualizacao} · ${m.cromosPorPacote} cromos por pacote (R$ ${m.precoPacote},00) · 48 seleções, 1 a 20 cada`;
+}
+
+/** Barra de progressão gamificada (estilo XP) com níveis e marco seguinte. */
+function renderProgressHero() {
+  const s = computeAlbumStats();
+  const N = s.teamsTotal;
+  const pct = s.pct;
+  const pctClamp = Math.min(pct, 100);
+  // Níveis: thresholds e nomes
+  let level, levelKlass, nextMs;
+  if (pct === 0)        { level = 'NÃO INICIADO';   levelKlass = 'lvl-empty'; nextMs = 1; }
+  else if (pct < 25)    { level = 'INICIANTE';      levelKlass = 'lvl-low';   nextMs = 25; }
+  else if (pct < 50)    { level = 'EM PROGRESSO';   levelKlass = 'lvl-mid';   nextMs = 50; }
+  else if (pct < 75)    { level = 'AVANÇADO';       levelKlass = 'lvl-high';  nextMs = 75; }
+  else if (pct < 100)   { level = 'QUASE LÁ!';      levelKlass = 'lvl-near';  nextMs = 100; }
+  else                  { level = 'CAMPEÃO';        levelKlass = 'lvl-done';  nextMs = null; }
+
+  const toGo = nextMs ? (nextMs - pct).toFixed(1).replace('.', ',') : '0';
+  const nextText = nextMs
+    ? `<span class="ph-level-next-label">Próximo marco em</span> <strong>${toGo}%</strong> <span class="ph-level-next-tag">para ${nextMs}%</span>`
+    : '<strong>Álbum 100% completo!</strong>';
+  const milestones = [0, 25, 50, 75, 100];
+
+  document.getElementById('progressHero').innerHTML = `
+    <div class="ph-header">
+      <div class="ph-title">Progresso do álbum</div>
+      <div class="ph-stats tabular">
+        <span class="ph-stat"><strong>${s.totalColadoFull}</strong>/${s.totalAlbum} cromos</span>
+        <span class="ph-sep">·</span>
+        <span class="ph-stat"><strong>${s.teamsStarted}</strong>/${N} iniciadas</span>
+        <span class="ph-sep">·</span>
+        <span class="ph-stat"><strong>${s.teamsComplete}</strong>/${N} completas</span>
+      </div>
+    </div>
+    <div class="ph-bar-wrap">
+      <div class="ph-bar">
+        <div class="ph-bar-fill" style="width: ${pctClamp}%">
+          <div class="ph-bar-glow"></div>
+        </div>
+        ${milestones.slice(1, -1).map(m => `<div class="ph-bar-tick" style="left: ${m}%"></div>`).join('')}
+        <div class="ph-bar-marker" style="left: ${pctClamp}%">
+          <div class="ph-bar-marker-pct tabular">${pct.toFixed(1).replace('.', ',')}%</div>
+        </div>
+      </div>
+      <div class="ph-milestones">
+        ${milestones.map(m => `<span class="ph-ms" style="left: ${m}%">${m}%</span>`).join('')}
+      </div>
+    </div>
+    <div class="ph-level">
+      <span class="ph-level-tag ${levelKlass}">Nível: ${level}</span>
+      <span class="ph-level-next">${nextText}</span>
+    </div>
+  `;
+}
+
+function renderFlagNav() {
+  const teams = [...ALBUM.selecoes].sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+  const html = teams.map(t => {
+    const s = computeTeamStats(t);
+    const status = statusFromStats(s);
+    const url = flagUrl(t.codigo, 160);
+    const fallback = `<div class="flag-chip-fallback">${t.bandeira}</div>`;
+    return `
+      <button class="flag-chip" data-status="${status}" data-codigo="${t.codigo}"
+              title="${escapeHtml(t.nome)} — ${s.colado}/${s.total} (${s.pct.toFixed(0)}%)"
+              aria-label="Ir para ${escapeHtml(t.nome)}">
+        <div class="flag-chip-img-wrap">
+          ${url ? `<img class="flag-chip-img" src="${url}" alt="" loading="lazy" onerror="this.outerHTML='${fallback.replace(/'/g,'&#39;')}'">` : fallback}
+        </div>
+        <div class="flag-chip-info">
+          <span class="flag-chip-code">${t.codigo}</span>
+          <span class="flag-chip-pct">${s.pct.toFixed(0)}%</span>
+        </div>
+      </button>
+    `;
+  }).join('');
+  document.getElementById('flagNav').innerHTML = html;
+}
+
+function renderKPIs() {
+  const s = computeAlbumStats();
+  const sp = countSpecialNumbers();
+  const N = s.teamsTotal;
+  const fwcPct   = (s.fwcColado / s.fwcTotal) * 100;
+  const logosPct = (sp.logos / N) * 100;
+  const fotosPct = (sp.fotos / N) * 100;
+
+  document.getElementById('kpis').innerHTML = `
+    <div class="kpi">
+      <div class="kpi-label">Total colado</div>
+      <div class="kpi-value tabular">${s.totalColadoFull}<span class="small"> / ${s.totalAlbum}</span></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:${s.pct}%"></div></div>
+      <div class="kpi-sub tabular">${s.pct.toFixed(1)}% completo</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">% Completude</div>
+      <div class="kpi-value tabular">${s.pct.toFixed(1).replace('.', ',')}<span class="small">%</span></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:${s.pct}%"></div></div>
+      <div class="kpi-sub tabular">do álbum total</div>
+    </div>
+    <div class="kpi kpi-gold">
+      <div class="kpi-label">Brilhantes (FWC)</div>
+      <div class="kpi-value tabular">${s.fwcColado}<span class="small"> / ${s.fwcTotal}</span></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill kpi-bar-gold" style="width:${fwcPct}%"></div></div>
+      <div class="kpi-sub tabular">${fwcPct.toFixed(0)}% das metalizadas</div>
+    </div>
+    <div class="kpi kpi-gold">
+      <div class="kpi-label">Logos (#1)</div>
+      <div class="kpi-value tabular">${sp.logos}<span class="small"> / ${N}</span></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill kpi-bar-gold" style="width:${logosPct}%"></div></div>
+      <div class="kpi-sub tabular">${logosPct.toFixed(0)}% dos escudos</div>
+    </div>
+    <div class="kpi kpi-violet">
+      <div class="kpi-label">Fotos do time (#13)</div>
+      <div class="kpi-value tabular">${sp.fotos}<span class="small"> / ${N}</span></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill kpi-bar-violet" style="width:${fotosPct}%"></div></div>
+      <div class="kpi-sub tabular">${fotosPct.toFixed(0)}% das fotos</div>
+    </div>
+  `;
+}
+
+function renderPackStats() {
+  const container = document.getElementById('packStats');
+  if (!container) return;
+  if (!ALBUM.meta.pacotesAbertos) {
+    container.style.display = 'none';
+    return;
+  }
+  const p = computePackStats();
+  const efClass = p.eficiencia >= 75 ? ' highlight' : '';
+  const formatBR = n => n.toFixed(2).replace('.', ',');
+  container.innerHTML = `
+    <div class="pack-stat">
+      <div class="pack-stat-label">Pacotes abertos</div>
+      <div class="pack-stat-value tabular">${p.pacotes}<span class="small"> · ${p.cromosComprados} cromos</span></div>
+    </div>
+    <div class="pack-stat${efClass}">
+      <div class="pack-stat-label">Eficiência (% novas)</div>
+      <div class="pack-stat-value tabular">${p.eficiencia.toFixed(1)}<span class="small">%</span></div>
+      <div class="pack-stat-bar"><div style="width:${Math.min(p.eficiencia, 100)}%"></div></div>
+    </div>
+    <div class="pack-stat">
+      <div class="pack-stat-label">Repetidas</div>
+      <div class="pack-stat-value tabular">${p.repetidas}<span class="small"> cromos</span></div>
+    </div>
+    <div class="pack-stat">
+      <div class="pack-stat-label">Gasto total</div>
+      <div class="pack-stat-value tabular">R$ ${p.gasto}<span class="small">,00</span></div>
+    </div>
+    <div class="pack-stat">
+      <div class="pack-stat-label">Custo por colada</div>
+      <div class="pack-stat-value tabular">R$ ${formatBR(p.custoPorColada)}</div>
+    </div>
+  `;
+}
+
+function renderSpecial() {
+  const s = computeAlbumStats();
+  const fwc = ALBUM.especiais.fwcTimes;
+  const fwcSet = new Set(fwc.coladas);
+  const pad = n => String(n).padStart(2, '0');
+  // FWC vai de 00 (capa) até 19 — 20 cromos. Geramos índices 0..total-1.
+  const fwcCells = Array.from({length: fwc.total}, (_, i) => i)
+    .map(n => {
+      const isCapa = n === 0;
+      const label = isCapa ? 'Capa do álbum (FWC 00)' : `FWC ${pad(n)}`;
+      return `<div class="fwc-cell ${fwcSet.has(n) ? 'filled' : ''}${isCapa ? ' fwc-capa' : ''}" title="${label}${fwcSet.has(n) ? ' — você tem' : ' — faltando'}">${pad(n)}</div>`;
+    })
+    .join('');
+
+  document.getElementById('special').innerHTML = `
+    <div class="special-block">
+      <div class="special-label">Especiais (FWC)</div>
+      <div class="special-value tabular">${s.fwcColado}<span class="small"> / ${s.fwcTotal}</span></div>
+    </div>
+    <div class="fwc-grid">${fwcCells}</div>
+    <div class="special-block">
+      <div class="special-label">Numeração</div>
+      <div class="special-value tabular" style="font-size:14px">00 → 19</div>
+    </div>
+  `;
+}
+
+function renderTeamCard(team) {
+  const stats = computeTeamStats(team);
+  const filledSet = new Set(team.coladas);
+  const slots = Array.from({length: TOTAL_PER_TEAM}, (_, i) => i + 1);
+
+  let cls = 'team-card';
+  if (stats.isEmpty) cls += ' empty';
+  else if (stats.isComplete) cls += ' complete';
+
+  const slotsHtml = slots.map(n => {
+    const filled = filledSet.has(n);
+    const special = n === 1 ? ' data-special="logo"' : n === 13 ? ' data-special="photo"' : '';
+    const specialLabel = n === 1 ? ' (logo da seleção)' : n === 13 ? ' (foto do time)' : '';
+    return `<div class="slot${filled ? ' filled' : ''}"${special} title="${filled ? 'Tem' : 'Faltando'} #${n}${specialLabel}"><span class="slot-num">${n}</span></div>`;
+  }).join('');
+
+  const flagSrc = flagUrl(team.codigo, 240);
+  const flagFallback = `<div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:36px;background:var(--slot-empty-bg)">${team.bandeira}</div>`;
+  const flagImg = flagSrc
+    ? `<img src="${flagSrc}" alt="" loading="lazy" onerror="this.outerHTML='${flagFallback.replace(/'/g,'&#39;').replace(/"/g,'&quot;')}'">`
+    : flagFallback;
+
+  const pctTop = stats.isEmpty
+    ? `<span class="team-status-pct" style="background:rgba(220,38,38,0.85)">0%</span>`
+    : `<span class="team-status-pct">${stats.pct.toFixed(0)}%</span>`;
+
+  const tag = stats.isEmpty ? '<span class="tag-empty">Não iniciada</span>' : '';
+
+  return `
+    <article class="${cls}" data-codigo="${team.codigo}" data-pct="${stats.pct}" tabindex="0" role="button" aria-label="Abrir detalhes de ${escapeHtml(team.nome)}">
+      <div class="team-flag-header">
+        ${flagImg}
+        <span class="team-code-badge team-flag-emoji" aria-label="${team.codigo}">${team.bandeira}</span>
+        ${pctTop}
+      </div>
+      <div class="team-body">
+        <div class="team-meta">
+          <span class="team-name" title="${escapeHtml(team.nome)}">${escapeHtml(team.nome)}</span>
+          <span class="team-progress tabular">
+            <span class="pct">${stats.colado}</span>/<span>${stats.total}</span>
+          </span>
+        </div>
+        <div class="team-bar"><div class="team-bar-fill" style="width:${stats.pct}%"></div></div>
+        ${tag ? `<div>${tag}</div>` : ''}
+        <div class="slots">${slotsHtml}</div>
+      </div>
+    </article>
+  `;
+}
+
+function renderTeams() {
+  const grid = document.getElementById('teams');
+  const filterFn = FILTER_FNS[state.filter];
+  const sortFn  = SORT_FNS[state.sort];
+  const search  = normalize(state.search.trim());
+
+  const items = ALBUM.selecoes
+    .map((team, idx) => ({ team, idx, stats: computeTeamStats(team) }))
+    .filter(({ team, stats }) => {
+      if (search) {
+        const hay = normalize(team.nome) + ' ' + team.codigo.toLowerCase();
+        if (!hay.includes(search)) return false;
+      }
+      return filterFn(stats);
+    })
+    .sort(sortFn);
+
+  document.getElementById('resultsCount').textContent =
+    `${items.length} de ${ALBUM.selecoes.length} seleções`;
+
+  if (items.length === 0) {
+    grid.innerHTML = '<div class="empty-state">Nenhuma seleção encontrada com os filtros atuais.</div>';
+    return;
+  }
+
+  // Quando estamos em "ordem do álbum" e sem busca/filtro, agrupamos por GRUPO
+  // com um header (Grupo A · Grupo B · ...) entre cada bloco.
+  const groupsView = state.sort === 'album' && !search && state.filter === 'all';
+  if (groupsView) {
+    const groups = {};
+    items.forEach(it => {
+      const g = it.team.grupo || '?';
+      (groups[g] = groups[g] || []).push(it);
+    });
+    let html = '';
+    let cardIdx = 0;
+    for (const g of Object.keys(groups).sort()) {
+      const block = groups[g];
+      const totalCromos = block.length * TOTAL_PER_TEAM;
+      const totalColados = block.reduce((acc, it) => acc + it.stats.colado, 0);
+      const pct = totalCromos > 0 ? (totalColados / totalCromos) * 100 : 0;
+      html += `
+        <div class="group-header">
+          <span class="group-header-tag">Grupo ${g}</span>
+          <div class="group-header-bar"><div style="width:${pct}%"></div></div>
+          <span class="group-header-info tabular">${totalColados}<span class="small">/${totalCromos}</span> · ${pct.toFixed(0)}%</span>
+        </div>
+      `;
+      html += block.map(({ team }) => {
+        const card = renderTeamCard(team);
+        const delayed = card.replace('<article ', `<article style="animation-delay:${Math.min(cardIdx, 24) * 18}ms" `);
+        cardIdx++;
+        return delayed;
+      }).join('');
+    }
+    grid.innerHTML = html;
+    return;
+  }
+
+  grid.innerHTML = items.map(({ team }, i) => {
+    const html = renderTeamCard(team);
+    return html.replace('<article ', `<article style="animation-delay:${Math.min(i, 24) * 18}ms" `);
+  }).join('');
+}
+
+/* ============================================================
+ * MODAL — detalhe da seleção (estilo página de álbum)
+ * ============================================================ */
+/** SVG de escudo (logo da seleção, cromo #1) e de grupo (foto do time, cromo #13). */
+const SVG_LOGO = `<svg class="sticker-special-icon" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M12 2L20 5.5V12C20 17 16.5 21 12 22C7.5 21 4 17 4 12V5.5L12 2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M9 12L11 14L15 10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+const SVG_PHOTO = `<svg class="sticker-special-icon" viewBox="0 0 24 24" aria-hidden="true">
+  <circle cx="6" cy="9" r="2.1" fill="currentColor"/>
+  <circle cx="12" cy="7" r="2.5" fill="currentColor"/>
+  <circle cx="18" cy="9" r="2.1" fill="currentColor"/>
+  <path d="M2 18Q2 13 6 13Q10 13 10 18Z" fill="currentColor"/>
+  <path d="M6.5 18Q6.5 11.5 12 11.5Q17.5 11.5 17.5 18Z" fill="currentColor"/>
+  <path d="M14 18Q14 13 18 13Q22 13 22 18Z" fill="currentColor"/>
+</svg>`;
+
+function renderSticker(team, n, filled) {
+  const flagSrc = flagUrl(team.codigo, 320);
+  const isLogo = n === 1;
+  const isPhoto = n === 13;
+  const specialClass = isLogo ? ' sticker-logo' : isPhoto ? ' sticker-photo' : '';
+  const specialLabel = isLogo ? 'LOGO' : isPhoto ? 'FOTO DO TIME' : '';
+  const tooltipExtra = isLogo ? ' — Logo da seleção' : isPhoto ? ' — Foto do time' : '';
+  const specialBadge = (isLogo || isPhoto)
+    ? `<div class="sticker-special-badge">${isLogo ? SVG_LOGO : SVG_PHOTO}</div>`
+    : '';
+
+  if (filled) {
+    return `
+      <div class="sticker filled${specialClass}" title="Cromo #${n}${tooltipExtra} — você tem">
+        <img class="sticker-bg" src="${flagSrc}" alt="" loading="lazy">
+        <div class="sticker-overlay"></div>
+        <div class="sticker-shimmer"></div>
+        ${specialBadge}
+        <div class="sticker-label-top">${specialLabel ? `★ ${specialLabel}` : `${team.codigo} · WC2026`}</div>
+        <div class="sticker-number">${n}</div>
+        <div class="sticker-label">${escapeHtml(team.nome)}</div>
+        <div class="sticker-status" aria-label="Você tem">✓</div>
+      </div>
+    `;
+  }
+  return `
+    <div class="sticker empty${specialClass}" title="Cromo #${n}${tooltipExtra} — faltando">
+      ${specialBadge}
+      <div class="sticker-label-top">${specialLabel ? `#${n} · ${specialLabel}` : `#${n} · ${team.codigo}`}</div>
+      <div class="sticker-q" aria-hidden="true">?</div>
+      <div class="sticker-label">${escapeHtml(team.nome)}</div>
+      <div class="sticker-status" aria-label="Faltando">?</div>
+    </div>
+  `;
+}
+
+function renderModalContent(team) {
+  const stats = computeTeamStats(team);
+  const filledSet = new Set(team.coladas);
+  const slots = Array.from({length: TOTAL_PER_TEAM}, (_, i) => i + 1);
+
+  const missing  = slots.filter(n => !filledSet.has(n));
+  const obtained = slots.filter(n => filledSet.has(n));
+
+  const flagSrc = flagUrl(team.codigo, 640);
+
+  return `
+    <button class="modal-close" id="modalCloseBtn" aria-label="Fechar">×</button>
+    <div class="modal-flag">
+      ${flagSrc ? `<img src="${flagSrc}" alt="" loading="lazy">` : ''}
+      <div class="modal-flag-text">
+        <div class="code">${team.codigo} · Copa do Mundo 2026</div>
+        <h2>${escapeHtml(team.nome)}</h2>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-stats">
+        <div class="modal-stat-block">
+          <div class="modal-stat-num tabular">${stats.colado}<span class="small">/${stats.total}</span></div>
+          <div class="modal-stat-label">Coladas</div>
+        </div>
+        <div class="modal-stat-block">
+          <div class="modal-stat-num tabular">${stats.pct.toFixed(0)}<span class="small">%</span></div>
+          <div class="modal-stat-label">Progresso</div>
+        </div>
+        <div class="modal-stat-block">
+          <div class="modal-stat-num tabular">${missing.length}</div>
+          <div class="modal-stat-label">Faltando</div>
+        </div>
+      </div>
+      <div class="modal-bar"><div class="modal-bar-fill" style="width:${stats.pct}%"></div></div>
+
+      ${missing.length > 0 ? `
+        <div class="modal-section">
+          <div class="modal-section-title">
+            Ainda faltando <span class="count">${missing.length}</span>
+          </div>
+          <div class="modal-chips">
+            ${missing.map(n => `<span class="modal-chip">#${n}</span>`).join('')}
+          </div>
+        </div>
+      ` : `
+        <div class="modal-section">
+          <div class="modal-section-title">
+            Coleção desta seleção completa
+          </div>
+        </div>
+      `}
+
+      ${obtained.length > 0 ? `
+        <div class="modal-section">
+          <div class="modal-section-title">
+            Já coladas <span class="count">${obtained.length}</span>
+          </div>
+          <div class="modal-chips">
+            ${obtained.map(n => `<span class="modal-chip" style="background:linear-gradient(135deg,var(--slot-filled-bg) 0%,var(--slot-filled-bg-2) 100%);color:white;border-color:transparent">#${n}</span>`).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          Página do álbum <span class="count">${stats.colado}/${stats.total}</span>
+        </div>
+        <div class="sticker-grid">
+          ${slots.map(n => renderSticker(team, n, filledSet.has(n))).join('')}
+        </div>
+      </div>
+
+      <div class="modal-note">
+        Os cromos são representações estilizadas — o álbum oficial Panini usa fotos de jogadores específicas que não estão disponíveis publicamente.
+      </div>
+    </div>
+  `;
+}
+
+function openModal(codigo) {
+  const team = ALBUM.selecoes.find(t => t.codigo === codigo);
+  if (!team) return;
+  document.getElementById('modalContent').innerHTML = renderModalContent(team);
+  const modal = document.getElementById('modal');
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+}
+
+function closeModal() {
+  document.getElementById('modal').hidden = true;
+  document.body.style.overflow = '';
+}
+
+function scrollToTeam(codigo) {
+  const el = document.querySelector(`.team-card[data-codigo="${codigo}"]`);
+  if (!el) {
+    state.search = '';
+    state.filter = 'all';
+    document.getElementById('search').value = '';
+    document.querySelectorAll('#statusFilter .filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+    renderTeams();
+    setTimeout(() => scrollToTeam(codigo), 50);
+    return;
+  }
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  el.classList.remove('highlight');
+  void el.offsetWidth;
+  el.classList.add('highlight');
+  setTimeout(() => el.classList.remove('highlight'), 1600);
+}
+
+/* ============================================================
+ * FORMATTERS — helpers de localização BR
+ * ============================================================ */
+const fmt = {
+  brl:  (n) => 'R$ ' + (Number(n) || 0).toLocaleString('pt-BR', { maximumFractionDigits: 0 }),
+  brl2: (n) => 'R$ ' + (Number(n) || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+  pct:  (n, dec = 1) => (Number(n) * 100).toFixed(dec).replace('.', ',') + '%',
+  num:  (n) => (Number(n) || 0).toLocaleString('pt-BR'),
+  date: (iso) => {
+    if (!iso) return '';
+    const [y, m, d] = iso.split('-');
+    return `${d}/${m}/${y}`;
+  }
+};
+
+/* ============================================================
+ * ABA 2 — ESTATÍSTICAS
+ * ============================================================ */
+
+/** Bloco "Você": cards de pacotes, gasto, custo/colada, velocidade, eficiência. */
+function renderStatsVoce() {
+  const p = STATS.pessoal;
+  const cards = [
+    { label: 'Pacotes comprados',  value: fmt.num(p.pacotesComprados),     sub: fmt.num(p.cromosComprados) + ' cromos' },
+    { label: 'Investimento',       value: fmt.brl(p.investimentoReais),    sub: fmt.brl2(p.investimentoReais / p.pacotesComprados) + ' por pacote' },
+    { label: 'Custo por colada',   value: fmt.brl2(p.custoPorColada),      sub: 'R$ ' + p.custoPorColada.toFixed(2).replace('.', ',') + '/cromo único' },
+    { label: 'Velocidade média',   value: fmt.num(p.velocidadeMediaDiaria) + ' /dia', sub: p.diasColecionando + ' dias colecionando' },
+    { label: 'Eficiência total',   value: fmt.pct(p.eficienciaTotal, 1),   sub: 'pacote: ' + fmt.pct(p.eficienciaPacote, 1), highlight: true },
+    { label: 'Progresso',          value: fmt.pct(p.progressoPercentual, 2), sub: p.totalColado + ' / 980' }
+  ];
+  document.getElementById('statsVoce').innerHTML = cards.map(c => `
+    <div class="stats-card${c.highlight ? ' stats-card-gold' : ''}">
+      <div class="stats-card-label">${c.label}</div>
+      <div class="stats-card-value tabular">${c.value}</div>
+      <div class="stats-card-sub tabular">${c.sub}</div>
+    </div>
+  `).join('');
+}
+
+/** Bloco "Você vs Mercado": barras comparando seu projetado vs mediano sem-troca vs típico com-troca. */
+function renderStatsVsMercado() {
+  const m = STATS.comparacaoMercado;
+  const max = Math.max(m.custoMedianoSemTroca, m.seuCustoProjetadoComTroca, m.custoTipicoComTroca, m.custoMinimoTeorico);
+  const bar = (label, valor, klass, badge = '') => {
+    const w = (valor / max) * 100;
+    return `
+      <div class="vs-row">
+        <div class="vs-label">${label} ${badge ? `<span class="vs-badge ${klass}">${badge}</span>` : ''}</div>
+        <div class="vs-bar-track">
+          <div class="vs-bar-fill ${klass}" style="width:${w}%"></div>
+        </div>
+        <div class="vs-value tabular">${fmt.brl(valor)}</div>
+      </div>
+    `;
+  };
+  document.getElementById('statsVsMercado').innerHTML = `
+    <div class="analysis-title"><span>Custo total projetado para fechar o álbum</span></div>
+    ${bar('Sua projeção (com troca)',     m.seuCustoProjetadoComTroca, 'good',    'mais econômico')}
+    ${bar('Típico de mercado (com troca)', m.custoTipicoComTroca,       'neutral')}
+    ${bar('Sua projeção (sem troca)',     m.seuCustoProjetadoSemTroca, 'warn')}
+    ${bar('Mediano de mercado (sem troca)', m.custoMedianoSemTroca,    'bad',     'evitar')}
+    ${bar('Mínimo teórico (impossível)',  m.custoMinimoTeorico,        'min',     '980 cromos × R$1')}
+    <div class="analysis-note">
+      <strong>Economia já realizada</strong> vs mediano de mercado: <strong class="tabular">${fmt.brl(m.economiaJaRealizada_vs_mediano)}</strong>.
+      Fonte: ${m.fonte}.
+    </div>
+  `;
+}
+
+/** Bloco "Raridades": metalizadas, extra stickers, estreantes mais disputadas. */
+function renderStatsRaridades() {
+  const r = STATS.raridades;
+  const m = r.metalizadas, e = r.extraStickers, d = r.selecoesMaisDisputadas;
+  const metalizadasPct = m.jaColadas / m.total;
+  const codigos = { Iraque: 'IRQ', 'Cabo Verde': 'CPV', 'Curaçao': 'CUW', Uzbequistão: 'UZB' };
+
+  document.getElementById('statsRaridades').innerHTML = `
+    <div class="analysis-card">
+      <div class="analysis-title">
+        <span>Metalizadas</span>
+        <span class="tab-badge tab-badge-accent">${fmt.pct(m.taxaAparicao, 1)} por envelope</span>
+      </div>
+      <div class="rarity-big tabular">${m.jaColadas}<span class="small"> / ${m.total}</span></div>
+      <div class="rarity-bar"><div class="rarity-bar-fill" style="width:${metalizadasPct * 100}%"></div></div>
+      <div class="analysis-note">
+        Esperado em ${STATS.pessoal.pacotesComprados} pacotes: ~${m.esperadoEm80Pacotes.toFixed(1)}.
+        Composição: ${m.composicao.escudosSelecoes} escudos · ${m.composicao.lendas} lendas · ${m.composicao.mascotes} mascotes · ${m.composicao.trofeu} troféu · ${m.composicao.logosFifaCopa} logos FIFA.
+      </div>
+    </div>
+
+    <div class="analysis-card">
+      <div class="analysis-title">
+        <span>Extra Stickers (fora do álbum)</span>
+        <span class="tab-badge" style="background:var(--warning-bg);color:var(--warning)">~${fmt.pct(e.taxaAparicao, 1)} taxa</span>
+      </div>
+      <div class="rarity-big tabular">0<span class="small"> / ${e.total} esperado</span></div>
+      <div class="analysis-note">
+        Esperado em ${STATS.pessoal.pacotesComprados} pacotes: ~${e.esperadoEm80Pacotes.toFixed(1)} (taxa baixíssima).
+        Provavelmente saiu zero — é o resultado mais provável estatisticamente.
+        Estrelas: ${e.jogadores.slice(0, 5).join(', ')}…
+      </div>
+    </div>
+
+    <div class="analysis-card analysis-rarity-table">
+      <div class="analysis-title"><span>Estreantes mais disputadas</span></div>
+      <table class="rarity-table tabular">
+        <thead>
+          <tr><th>Seleção</th><th>Status</th><th>%</th></tr>
+        </thead>
+        <tbody>
+          ${d.lista.map(nome => {
+            const cod = codigos[nome] || '';
+            const s = d.seuStatus[cod];
+            if (!s) return '';
+            const isEmpty = s.coladas === 0;
+            return `
+              <tr class="${isEmpty ? 'row-warn' : ''}" data-codigo="${cod}">
+                <td>${nome}</td>
+                <td>${s.coladas}/${s.total}</td>
+                <td class="${isEmpty ? 'pct-warn' : ''}">${fmt.pct(s.percent, 0)}</td>
+              </tr>
+            `;
+          }).join('')}
+        </tbody>
+      </table>
+      <div class="analysis-note">${d.motivo}.</div>
+    </div>
+  `;
+}
+
+/** Bloco "Canais Exclusivos": Mc, Coca, Panini com criticidade. */
+function renderStatsCanais() {
+  const c = STATS.canaisExclusivos;
+  const order = ['mcDonalds', 'cocaCola', 'paniniSiteOficial'];
+  const meta = {
+    mcDonalds:        { titulo: "McDonald's",        cor: '#dc2626', sub: c.mcDonalds.destaque },
+    cocaCola:         { titulo: 'Coca-Cola',         cor: '#0ea5e9', sub: c.cocaCola.ondeEncontrar + ' · ' + c.cocaCola.categoria },
+    paniniSiteOficial:{ titulo: 'Panini (site)',     cor: '#10b981', sub: 'Venda individual a partir de ' + fmt.date(c.paniniSiteOficial.inicioVenda) }
+  };
+  document.getElementById('statsCanais').innerHTML = order.map(k => {
+    const x = c[k];
+    const m = meta[k];
+    const critClass = 'crit-' + x.criticidade.toLowerCase();
+    const exclusivas = x.figurinhasExclusivas ?? '—';
+    return `
+      <div class="channel-card ${critClass}">
+        <div class="channel-header">
+          <span class="channel-title">${m.titulo}</span>
+          <span class="channel-badge ${critClass}">${x.criticidade}</span>
+        </div>
+        ${x.figurinhasExclusivas ? `<div class="channel-stat tabular">${exclusivas}<span class="small"> exclusivas</span></div>` : ''}
+        <div class="channel-sub">${m.sub}</div>
+        <div class="analysis-note">${x.recomendacao}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderStats() {
+  renderStatsVoce();
+  renderStatsVsMercado();
+  renderStatsRaridades();
+  renderStatsCanais();
+}
+
+/* ============================================================
+ * RANKINGS + cromos especiais (logo #1 / foto do time #13)
+ * Usados nos KPIs e cards de ranking da página principal.
+ * ============================================================ */
+
+/** Conta quantas seleções têm o cromo #1 (logo) e #13 (foto do time) colados. */
+function countSpecialNumbers() {
+  let logos = 0, fotos = 0;
+  for (const t of ALBUM.selecoes) {
+    if (t.coladas.includes(1)) logos++;
+    if (t.coladas.includes(13)) fotos++;
+  }
+  return { logos, fotos };
+}
+
+/** Top 5 mais e menos completas, com tiebreak alfabético em pt-BR. */
+function getRankings() {
+  const items = ALBUM.selecoes.map(team => ({ team, stats: computeTeamStats(team) }));
+  const top5 = [...items]
+    .sort((a, b) => b.stats.colado - a.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR'))
+    .slice(0, 5);
+  const bottom5 = [...items]
+    .sort((a, b) => a.stats.colado - b.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR'))
+    .slice(0, 5);
+  return { top5, bottom5 };
+}
+
+/** Renderiza Top 5 melhores e Top 5 piores na página principal. */
+function renderRankings() {
+  const { top5, bottom5 } = getRankings();
+  const renderRow = (item, i) => {
+    const t = item.team;
+    const s = item.stats;
+    const flagSrc = flagUrl(t.codigo, 40);
+    return `
+      <div class="rank-row" data-codigo="${t.codigo}" tabindex="0" role="button" aria-label="Abrir ${escapeHtml(t.nome)}">
+        <span class="rank-pos">${i + 1}</span>
+        <img class="rank-flag" src="${flagSrc}" alt="" loading="lazy">
+        <span class="rank-name">${escapeHtml(t.nome)}</span>
+        <span class="rank-stat tabular">${s.colado}/${s.total} <span class="pct">${s.pct.toFixed(0)}%</span></span>
+      </div>
+    `;
+  };
+  document.getElementById('rankTop').innerHTML = top5.map(renderRow).join('');
+  document.getElementById('rankBottom').innerHTML = bottom5.map(renderRow).join('');
+}
+
+/* ============================================================
+ * SWITCH DE ABAS — gerencia qual view fica visível.
+ * Render lazy: só renderiza ao ativar a aba pela primeira vez,
+ * mas re-renderiza sempre que voltar (caso ALBUM tenha mudado).
+ * ============================================================ */
+function activateTab(tab) {
+  document.querySelectorAll('#tabs .tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === tab);
+  });
+  const map = {
+    album: 'viewCollection',
+    stats: 'viewStats'
+  };
+  Object.entries(map).forEach(([key, id]) => {
+    const el = document.getElementById(id);
+    if (el) el.hidden = key !== tab;
+  });
+  if (tab === 'stats') renderStats();
+}
+
+/* ============================================================
+ * EVENTOS
+ * ============================================================ */
+function setupListeners() {
+  document.getElementById('search').addEventListener('input', e => {
+    state.search = e.target.value;
+    renderTeams();
+  });
+
+  document.querySelectorAll('#statusFilter .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#statusFilter .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.filter = btn.dataset.filter;
+      renderTeams();
+    });
+  });
+
+  document.getElementById('sort').addEventListener('change', e => {
+    state.sort = e.target.value;
+    renderTeams();
+  });
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('album-theme', next);
+    updateThemeButton();
+  });
+
+  document.getElementById('flagNav').addEventListener('click', e => {
+    const chip = e.target.closest('.flag-chip');
+    if (!chip) return;
+    scrollToTeam(chip.dataset.codigo);
+  });
+
+  document.getElementById('teams').addEventListener('click', e => {
+    const card = e.target.closest('.team-card');
+    if (!card) return;
+    openModal(card.dataset.codigo);
+  });
+
+  document.getElementById('teams').addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const card = e.target.closest('.team-card');
+    if (!card) return;
+    e.preventDefault();
+    openModal(card.dataset.codigo);
+  });
+
+  document.getElementById('modal').addEventListener('click', e => {
+    if (e.target.id === 'modal') closeModal();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !document.getElementById('modal').hidden) closeModal();
+  });
+
+  // Tabs
+  document.getElementById('tabs').addEventListener('click', e => {
+    const btn = e.target.closest('.tab-btn');
+    if (!btn) return;
+    activateTab(btn.dataset.tab);
+  });
+
+  // Linhas da tabela de raridades (estreantes) abrem o modal da seleção
+  document.getElementById('viewStats').addEventListener('click', e => {
+    const row = e.target.closest('tr[data-codigo]');
+    if (!row) return;
+    openModal(row.dataset.codigo);
+  });
+
+  // Linhas dos rankings (top/bottom 5) na página principal também abrem o modal
+  document.getElementById('viewCollection').addEventListener('click', e => {
+    const row = e.target.closest('.rank-row');
+    if (!row) return;
+    openModal(row.dataset.codigo);
+  });
+  document.getElementById('viewCollection').addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const row = e.target.closest('.rank-row');
+    if (!row) return;
+    e.preventDefault();
+    openModal(row.dataset.codigo);
+  });
+}
+
+function updateThemeButton() {
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  document.getElementById('themeToggle').textContent = isDark ? 'Modo claro' : 'Modo escuro';
+}
+
+function loadTheme() {
+  const saved = localStorage.getItem('album-theme');
+  if (saved === 'dark' || saved === 'light') {
+    document.documentElement.dataset.theme = saved;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.dataset.theme = 'dark';
+  } else {
+    document.documentElement.dataset.theme = 'light';
+  }
+  updateThemeButton();
+}
+
+/* ============================================================
+ * BOOT
+ * ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  loadTheme();
+  renderHeader();
+  renderProgressHero();
+  renderFlagNav();
+  renderKPIs();
+  renderRankings();
+  renderSpecial();
+  setupListeners();
+  renderTeams();
+});
+</script>
+
+</body>
+</html>

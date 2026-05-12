@@ -1,0 +1,28 @@
+# Configuração do Netlify para o Álbum Copa 2026.
+# Como o site é 100% estático (single HTML), não há build step —
+# basta publicar a raiz do repositório.
+
+[build]
+  publish = "."
+
+# Headers de segurança e cache (ajuda em CDN/performance)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache do HTML: revalida sempre (queremos updates imediatos)
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# SPA fallback (qualquer rota cai no index.html — não usamos agora,
+# mas fica preparado pra quando tivermos rotas/hash navegação)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
