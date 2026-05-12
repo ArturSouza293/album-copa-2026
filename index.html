@@ -12,62 +12,67 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* ---------- Tokens ---------- */
+  /* ============================================================
+   * TOKENS — paleta inspirada em Claude Design:
+   *   bg/borders com leve tom warm (creme), sombras mais difusas,
+   *   tipografia mais respirada. Preserva os accents existentes
+   *   (verde p/ coladas, azul p/ destaque, dourado p/ FWC).
+   * ============================================================ */
   :root {
-    --bg: #eef2f7;
+    --bg: #f5f1eb;
     --bg-card: #ffffff;
     --bg-elevated: #ffffff;
-    --border: #e1e6ee;
-    --border-strong: #c5cdd9;
-    --text: #0f172a;
-    --text-muted: #5d6776;
-    --text-subtle: #98a1b0;
-    --slot-empty-bg: #eef1f5;
-    --slot-empty-border: #dde2ea;
-    --slot-empty-text: #b3bac5;
+    --border: #e8e2d8;
+    --border-strong: #cfc8b9;
+    --text: #1d1916;
+    --text-muted: #6b6358;
+    --text-subtle: #9b9285;
+    --slot-empty-bg: #f0ecdf;
+    --slot-empty-border: #e1d9c8;
+    --slot-empty-text: #b8ad9a;
     --slot-filled-bg: #059669;
     --slot-filled-bg-2: #10b981;
     --slot-filled-text: #ffffff;
     --accent: #2563eb;
     --accent-2: #3b82f6;
-    --warning: #dc2626;
-    --warning-bg: #fef3f3;
-    --warning-border: #f5cccc;
-    --gold: #ca8a04;
-    --tooltip-bg: #0f172a;
-    --tooltip-fg: #f8fafc;
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
-    --shadow: 0 2px 6px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15,23,42,0.04);
-    --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.10);
-    --shadow-xl: 0 25px 60px rgba(15, 23, 42, 0.25);
+    --warning: #c2410c;
+    --warning-bg: #fdf2ea;
+    --warning-border: #f0c9a8;
+    --gold: #b8852a;
+    --tooltip-bg: #1d1916;
+    --tooltip-fg: #f5f1eb;
+    --shadow-sm: 0 1px 2px rgba(29, 25, 22, 0.04);
+    --shadow: 0 4px 12px rgba(29, 25, 22, 0.06), 0 1px 3px rgba(29, 25, 22, 0.04);
+    --shadow-lg: 0 16px 40px rgba(29, 25, 22, 0.10), 0 4px 12px rgba(29, 25, 22, 0.05);
+    --shadow-xl: 0 28px 70px rgba(29, 25, 22, 0.22), 0 10px 25px rgba(29, 25, 22, 0.10);
   }
   [data-theme="dark"] {
-    --bg: #0a0f1c;
-    --bg-card: #131a2a;
-    --bg-elevated: #1a2336;
-    --border: #1f2a3d;
-    --border-strong: #2e3a52;
-    --text: #e8edf5;
-    --text-muted: #8a94a6;
-    --text-subtle: #5d6776;
-    --slot-empty-bg: #19233a;
-    --slot-empty-border: #243049;
-    --slot-empty-text: #475569;
+    --bg: #161310;
+    --bg-card: #221d18;
+    --bg-elevated: #2a241e;
+    --border: #322a23;
+    --border-strong: #4a4035;
+    --text: #f0e9df;
+    --text-muted: #9a9085;
+    --text-subtle: #6a6157;
+    --slot-empty-bg: #2a241e;
+    --slot-empty-border: #3a3127;
+    --slot-empty-text: #57503f;
     --slot-filled-bg: #10b981;
     --slot-filled-bg-2: #34d399;
     --slot-filled-text: #042519;
     --accent: #60a5fa;
     --accent-2: #93c5fd;
-    --warning: #f87171;
-    --warning-bg: #2a1414;
-    --warning-border: #5b2424;
+    --warning: #f97316;
+    --warning-bg: #2a1d12;
+    --warning-border: #5a3a1e;
     --gold: #fbbf24;
-    --tooltip-bg: #f8fafc;
-    --tooltip-fg: #0f172a;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 25px 80px rgba(0, 0, 0, 0.7);
+    --tooltip-bg: #f5f1eb;
+    --tooltip-fg: #1d1916;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 28px 80px rgba(0, 0, 0, 0.75);
   }
 
   html, body {
@@ -822,10 +827,16 @@
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 12px;
   }
+  /* Card de seleção — agora com a bandeira como BG semi-transparente,
+     sigla + nome do país visíveis em texto, sem o banner anterior. */
   .team-card {
-    background: var(--bg-card);
+    position: relative;
+    background-color: var(--bg-card);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
@@ -834,6 +845,24 @@
     display: flex;
     flex-direction: column;
     animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+    isolation: isolate;
+  }
+  /* Overlay que apaga a bandeira pra deixar bem suave (~10-15% visível) */
+  .team-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--bg-card) 86%, transparent) 0%,
+      color-mix(in srgb, var(--bg-card) 95%, transparent) 100%);
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.25s ease;
+  }
+  .team-card > * { position: relative; z-index: 1; }
+  .team-card:hover .team-card-overlay {
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--bg-card) 76%, transparent) 0%,
+      color-mix(in srgb, var(--bg-card) 92%, transparent) 100%);
   }
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(8px); }
@@ -846,11 +875,19 @@
   }
   .team-card.empty {
     border-color: var(--warning-border);
-    background: var(--warning-bg);
+  }
+  .team-card.empty .team-card-overlay {
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--warning-bg) 90%, transparent) 0%,
+      color-mix(in srgb, var(--warning-bg) 96%, transparent) 100%);
   }
   .team-card.complete {
     border-color: var(--slot-filled-bg);
-    background: linear-gradient(180deg, var(--bg-card) 0%, color-mix(in srgb, var(--slot-filled-bg) 6%, var(--bg-card)) 100%);
+  }
+  .team-card.complete .team-card-overlay {
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--bg-card) 80%, transparent) 0%,
+      color-mix(in srgb, var(--slot-filled-bg) 10%, var(--bg-card)) 100%);
   }
   .team-card.highlight {
     animation: pulse 1.5s;
@@ -861,67 +898,58 @@
     50% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent), var(--shadow-lg); }
   }
 
-  .team-flag-header {
-    position: relative;
-    height: 64px;
-    background: var(--slot-empty-bg);
-    overflow: hidden;
-  }
-  .team-flag-header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .team-card:hover .team-flag-header img { transform: scale(1.06); }
-  .team-flag-header::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.25) 100%);
-  }
-  .team-code-badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: rgba(0,0,0,0.55);
-    color: white;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    padding: 3px 7px;
-    border-radius: 4px;
-    backdrop-filter: blur(4px);
-    z-index: 1;
-  }
-  .team-code-badge.team-flag-emoji {
-    font-size: 22px;
-    line-height: 1;
-    padding: 4px 7px 3px;
-    letter-spacing: 0;
-    background: rgba(0,0,0,0.45);
-  }
-  .team-status-pct {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background: rgba(0,0,0,0.65);
-    color: white;
-    font-size: 10px;
-    font-weight: 800;
-    padding: 3px 7px;
-    border-radius: 4px;
-    backdrop-filter: blur(4px);
-    z-index: 1;
-    font-variant-numeric: tabular-nums;
-  }
-
   .team-body {
-    padding: 11px 12px 12px;
+    padding: 12px 14px 13px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     flex: 1;
+  }
+  .team-card-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+  }
+  .team-card-code {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    background: color-mix(in srgb, var(--bg-card) 85%, transparent);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .team-card-grupo {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .team-card-pct {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text);
+    background: color-mix(in srgb, var(--bg-card) 85%, transparent);
+    border: 1px solid var(--border);
+    padding: 3px 9px;
+    border-radius: 4px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .team-card-pct-empty {
+    color: var(--warning);
+    border-color: color-mix(in srgb, var(--warning) 40%, var(--border));
   }
   .team-meta {
     display: flex;
@@ -1211,6 +1239,233 @@
     transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  /* ============================================================
+   * MODAL — fluxo de adicionar nova figurinha colada
+   * ============================================================ */
+  .modal-add-section {
+    margin-bottom: 22px;
+  }
+  .modal-add-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 35%, transparent),
+                inset 0 1px 0 rgba(255,255,255,0.15);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .modal-add-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 45%, transparent),
+                inset 0 1px 0 rgba(255,255,255,0.18);
+  }
+  .modal-add-btn:active { transform: scale(0.98); }
+  .modal-add-btn-icon {
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 300;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.22);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .modal-add-btn[aria-expanded="true"] .modal-add-btn-icon {
+    transform: rotate(45deg);
+    background: rgba(255,255,255,0.32);
+  }
+  .modal-add-btn-label { flex: 1; text-align: left; }
+  .modal-add-btn-count {
+    background: rgba(255,255,255,0.22);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .modal-add-panel {
+    margin-top: 12px;
+    padding: 16px;
+    background: var(--bg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    animation: addPanelOpen 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: top center;
+  }
+  @keyframes addPanelOpen {
+    from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .modal-add-title {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+  .modal-add-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+    gap: 8px;
+  }
+  .modal-add-num {
+    position: relative;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    color: var(--text);
+    font-size: 19px;
+    font-weight: 800;
+    font-family: inherit;
+    font-variant-numeric: tabular-nums;
+    padding: 14px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: -0.01em;
+  }
+  .modal-add-num:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, var(--bg-card));
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+  .modal-add-num:active {
+    transform: scale(0.92);
+    transition: transform 0.05s;
+  }
+  .modal-add-num-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: white;
+    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .modal-add-num-badge.violet {
+    background: #7c3aed;
+  }
+
+  /* Banner de "seleção completa" quando não há mais nada faltando */
+  .modal-complete-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 20px;
+    margin-bottom: 22px;
+    background: linear-gradient(135deg,
+      var(--slot-filled-bg) 0%,
+      var(--slot-filled-bg-2) 100%);
+    color: white;
+    border-radius: 12px;
+    font-size: 14.5px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.01em;
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--slot-filled-bg-2) 35%, transparent);
+  }
+  .modal-complete-icon {
+    font-size: 22px;
+    animation: completePulse 1.6s ease-in-out infinite;
+  }
+  .modal-complete-icon:last-child { animation-delay: 0.4s; }
+  @keyframes completePulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50%      { transform: scale(1.2) rotate(8deg); }
+  }
+
+  /* ============================================================
+   * ANIMAÇÃO de confirmação ao adicionar nova figurinha colada
+   * ============================================================ */
+  .sticker.sticker-just-added {
+    animation: stickerJustAdded 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 5;
+  }
+  @keyframes stickerJustAdded {
+    0%   { transform: scale(0.7); filter: brightness(1.4) saturate(1.3); }
+    35%  { transform: scale(1.18); filter: brightness(1.2); }
+    65%  { transform: scale(0.96); }
+    100% { transform: scale(1); filter: brightness(1); }
+  }
+  /* Anel verde expandindo pra fora */
+  .sticker.sticker-just-added > .sticker-shimmer { display: none; }
+  .sticker.sticker-just-added::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border: 4px solid var(--slot-filled-bg-2);
+    border-radius: 10px;
+    animation: glowRing 0.8s ease-out forwards;
+    pointer-events: none;
+    z-index: 6;
+    box-sizing: border-box;
+  }
+  @keyframes glowRing {
+    0%   { opacity: 1; transform: scale(0.85); border-width: 5px; }
+    60%  { opacity: 0.6; border-width: 2px; }
+    100% { opacity: 0; transform: scale(1.5); border-width: 0; }
+  }
+  /* "✨ +1" flutuando pra cima */
+  .sticker.sticker-just-added::after {
+    content: '✨ +1';
+    position: absolute;
+    top: 8px; left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+    color: #fbbf24;
+    text-shadow:
+      0 0 10px rgba(0,0,0,0.7),
+      0 2px 4px rgba(0,0,0,0.5),
+      0 0 14px rgba(251, 191, 36, 0.8);
+    z-index: 7;
+    pointer-events: none;
+    animation: plusFloat 0.9s ease-out forwards;
+    letter-spacing: -0.02em;
+  }
+  @keyframes plusFloat {
+    0%   { opacity: 0; transform: translateY(20%) scale(0.6); }
+    25%  { opacity: 1; transform: translateY(0) scale(1.15); }
+    60%  { opacity: 1; transform: translateY(-30%) scale(1); }
+    100% { opacity: 0; transform: translateY(-90%) scale(0.85); }
+  }
+
+  /* Em mobile o painel de add fica mais compacto */
+  @media (max-width: 720px) {
+    .modal-add-btn { padding: 12px 14px; font-size: 14px; gap: 10px; }
+    .modal-add-btn-icon { width: 28px; height: 28px; font-size: 22px; }
+    .modal-add-btn-count { font-size: 10.5px; padding: 3px 8px; }
+    .modal-add-panel { padding: 12px; }
+    .modal-add-grid { grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 6px; }
+    .modal-add-num { font-size: 17px; padding: 11px 6px; }
+    .modal-complete-banner { font-size: 13px; padding: 14px 16px; }
+  }
+
   .modal-section { margin-bottom: 22px; }
   .modal-section-title {
     font-size: 11px;
@@ -1450,8 +1705,10 @@
     .results-count { margin-left: 0; text-align: center; }
 
     .teams-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .team-flag-header { height: 56px; }
-    .team-name { font-size: 12.5px; }
+    .team-card-code { font-size: 10px; padding: 2px 6px; letter-spacing: 0.12em; }
+    .team-card-grupo { font-size: 9px; padding: 2px 6px; }
+    .team-card-pct { font-size: 12.5px; padding: 2px 7px; }
+    .team-name { font-size: 13px; }
     .team-body { padding: 10px; gap: 7px; }
     .slot { font-size: 9.5px; }
 
@@ -1503,7 +1760,7 @@
   /* Touch devices: substituir hover por estado :active (feedback ao tocar) */
   @media (hover: none) {
     .team-card:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--border); }
-    .team-card:hover .team-flag-header img { transform: none; }
+    .team-card:hover .team-card-overlay { background: inherit; }
     .team-card:active { transform: scale(0.98); transition: transform 0.08s; }
     .flag-chip:hover { transform: none; }
     .flag-chip:active { transform: scale(0.94); }
@@ -3283,7 +3540,7 @@ const SORT_FNS = {
   asc:   (a, b) => a.stats.colado - b.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR')
 };
 
-const state = { search: '', filter: 'all', sort: 'album', openModalCodigo: null, syncStatus: 'init' };
+const state = { search: '', filter: 'all', sort: 'album', openModalCodigo: null, syncStatus: 'init', addPanelOpen: false };
 
 function normalize(str) {
   return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -3463,34 +3720,28 @@ function renderTeamCard(team) {
     return `<div class="slot${filled ? ' filled' : ''}"${special} title="${filled ? 'Tem' : 'Faltando'} #${n}${specialLabel}"><span class="slot-num">${n}</span></div>`;
   }).join('');
 
-  const flagSrc = flagUrl(team.codigo, 240);
-  const flagFallback = `<div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:36px;background:var(--slot-empty-bg)">${team.bandeira}</div>`;
-  const flagImg = flagSrc
-    ? `<img src="${flagSrc}" alt="" loading="lazy" onerror="this.outerHTML='${flagFallback.replace(/'/g,'&#39;').replace(/"/g,'&quot;')}'">`
-    : flagFallback;
-
-  const pctTop = stats.isEmpty
-    ? `<span class="team-status-pct" style="background:rgba(220,38,38,0.85)">0%</span>`
-    : `<span class="team-status-pct">${stats.pct.toFixed(0)}%</span>`;
-
+  // Bandeira em alta resolução, usada como background semi-transparente
+  const flagSrc = flagUrl(team.codigo, 320);
+  const bgStyle = flagSrc ? `style="background-image:url('${flagSrc}')"` : '';
+  const pctText = stats.isEmpty ? '0%' : `${stats.pct.toFixed(0)}%`;
   const tag = stats.isEmpty ? '<span class="tag-empty">Não iniciada</span>' : '';
+  const grupo = team.grupo || '';
 
   return `
-    <article class="${cls}" data-codigo="${team.codigo}" data-pct="${stats.pct}" tabindex="0" role="button" aria-label="Abrir detalhes de ${escapeHtml(team.nome)}">
-      <div class="team-flag-header">
-        ${flagImg}
-        <span class="team-code-badge team-flag-emoji" aria-label="${team.codigo}">${team.bandeira}</span>
-        ${pctTop}
-      </div>
+    <article class="${cls}" data-codigo="${team.codigo}" data-pct="${stats.pct}" tabindex="0" role="button" aria-label="Abrir detalhes de ${escapeHtml(team.nome)}" ${bgStyle}>
+      <div class="team-card-overlay"></div>
       <div class="team-body">
-        <div class="team-meta">
-          <span class="team-name" title="${escapeHtml(team.nome)}">${escapeHtml(team.nome)}</span>
-          <span class="team-progress tabular">
-            <span class="pct">${stats.colado}</span>/<span>${stats.total}</span>
-          </span>
+        <header class="team-card-head">
+          <span class="team-card-code" aria-label="Código FIFA">${team.codigo}</span>
+          ${grupo ? `<span class="team-card-grupo" aria-label="Grupo ${grupo}">Grupo ${grupo}</span>` : ''}
+          <span class="team-card-pct tabular${stats.isEmpty ? ' team-card-pct-empty' : ''}">${pctText}</span>
+        </header>
+        <h3 class="team-name" title="${escapeHtml(team.nome)}">${escapeHtml(team.nome)}</h3>
+        <div class="team-progress tabular">
+          <span class="pct">${stats.colado}</span> de <span>${stats.total}</span> coladas
+          ${tag}
         </div>
         <div class="team-bar"><div class="team-bar-fill" style="width:${stats.pct}%"></div></div>
-        ${tag ? `<div>${tag}</div>` : ''}
         <div class="slots">${slotsHtml}</div>
       </div>
     </article>
@@ -3652,32 +3903,32 @@ function renderModalContent(team) {
       <div class="modal-bar"><div class="modal-bar-fill" style="width:${stats.pct}%"></div></div>
 
       ${missing.length > 0 ? `
-        <div class="modal-section">
-          <div class="modal-section-title">
-            Ainda faltando <span class="count">${missing.length}</span>
-          </div>
-          <div class="modal-chips">
-            ${missing.map(n => `<span class="modal-chip">#${n}</span>`).join('')}
+        <div class="modal-add-section">
+          <button class="modal-add-btn" id="addStickerBtn" type="button" aria-expanded="${state.addPanelOpen}">
+            <span class="modal-add-btn-icon" aria-hidden="true">+</span>
+            <span class="modal-add-btn-label">Marcar cromo colado</span>
+            <span class="modal-add-btn-count tabular">${missing.length} ${missing.length === 1 ? 'falta' : 'faltam'}</span>
+          </button>
+          <div class="modal-add-panel" id="addStickerPanel"${state.addPanelOpen ? '' : ' hidden'}>
+            <div class="modal-add-title">Qual número você acabou de colar?</div>
+            <div class="modal-add-grid">
+              ${missing.map(n => `
+                <button class="modal-add-num" type="button" data-codigo="${team.codigo}" data-num="${n}" aria-label="Marcar cromo número ${n} como colado">
+                  ${n === 1 ? '<span class="modal-add-num-badge" title="Logo da seleção">★</span>' : ''}
+                  ${n === 13 ? '<span class="modal-add-num-badge violet" title="Foto do time">📷</span>' : ''}
+                  ${n}
+                </button>
+              `).join('')}
+            </div>
           </div>
         </div>
       ` : `
-        <div class="modal-section">
-          <div class="modal-section-title">
-            Coleção desta seleção completa
-          </div>
+        <div class="modal-complete-banner">
+          <span class="modal-complete-icon">✨</span>
+          Seleção completa! Todos os 20 cromos colados.
+          <span class="modal-complete-icon">✨</span>
         </div>
       `}
-
-      ${obtained.length > 0 ? `
-        <div class="modal-section">
-          <div class="modal-section-title">
-            Já coladas <span class="count">${obtained.length}</span>
-          </div>
-          <div class="modal-chips">
-            ${obtained.map(n => `<span class="modal-chip" style="background:linear-gradient(135deg,var(--slot-filled-bg) 0%,var(--slot-filled-bg-2) 100%);color:white;border-color:transparent">#${n}</span>`).join('')}
-          </div>
-        </div>
-      ` : ''}
 
       <div class="modal-section">
         <div class="modal-section-title">
@@ -3689,7 +3940,7 @@ function renderModalContent(team) {
       </div>
 
       <div class="modal-note">
-        Os cromos são representações estilizadas — o álbum oficial Panini usa fotos de jogadores específicas que não estão disponíveis publicamente.
+        Toque numa figurinha vazia ou use o botão <strong>+ Marcar</strong> acima — toque numa figurinha já colada pra desmarcar.
       </div>
     </div>
   `;
@@ -3708,6 +3959,7 @@ function openModal(codigo) {
 
 function closeModal() {
   state.openModalCodigo = null;
+  state.addPanelOpen = false;
   document.getElementById('modal').hidden = true;
   document.body.style.overflow = '';
 }
@@ -4041,14 +4293,46 @@ function setupListeners() {
     openModal(row.dataset.codigo);
   });
 
-  // Click nos cromos do modal → toggle (marca/desmarca)
+  // Click handlers do modal (delegação no container)
   document.getElementById('modalContent').addEventListener('click', e => {
+    // 1) Botão "+ Marcar cromo colado" → expande/colapsa o painel
+    const addBtn = e.target.closest('#addStickerBtn');
+    if (addBtn) {
+      state.addPanelOpen = !state.addPanelOpen;
+      const panel = document.getElementById('addStickerPanel');
+      if (panel) {
+        panel.hidden = !state.addPanelOpen;
+        addBtn.setAttribute('aria-expanded', state.addPanelOpen ? 'true' : 'false');
+        if (state.addPanelOpen) {
+          // Foca no painel pra navegação por teclado
+          panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+      return;
+    }
+    // 2) Botão de número no painel "+ Marcar" → adiciona com animação
+    const numBtn = e.target.closest('.modal-add-num');
+    if (numBtn) {
+      const codigo = numBtn.dataset.codigo;
+      const numero = parseInt(numBtn.dataset.num, 10);
+      if (codigo && !Number.isNaN(numero)) {
+        addStickerAnimated(codigo, numero);
+      }
+      return;
+    }
+    // 3) Click direto num cromo
+    //    - Empty → ADD com animação (rota rápida, sem precisar do painel)
+    //    - Filled → REMOVE silenciosa (correção rápida)
     const sticker = e.target.closest('.sticker.clickable');
     if (!sticker) return;
     const codigo = sticker.dataset.codigo;
     const numero = parseInt(sticker.dataset.num, 10);
     if (!codigo || Number.isNaN(numero)) return;
-    toggleSticker(codigo, numero);
+    if (sticker.classList.contains('empty')) {
+      addStickerAnimated(codigo, numero);
+    } else {
+      toggleSticker(codigo, numero);
+    }
   });
 
   // Click nas células FWC (card especial na página principal) → toggle
@@ -4156,6 +4440,36 @@ async function loadColadasFromDB() {
     console.error('[Supabase] load failed:', e);
     setSyncStatus('error');
     return false;
+  }
+}
+
+/** Dispara a animação de confirmação no sticker recém-marcado.
+ *  Como o redrawAfterChange reconstrói o modal, encontramos o novo
+ *  elemento DOM pelos data-attrs e aplicamos a classe da animação. */
+function flashStickerAdded(codigo, numero) {
+  requestAnimationFrame(() => {
+    const sel = `.sticker[data-codigo="${codigo}"][data-num="${numero}"]`;
+    document.querySelectorAll(sel).forEach(el => {
+      el.classList.remove('sticker-just-added');
+      // Reflow pra reiniciar a animação se já estava aplicada
+      void el.offsetWidth;
+      el.classList.add('sticker-just-added');
+      setTimeout(() => el.classList.remove('sticker-just-added'), 900);
+    });
+  });
+}
+
+/** Wrapper de toggleSticker que dispara a animação SÓ quando adiciona
+ *  (empty → filled). Removals continuam silenciosos. */
+function addStickerAnimated(codigo, numero) {
+  const isFwc = codigo === 'FWC';
+  const arr = isFwc ? ALBUM.especiais.fwcTimes.coladas
+                    : (ALBUM.selecoes.find(s => s.codigo === codigo)?.coladas);
+  if (!arr) return;
+  // Só anima se vai ADICIONAR (não está na lista ainda)
+  if (!arr.includes(numero)) {
+    toggleSticker(codigo, numero);
+    flashStickerAdded(codigo, numero);
   }
 }
 
