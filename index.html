@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://flagcdn.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -146,6 +147,58 @@
     transition: border-color 0.15s, color 0.15s;
   }
   .theme-toggle:hover { border-color: var(--border-strong); color: var(--text); }
+
+  /* Sync status pill — estado da conexão com Supabase */
+  .sync-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  .sync-status::before {
+    content: '';
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .sync-status.sync-init    { background: color-mix(in srgb, var(--text-muted) 14%, transparent); color: var(--text-muted); }
+  .sync-status.sync-init::before    { background: var(--text-muted); }
+  .sync-status.sync-loading { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
+  .sync-status.sync-loading::before { background: var(--accent); animation: syncPulse 1s ease-in-out infinite; }
+  .sync-status.sync-saving  { background: color-mix(in srgb, #f59e0b 16%, transparent); color: #b45309; }
+  .sync-status.sync-saving::before  { background: #f59e0b; animation: syncPulse 1s ease-in-out infinite; }
+  .sync-status.sync-ok      { background: color-mix(in srgb, var(--slot-filled-bg) 14%, transparent); color: var(--slot-filled-bg); }
+  .sync-status.sync-ok::before      { background: var(--slot-filled-bg); }
+  .sync-status.sync-offline { background: color-mix(in srgb, var(--text-muted) 14%, transparent); color: var(--text-muted); }
+  .sync-status.sync-offline::before { background: var(--text-muted); }
+  .sync-status.sync-error   { background: color-mix(in srgb, var(--warning) 14%, transparent); color: var(--warning); }
+  .sync-status.sync-error::before   { background: var(--warning); }
+  @keyframes syncPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.4; transform: scale(0.7); }
+  }
+  [data-theme="dark"] .sync-status.sync-saving { color: #fbbf24; }
+
+  /* Cromos clicáveis (no modal) e células FWC (página principal) */
+  .sticker.clickable, .fwc-cell.clickable {
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .sticker.clickable:focus-visible,
+  .fwc-cell.clickable:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .sticker.clickable:active { transform: scale(0.96); transition: transform 0.05s; }
+  .fwc-cell.clickable:active { transform: scale(0.92); transition: transform 0.05s; }
 
   /* ---------- Flag nav ---------- */
   .flag-nav {
@@ -2747,6 +2800,7 @@
       <div class="subtitle" id="subtitle"></div>
     </div>
     <div class="header-actions">
+      <span class="sync-status sync-init" id="syncStatus" title="Status da sincronização com o Supabase">iniciando…</span>
       <input type="search" id="search" class="header-search" placeholder="Buscar país (nome ou código FIFA)" autocomplete="off">
       <button class="theme-toggle" id="themeToggle" type="button">Modo escuro</button>
     </div>
@@ -2846,6 +2900,23 @@
 </div>
 
 <script>
+/* ============================================================
+ * SUPABASE — sincronização entre dispositivos
+ * ============================================================
+ * A anon key abaixo é segura pra expor (é desenhada pra ir no
+ * front-end), mas as policies RLS são "anon pode tudo" — então
+ * qualquer um que descobrir a URL consegue ler/gravar. Como o
+ * álbum é pessoal e a URL é "obscura", é OK pra agora. Pra
+ * multi-usuário sério, ative Supabase Auth + policies por uid.
+ * ============================================================ */
+const SUPABASE_URL = 'https://kqmqknxitimkpvfdtqua.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxbXFrbnhpdGlta3B2ZmR0cXVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg1NTM0NDgsImV4cCI6MjA5NDEyOTQ0OH0.6BAy5mt4TAJBd5pbG8E4ZaBc-Ia4eXuL9Daglfvvy2I';
+const sb = (window.supabase && window.supabase.createClient)
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      realtime: { params: { eventsPerSecond: 5 } }
+    })
+  : null;
+
 /* ============================================================
  * ESTRUTURA DE DADOS — ALBUM
  * ============================================================
@@ -3171,7 +3242,7 @@ const SORT_FNS = {
   asc:   (a, b) => a.stats.colado - b.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR')
 };
 
-const state = { search: '', filter: 'all', sort: 'album' };
+const state = { search: '', filter: 'all', sort: 'album', openModalCodigo: null, syncStatus: 'init' };
 
 function normalize(str) {
   return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -3350,8 +3421,10 @@ function renderSpecial() {
   const fwcCells = Array.from({length: fwc.total}, (_, i) => i)
     .map(n => {
       const isCapa = n === 0;
+      const isFilled = fwcSet.has(n);
       const label = isCapa ? 'Capa do álbum (FWC 00)' : `FWC ${pad(n)}`;
-      return `<div class="fwc-cell ${fwcSet.has(n) ? 'filled' : ''}${isCapa ? ' fwc-capa' : ''}" title="${label}${fwcSet.has(n) ? ' — você tem' : ' — faltando'}">${pad(n)}</div>`;
+      const action = isFilled ? 'clique para desmarcar' : 'clique para marcar';
+      return `<div class="fwc-cell clickable ${isFilled ? 'filled' : ''}${isCapa ? ' fwc-capa' : ''}" data-codigo="FWC" data-num="${n}" title="${label} — ${action}" role="button" tabindex="0">${pad(n)}</div>`;
     })
     .join('');
 
@@ -3513,7 +3586,7 @@ function renderSticker(team, n, filled) {
 
   if (filled) {
     return `
-      <div class="sticker filled${specialClass}" title="Cromo #${n}${tooltipExtra} — você tem">
+      <div class="sticker filled clickable${specialClass}" data-codigo="${team.codigo}" data-num="${n}" title="Cromo #${n}${tooltipExtra} — clique para desmarcar" role="button" tabindex="0">
         <img class="sticker-bg" src="${flagSrc}" alt="" loading="lazy">
         <div class="sticker-overlay"></div>
         <div class="sticker-shimmer"></div>
@@ -3526,7 +3599,7 @@ function renderSticker(team, n, filled) {
     `;
   }
   return `
-    <div class="sticker empty${specialClass}" title="Cromo #${n}${tooltipExtra} — faltando">
+    <div class="sticker empty clickable${specialClass}" data-codigo="${team.codigo}" data-num="${n}" title="Cromo #${n}${tooltipExtra} — clique para marcar como colado" role="button" tabindex="0">
       ${specialBadge}
       <div class="sticker-label-top">${specialLabel ? `#${n} · ${specialLabel}` : `#${n} · ${team.codigo}`}</div>
       <div class="sticker-q" aria-hidden="true">?</div>
@@ -3619,6 +3692,7 @@ function renderModalContent(team) {
 function openModal(codigo) {
   const team = ALBUM.selecoes.find(t => t.codigo === codigo);
   if (!team) return;
+  state.openModalCodigo = codigo;
   document.getElementById('modalContent').innerHTML = renderModalContent(team);
   const modal = document.getElementById('modal');
   modal.hidden = false;
@@ -3627,6 +3701,7 @@ function openModal(codigo) {
 }
 
 function closeModal() {
+  state.openModalCodigo = null;
   document.getElementById('modal').hidden = true;
   document.body.style.overflow = '';
 }
@@ -3959,6 +4034,41 @@ function setupListeners() {
     if (!row) return;
     openModal(row.dataset.codigo);
   });
+
+  // Click nos cromos do modal → toggle (marca/desmarca)
+  document.getElementById('modalContent').addEventListener('click', e => {
+    const sticker = e.target.closest('.sticker.clickable');
+    if (!sticker) return;
+    const codigo = sticker.dataset.codigo;
+    const numero = parseInt(sticker.dataset.num, 10);
+    if (!codigo || Number.isNaN(numero)) return;
+    toggleSticker(codigo, numero);
+  });
+
+  // Click nas células FWC (card especial na página principal) → toggle
+  document.getElementById('special').addEventListener('click', e => {
+    const cell = e.target.closest('.fwc-cell.clickable');
+    if (!cell) return;
+    const numero = parseInt(cell.dataset.num, 10);
+    if (Number.isNaN(numero)) return;
+    toggleSticker('FWC', numero);
+  });
+
+  // Acessibilidade: Enter/Space nos cromos clicáveis também alterna
+  document.getElementById('modalContent').addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const sticker = e.target.closest('.sticker.clickable');
+    if (!sticker) return;
+    e.preventDefault();
+    toggleSticker(sticker.dataset.codigo, parseInt(sticker.dataset.num, 10));
+  });
+  document.getElementById('special').addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const cell = e.target.closest('.fwc-cell.clickable');
+    if (!cell) return;
+    e.preventDefault();
+    toggleSticker('FWC', parseInt(cell.dataset.num, 10));
+  });
   document.getElementById('viewCollection').addEventListener('keydown', e => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const row = e.target.closest('.rank-row');
@@ -3986,11 +4096,153 @@ function loadTheme() {
 }
 
 /* ============================================================
+ * SUPABASE DATA LAYER
+ * ============================================================
+ * 1) loadColadasFromDB — carrega todos os stickers do banco e
+ *    sobrescreve os arrays `coladas` do ALBUM.
+ * 2) toggleSticker     — clica numa figurinha (modal ou FWC):
+ *    optimistic update local + INSERT/DELETE no Supabase.
+ * 3) subscribeRealtime — escuta mudanças em qualquer dispositivo
+ *    via websocket e atualiza a UI ao vivo.
+ * 4) redrawAfterChange — re-renderiza tudo o que depende de
+ *    `coladas` (KPIs, ranks, cards, modal, etc).
+ * ============================================================ */
+
+function setSyncStatus(status) {
+  state.syncStatus = status;
+  const el = document.getElementById('syncStatus');
+  if (!el) return;
+  const labels = {
+    init:    { txt: 'iniciando…',     klass: 'sync-init' },
+    loading: { txt: 'carregando…',    klass: 'sync-loading' },
+    saving:  { txt: 'salvando…',      klass: 'sync-saving' },
+    ok:      { txt: 'sincronizado',   klass: 'sync-ok' },
+    offline: { txt: 'offline',        klass: 'sync-offline' },
+    error:   { txt: 'erro de sync',   klass: 'sync-error' }
+  };
+  const cfg = labels[status] || labels.init;
+  el.className = 'sync-status ' + cfg.klass;
+  el.textContent = cfg.txt;
+}
+
+async function loadColadasFromDB() {
+  if (!sb) { setSyncStatus('offline'); return false; }
+  setSyncStatus('loading');
+  try {
+    const { data, error } = await sb.from('stickers').select('selecao_codigo, numero');
+    if (error) throw error;
+    // Zera os arrays locais e repopula a partir do banco
+    ALBUM.selecoes.forEach(s => { s.coladas = []; });
+    ALBUM.especiais.fwcTimes.coladas = [];
+    const teamsByCode = Object.fromEntries(ALBUM.selecoes.map(s => [s.codigo, s]));
+    for (const row of data) {
+      if (row.selecao_codigo === 'FWC') {
+        ALBUM.especiais.fwcTimes.coladas.push(row.numero);
+      } else if (teamsByCode[row.selecao_codigo]) {
+        teamsByCode[row.selecao_codigo].coladas.push(row.numero);
+      }
+    }
+    // Mantém a contagem total em sync com o que veio do banco
+    ALBUM.meta.totalColado = data.length;
+    setSyncStatus('ok');
+    return true;
+  } catch (e) {
+    console.error('[Supabase] load failed:', e);
+    setSyncStatus('error');
+    return false;
+  }
+}
+
+async function toggleSticker(codigo, numero) {
+  if (!sb) { setSyncStatus('offline'); return; }
+  // Localiza o array alvo
+  const isFwc = codigo === 'FWC';
+  const arr = isFwc ? ALBUM.especiais.fwcTimes.coladas
+                    : (ALBUM.selecoes.find(s => s.codigo === codigo)?.coladas);
+  if (!arr) return;
+  const wasIn = arr.includes(numero);
+
+  // Optimistic update
+  if (wasIn) arr.splice(arr.indexOf(numero), 1);
+  else arr.push(numero);
+  ALBUM.meta.totalColado += wasIn ? -1 : 1;
+  redrawAfterChange();
+  setSyncStatus('saving');
+
+  try {
+    if (wasIn) {
+      const { error } = await sb.from('stickers').delete()
+        .eq('selecao_codigo', codigo).eq('numero', numero);
+      if (error) throw error;
+    } else {
+      const { error } = await sb.from('stickers').insert({
+        selecao_codigo: codigo, numero: numero
+      });
+      // Ignora erro de chave duplicada (alguém já adicionou em paralelo)
+      if (error && error.code !== '23505') throw error;
+    }
+    setSyncStatus('ok');
+  } catch (e) {
+    console.error('[Supabase] toggle failed:', e);
+    // Reverte o optimistic update
+    if (wasIn) arr.push(numero);
+    else arr.splice(arr.indexOf(numero), 1);
+    ALBUM.meta.totalColado += wasIn ? 1 : -1;
+    redrawAfterChange();
+    setSyncStatus('error');
+  }
+}
+
+function subscribeRealtime() {
+  if (!sb) return;
+  sb.channel('stickers-changes')
+    .on('postgres_changes',
+      { event: '*', schema: 'public', table: 'stickers' },
+      payload => handleRealtimeChange(payload))
+    .subscribe();
+}
+
+function handleRealtimeChange(payload) {
+  const row = payload.new || payload.old;
+  if (!row) return;
+  const codigo = row.selecao_codigo;
+  const numero = row.numero;
+  const isFwc = codigo === 'FWC';
+  const arr = isFwc ? ALBUM.especiais.fwcTimes.coladas
+                    : (ALBUM.selecoes.find(s => s.codigo === codigo)?.coladas);
+  if (!arr) return;
+  const isIn = arr.includes(numero);
+  let changed = false;
+  if (payload.eventType === 'INSERT' && !isIn) { arr.push(numero); ALBUM.meta.totalColado++; changed = true; }
+  if (payload.eventType === 'DELETE' &&  isIn) { arr.splice(arr.indexOf(numero), 1); ALBUM.meta.totalColado--; changed = true; }
+  if (changed) redrawAfterChange();
+}
+
+/** Re-renderiza tudo que depende de `coladas` (após toggle ou realtime event). */
+function redrawAfterChange() {
+  renderProgressHero();
+  renderKPIs();
+  renderRankings();
+  renderFlagNav();
+  renderSpecial();
+  renderTeams();
+  // Se o modal estiver aberto, re-renderiza o conteúdo dele
+  if (state.openModalCodigo) {
+    const team = ALBUM.selecoes.find(t => t.codigo === state.openModalCodigo);
+    if (team) {
+      document.getElementById('modalContent').innerHTML = renderModalContent(team);
+      document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+    }
+  }
+}
+
+/* ============================================================
  * BOOT
  * ============================================================ */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   loadTheme();
   renderHeader();
+  // 1) Render imediato com os dados embutidos (UX rápido, sem branco)
   renderProgressHero();
   renderFlagNav();
   renderKPIs();
@@ -3998,6 +4250,11 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSpecial();
   setupListeners();
   renderTeams();
+  // 2) Carrega o estado real do Supabase (pode ter mudado em outro dispositivo)
+  const ok = await loadColadasFromDB();
+  if (ok) redrawAfterChange();
+  // 3) Subscreve a real-time pra ouvir mudanças vindas de outros dispositivos
+  subscribeRealtime();
 });
 </script>
 
