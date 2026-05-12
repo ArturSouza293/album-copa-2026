@@ -84,12 +84,38 @@ O arquivo `netlify.toml` já está configurado pra publicar a raiz do repo.
 
 ---
 
+## Supabase (sync entre dispositivos)
+
+O app está integrado com Supabase pra sincronizar o estado entre celular, desktop e tablet em tempo real (via websocket).
+
+**Setup inicial** (rodar 1x só, depois de criar o projeto Supabase):
+
+1. Abre o painel do Supabase → SQL Editor → New query
+2. Cola o conteúdo de `supabase/setup.sql`
+3. Run
+
+O script é idempotente (`ON CONFLICT DO NOTHING`), então pode rodar de novo sem perigo.
+
+**Modificando as credentials** (caso troque de projeto Supabase):
+No início da tag `<script>` do `index.html`, atualiza:
+```javascript
+const SUPABASE_URL = 'https://SEU_REF.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJ...';
+```
+
+**Regerar o seed** depois de editar manualmente as `coladas` no `index.html`:
+```bash
+python supabase/_generate_seed.py > supabase/seed.sql
+```
+
 ## Roadmap
 
-- [ ] **Supabase**: tabela SQL `stickers (selecao_codigo, numero, colado_em)` pra sincronizar entre dispositivos
-- [ ] **UI clicável**: tocar numa figurinha alterna entre colada/faltando (com persistência via Supabase)
+- [x] ~~**Supabase**: tabela SQL pra sincronizar entre dispositivos~~ ✅
+- [x] ~~**UI clicável**: tocar numa figurinha alterna entre colada/faltando~~ ✅
+- [x] ~~**Real-time sync**: mudança no celular aparece no desktop sem F5~~ ✅
 - [ ] **Histórico temporal**: gráfico de progresso ao longo dos dias (usando `colado_em`)
 - [ ] **Modo trade**: marcar repetidas pra trocar com amigos
+- [ ] **Auth multi-usuário**: cada amigo com seu próprio álbum (Supabase Auth + RLS por uid)
 
 ---
 

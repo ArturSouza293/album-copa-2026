@@ -667,67 +667,6 @@
     box-shadow: 0 0 8px color-mix(in srgb, #a78bfa 55%, transparent);
   }
 
-  /* ---------- Pack stats ---------- */
-  .pack-stats {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    margin-bottom: 14px;
-  }
-  .pack-stat {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    transition: transform 0.15s, box-shadow 0.15s;
-    position: relative;
-    overflow: hidden;
-  }
-  .pack-stat:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow);
-  }
-  .pack-stat-label {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .pack-stat-value {
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-  }
-  .pack-stat-value .small {
-    font-size: 11px;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-  .pack-stat-bar {
-    height: 4px;
-    background: var(--slot-empty-bg);
-    border-radius: 2px;
-    overflow: hidden;
-    margin-top: 6px;
-  }
-  .pack-stat-bar > div {
-    height: 100%;
-    background: linear-gradient(90deg, var(--gold) 0%, #f59e0b 100%);
-    border-radius: 2px;
-    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .pack-stat.highlight {
-    border-color: var(--gold);
-    background: linear-gradient(135deg, var(--bg-card) 0%, color-mix(in srgb, var(--gold) 8%, var(--bg-card)) 100%);
-  }
-  .pack-stat.highlight .pack-stat-value { color: var(--gold); }
-
   /* ---------- Special card ---------- */
   .special-card {
     background: var(--bg-card);
@@ -2789,6 +2728,124 @@
     .ritmo-grid { grid-template-columns: 1fr; }
     .chart-tick { font-size: 9px; }
   }
+
+  /* ============================================================
+   * POLISH FINAL — acessibilidade, scrollbars, print, motion
+   * ============================================================ */
+
+  /* Focus rings consistentes pra navegação por teclado.
+     Aparece SÓ com :focus-visible (não com clique do mouse). */
+  :focus { outline: none; }
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible,
+  [role="button"]:focus-visible,
+  a:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* Seleção de texto na cor do tema */
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+    color: var(--text);
+  }
+
+  /* Scrollbar custom — discreta e na cor do tema */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 5px;
+    border: 2px solid var(--bg);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) var(--bg);
+  }
+
+  /* Loading skeleton enquanto carrega do Supabase (placeholder visual) */
+  .loading-skeleton {
+    background: linear-gradient(90deg,
+      var(--slot-empty-bg) 0%,
+      color-mix(in srgb, var(--slot-empty-bg) 70%, var(--bg-card)) 50%,
+      var(--slot-empty-bg) 100%);
+    background-size: 200% 100%;
+    animation: skeletonShimmer 1.6s ease-in-out infinite;
+    border-radius: 4px;
+  }
+  @keyframes skeletonShimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Estado de erro inline (caso queira mostrar uma mensagem) */
+  .error-message {
+    background: color-mix(in srgb, var(--warning) 10%, var(--bg-card));
+    border: 1px solid color-mix(in srgb, var(--warning) 40%, var(--border));
+    border-left: 4px solid var(--warning);
+    color: var(--warning);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* Smoothing — transição padrão em todos os elementos que comutam tema */
+  .kpi, .ranking-card, .team-card, .stats-card, .channel-card,
+  .news-item, .analysis-card, .pack-stat, .group-header,
+  .flag-chip, .progress-hero, .special-card, .modal, .tabs,
+  .filter-group, .filter-select, .filter-input, .header-search,
+  .theme-toggle, .sync-status {
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease,
+                transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Reduz movimento pra usuários com prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .sticker.empty .sticker-q,
+    .ph-bar-glow,
+    .kpi-bar-fill::after,
+    .sticker-shimmer,
+    .chart-pulse,
+    .fwc-cell.fwc-capa.filled,
+    .ph-level-tag {
+      animation: none !important;
+    }
+  }
+
+  /* Print styles — quando imprimir, esconde controles e foca no conteúdo */
+  @media print {
+    body { background: white; color: black; }
+    .tabs, .filters, .flag-nav, .theme-toggle, .header-search,
+    .sync-status, .modal-backdrop, .ph-level, .ph-level-next {
+      display: none !important;
+    }
+    .app-header { position: static; box-shadow: none; }
+    .container { padding: 8mm; }
+    .team-card, .kpi, .ranking-card, .stats-card, .channel-card {
+      box-shadow: none !important;
+      page-break-inside: avoid;
+    }
+    .teams-grid { gap: 4mm; }
+    .progress-hero { page-break-after: avoid; }
+  }
 </style>
 </head>
 <body>
@@ -3209,22 +3266,6 @@ function statusFromStats(stats) {
   return 'low';
 }
 
-/** Estatísticas de pacotes (eficiência, gasto, custo por colada).
- *  Só faz sentido se ALBUM.meta.pacotesAbertos estiver definido. */
-function computePackStats() {
-  const albumStats = computeAlbumStats();
-  const pacotes = ALBUM.meta.pacotesAbertos || 0;
-  const cromosPorPacote = ALBUM.meta.cromosPorPacote;
-  const precoPacote = ALBUM.meta.precoPacote;
-  const cromosComprados = pacotes * cromosPorPacote;
-  const novas = albumStats.totalColadoFull;
-  const repetidas = Math.max(0, cromosComprados - novas);
-  const eficiencia = cromosComprados > 0 ? (novas / cromosComprados) * 100 : 0;
-  const gasto = pacotes * precoPacote;
-  const custoPorColada = novas > 0 ? gasto / novas : 0;
-  return { pacotes, cromosComprados, novas, repetidas, eficiencia, gasto, custoPorColada };
-}
-
 /* ============================================================
  * RENDER
  * ============================================================ */
@@ -3373,41 +3414,6 @@ function renderKPIs() {
       <div class="kpi-value tabular">${sp.fotos}<span class="small"> / ${N}</span></div>
       <div class="kpi-bar"><div class="kpi-bar-fill kpi-bar-violet" style="width:${fotosPct}%"></div></div>
       <div class="kpi-sub tabular">${fotosPct.toFixed(0)}% das fotos</div>
-    </div>
-  `;
-}
-
-function renderPackStats() {
-  const container = document.getElementById('packStats');
-  if (!container) return;
-  if (!ALBUM.meta.pacotesAbertos) {
-    container.style.display = 'none';
-    return;
-  }
-  const p = computePackStats();
-  const efClass = p.eficiencia >= 75 ? ' highlight' : '';
-  const formatBR = n => n.toFixed(2).replace('.', ',');
-  container.innerHTML = `
-    <div class="pack-stat">
-      <div class="pack-stat-label">Pacotes abertos</div>
-      <div class="pack-stat-value tabular">${p.pacotes}<span class="small"> · ${p.cromosComprados} cromos</span></div>
-    </div>
-    <div class="pack-stat${efClass}">
-      <div class="pack-stat-label">Eficiência (% novas)</div>
-      <div class="pack-stat-value tabular">${p.eficiencia.toFixed(1)}<span class="small">%</span></div>
-      <div class="pack-stat-bar"><div style="width:${Math.min(p.eficiencia, 100)}%"></div></div>
-    </div>
-    <div class="pack-stat">
-      <div class="pack-stat-label">Repetidas</div>
-      <div class="pack-stat-value tabular">${p.repetidas}<span class="small"> cromos</span></div>
-    </div>
-    <div class="pack-stat">
-      <div class="pack-stat-label">Gasto total</div>
-      <div class="pack-stat-value tabular">R$ ${p.gasto}<span class="small">,00</span></div>
-    </div>
-    <div class="pack-stat">
-      <div class="pack-stat-label">Custo por colada</div>
-      <div class="pack-stat-value tabular">R$ ${formatBR(p.custoPorColada)}</div>
     </div>
   `;
 }
