@@ -54,13 +54,14 @@ by_code = {}
 for c, n in inserts:
     by_code.setdefault(c, []).append(n)
 
-rows = []
-for code, nums in by_code.items():
-    nums_sorted = sorted(set(nums))
+codes = list(by_code.keys())
+for i, code in enumerate(codes):
+    nums_sorted = sorted(set(by_code[code]))
     row = ", ".join(f"('{code}', {n})" for n in nums_sorted)
-    rows.append(f"  {row}  -- {code} ({len(nums_sorted)})")
-
-print(",\n".join(rows) + ";")
+    # Importante: separador (, ou ;) ANTES do comentário SQL.
+    # Senão o "--" consome a vírgula e o INSERT quebra.
+    sep = ";" if i == len(codes) - 1 else ","
+    print(f"  {row}{sep}  -- {code} ({len(nums_sorted)})")
 print()
 print(f"-- Verificação: deve mostrar {total} linhas")
 print("-- SELECT COUNT(*) FROM public.stickers;")
