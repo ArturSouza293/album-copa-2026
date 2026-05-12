@@ -1842,32 +1842,20 @@
   }
 
   /* ============================================================
-   * EMPTY SLOT — "?" watermark no compact grid
+   * EMPTY SLOT — número apagado (em vez do "?")
    * ============================================================ */
   .slot-num {
     position: relative;
     z-index: 1;
+    transition: opacity 0.2s, transform 0.15s;
   }
-  .slot:not(.filled)::after {
-    content: '?';
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 900;
-    color: var(--slot-empty-text);
-    opacity: 0.3;
-    pointer-events: none;
-    z-index: 0;
-    letter-spacing: 0;
-    line-height: 1;
-    transition: opacity 0.2s, transform 0.2s;
+  .slot:not(.filled) .slot-num {
+    opacity: 0.4;
+    font-weight: 700;
   }
-  .slot:not(.filled):hover::after {
-    opacity: 0.7;
-    transform: scale(1.15);
+  .slot:not(.filled):hover .slot-num {
+    opacity: 0.85;
+    transform: scale(1.12);
   }
   .slot.filled {
     animation: slotPop 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
