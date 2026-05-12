@@ -1604,9 +1604,23 @@
     border: 1.5px dashed var(--slot-empty-border);
   }
   .sticker.empty .sticker-number {
-    color: var(--slot-empty-text);
-    text-shadow: none;
-    opacity: 0.7;
+    color: var(--text);
+    text-shadow: 0 1px 2px color-mix(in srgb, var(--bg-card) 60%, transparent);
+    opacity: 0.32;
+    font-weight: 800;
+    transition: opacity 0.22s, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .sticker.empty:hover .sticker-number {
+    opacity: 0.62;
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+  .sticker.sticker-logo.empty .sticker-number {
+    color: #d97706;
+    opacity: 0.42;
+  }
+  .sticker.sticker-photo.empty .sticker-number {
+    color: #7c3aed;
+    opacity: 0.42;
   }
   .sticker.empty .sticker-label,
   .sticker.empty .sticker-label-top {
@@ -1863,35 +1877,6 @@
   @keyframes slotPop {
     from { transform: scale(0.6); opacity: 0; }
     to   { transform: scale(1); opacity: 1; }
-  }
-
-  /* ============================================================
-   * EMPTY STICKER — figurinha "mistério" com "?" gigante
-   * ============================================================ */
-  .sticker.empty .sticker-q {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 88px;
-    font-weight: 900;
-    color: var(--slot-empty-text);
-    opacity: 0.55;
-    letter-spacing: 0;
-    line-height: 1;
-    pointer-events: none;
-    text-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    animation: stickerQPulse 2.6s ease-in-out infinite;
-  }
-  @keyframes stickerQPulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 0.45; }
-    50%      { transform: translate(-50%, -50%) scale(1.08) rotate(-3deg); opacity: 0.85; }
-  }
-  .sticker.empty:hover .sticker-q {
-    animation-play-state: paused;
-    transform: translate(-50%, -50%) scale(1.18) rotate(8deg);
-    opacity: 0.95;
-    transition: transform 0.25s, opacity 0.25s;
   }
 
   /* Shimmer nos cromos colados (passa ao hover) */
@@ -2339,7 +2324,6 @@
         color-mix(in srgb, #fbbf24 18%, var(--slot-empty-bg)) 10px,
         color-mix(in srgb, #fbbf24 18%, var(--slot-empty-bg)) 11px);
   }
-  .sticker.sticker-logo.empty .sticker-q { color: #d97706; }
   .sticker.sticker-logo.empty .sticker-label-top { color: #b45309; font-weight: 800; letter-spacing: 0.15em; }
 
   .sticker.sticker-photo.empty {
@@ -2351,7 +2335,6 @@
         color-mix(in srgb, #8b5cf6 18%, var(--slot-empty-bg)) 10px,
         color-mix(in srgb, #8b5cf6 18%, var(--slot-empty-bg)) 11px);
   }
-  .sticker.sticker-photo.empty .sticker-q { color: #7c3aed; }
   .sticker.sticker-photo.empty .sticker-label-top { color: #6d28d9; font-weight: 800; letter-spacing: 0.15em; }
 
   /* Badge circular com ícone (escudo / grupo) */
@@ -3064,7 +3047,6 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-    .sticker.empty .sticker-q,
     .ph-bar-glow,
     .kpi-bar-fill::after,
     .sticker-shimmer,
@@ -3846,8 +3828,8 @@ function renderSticker(team, n, filled) {
   return `
     <div class="sticker empty clickable${specialClass}" data-codigo="${team.codigo}" data-num="${n}" title="Cromo #${n}${tooltipExtra} — clique para marcar como colado" role="button" tabindex="0">
       ${specialBadge}
-      <div class="sticker-label-top">${specialLabel ? `#${n} · ${specialLabel}` : `#${n} · ${team.codigo}`}</div>
-      <div class="sticker-q" aria-hidden="true">?</div>
+      <div class="sticker-label-top">${specialLabel ? `★ ${specialLabel}` : `${team.codigo} · WC2026`}</div>
+      <div class="sticker-number" aria-hidden="true">${n}</div>
       <div class="sticker-label">${escapeHtml(team.nome)}</div>
       <div class="sticker-status" aria-label="Faltando">?</div>
     </div>
