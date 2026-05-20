@@ -747,6 +747,19 @@
     50%      { box-shadow: 0 0 0 1.5px var(--bg-card), 0 0 0 2.5px var(--gold), 0 0 12px rgba(245, 158, 11, 0.85); }
   }
   .fwc-cell:hover { transform: scale(1.2); z-index: 2; }
+
+  /* Coca-Cola "Time dos Sonhos" (CC1..CC14): célula vermelha quando colada. */
+  .cc-cell.filled {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-color: #dc2626;
+    color: #fff;
+  }
+  /* Divisória full-width entre a faixa FWC e a faixa Coca-Cola. */
+  .special-divider {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: var(--border);
+  }
   .capa-badge {
     display: inline-flex;
     align-items: center;
@@ -3314,7 +3327,10 @@ const ALBUM = {
   ],
   especiais: {
     // FWC vão de 00 (capa) até 19 — 20 cromos no total.
-    fwcTimes: { coladas: [0, 2, 3, 4, 9, 11, 13, 16, 17, 19], total: 20 }
+    fwcTimes: { coladas: [0, 2, 3, 4, 9, 11, 13, 16, 17, 19], total: 20 },
+    // Coca-Cola "Time dos Sonhos" — CC1..CC14. Coleção promocional à parte
+    // (rótulos da Coca-Cola Zero), NÃO entra nos 980 do álbum Panini.
+    cocaCola: { coladas: [2, 4, 6, 8, 9], total: 14 }
   }
 };
 
@@ -3474,7 +3490,9 @@ function computeAlbumStats() {
     if (c === TOTAL_PER_TEAM) teamsComplete++;
   }
   const fwcColado = new Set(ALBUM.especiais.fwcTimes.coladas).size;
+  const ccColado = new Set(ALBUM.especiais.cocaCola.coladas).size;
   // FWC 00 é a capa — já incluída em fwcTimes.coladas, não soma separado.
+  // Coca-Cola é coleção à parte: NÃO entra no total dos 980 do álbum.
   const totalColadoFull = totalColadoTeams + fwcColado;
   return {
     totalColadoTeams,
@@ -3482,7 +3500,8 @@ function computeAlbumStats() {
     totalAlbum: ALBUM.meta.totalCromos,
     pct: (totalColadoFull / ALBUM.meta.totalCromos) * 100,
     teamsStarted, teamsComplete, teamsTotal: teams.length,
-    fwcColado, fwcTotal: ALBUM.especiais.fwcTimes.total
+    fwcColado, fwcTotal: ALBUM.especiais.fwcTimes.total,
+    ccColado, ccTotal: ALBUM.especiais.cocaCola.total
   };
 }
 
@@ -3661,6 +3680,17 @@ function renderSpecial() {
     })
     .join('');
 
+  // Coca-Cola "Time dos Sonhos" — CC1..CC14 (coleção separada, contador próprio).
+  const cc = ALBUM.especiais.cocaCola;
+  const ccSet = new Set(cc.coladas);
+  const ccCells = Array.from({length: cc.total}, (_, i) => i + 1)
+    .map(n => {
+      const isFilled = ccSet.has(n);
+      const action = isFilled ? 'clique para desmarcar' : 'clique para marcar';
+      return `<div class="fwc-cell cc-cell clickable ${isFilled ? 'filled' : ''}" data-codigo="CC" data-num="${n}" title="Coca-Cola CC${n} — ${action}" role="button" tabindex="0">${n}</div>`;
+    })
+    .join('');
+
   document.getElementById('special').innerHTML = `
     <div class="special-block">
       <div class="special-label">Especiais (FWC)</div>
@@ -3670,6 +3700,16 @@ function renderSpecial() {
     <div class="special-block">
       <div class="special-label">Numeração</div>
       <div class="special-value tabular" style="font-size:14px">00 → 19</div>
+    </div>
+    <div class="special-divider"></div>
+    <div class="special-block">
+      <div class="special-label">Coca-Cola · Time dos Sonhos</div>
+      <div class="special-value tabular">${s.ccColado}<span class="small"> / ${s.ccTotal}</span></div>
+    </div>
+    <div class="fwc-grid cc-grid">${ccCells}</div>
+    <div class="special-block">
+      <div class="special-label">Numeração</div>
+      <div class="special-value tabular" style="font-size:14px">CC1 → CC14</div>
     </div>
   `;
 }
@@ -4311,7 +4351,7 @@ function setupListeners() {
     if (!cell) return;
     const numero = parseInt(cell.dataset.num, 10);
     if (Number.isNaN(numero)) return;
-    toggleSticker('FWC', numero);
+    toggleSticker(cell.dataset.codigo, numero);
   });
 
   // Acessibilidade: Enter/Space nos cromos clicáveis também alterna
@@ -4327,7 +4367,7 @@ function setupListeners() {
     const cell = e.target.closest('.fwc-cell.clickable');
     if (!cell) return;
     e.preventDefault();
-    toggleSticker('FWC', parseInt(cell.dataset.num, 10));
+    toggleSticker(cell.dataset.codigo, parseInt(cell.dataset.num, 10));
   });
   document.getElementById('viewCollection').addEventListener('keydown', e => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
@@ -4385,6 +4425,13 @@ function setSyncStatus(status) {
   el.textContent = cfg.txt;
 }
 
+/** Retorna o array de coladas certo pra um código: time, FWC ou Coca-Cola (CC). */
+function coladasArrayFor(codigo) {
+  if (codigo === 'FWC') return ALBUM.especiais.fwcTimes.coladas;
+  if (codigo === 'CC')  return ALBUM.especiais.cocaCola.coladas;
+  return ALBUM.selecoes.find(s => s.codigo === codigo)?.coladas;
+}
+
 async function loadColadasFromDB() {
   if (!sb) { setSyncStatus('offline'); return false; }
   setSyncStatus('loading');
@@ -4394,10 +4441,13 @@ async function loadColadasFromDB() {
     // Zera os arrays locais e repopula a partir do banco
     ALBUM.selecoes.forEach(s => { s.coladas = []; });
     ALBUM.especiais.fwcTimes.coladas = [];
+    ALBUM.especiais.cocaCola.coladas = [];
     const teamsByCode = Object.fromEntries(ALBUM.selecoes.map(s => [s.codigo, s]));
     for (const row of data) {
       if (row.selecao_codigo === 'FWC') {
         ALBUM.especiais.fwcTimes.coladas.push(row.numero);
+      } else if (row.selecao_codigo === 'CC') {
+        ALBUM.especiais.cocaCola.coladas.push(row.numero);
       } else if (teamsByCode[row.selecao_codigo]) {
         teamsByCode[row.selecao_codigo].coladas.push(row.numero);
       }
@@ -4432,9 +4482,7 @@ function flashStickerAdded(codigo, numero) {
 /** Wrapper de toggleSticker que dispara a animação SÓ quando adiciona
  *  (empty → filled). Removals continuam silenciosos. */
 function addStickerAnimated(codigo, numero) {
-  const isFwc = codigo === 'FWC';
-  const arr = isFwc ? ALBUM.especiais.fwcTimes.coladas
-                    : (ALBUM.selecoes.find(s => s.codigo === codigo)?.coladas);
+  const arr = coladasArrayFor(codigo);
   if (!arr) return;
   // Só anima se vai ADICIONAR (não está na lista ainda)
   if (!arr.includes(numero)) {
@@ -4446,9 +4494,7 @@ function addStickerAnimated(codigo, numero) {
 async function toggleSticker(codigo, numero) {
   if (!sb) { setSyncStatus('offline'); return; }
   // Localiza o array alvo
-  const isFwc = codigo === 'FWC';
-  const arr = isFwc ? ALBUM.especiais.fwcTimes.coladas
-                    : (ALBUM.selecoes.find(s => s.codigo === codigo)?.coladas);
+  const arr = coladasArrayFor(codigo);
   if (!arr) return;
   const wasIn = arr.includes(numero);
 
@@ -4497,9 +4543,7 @@ function handleRealtimeChange(payload) {
   if (!row) return;
   const codigo = row.selecao_codigo;
   const numero = row.numero;
-  const isFwc = codigo === 'FWC';
-  const arr = isFwc ? ALBUM.especiais.fwcTimes.coladas
-                    : (ALBUM.selecoes.find(s => s.codigo === codigo)?.coladas);
+  const arr = coladasArrayFor(codigo);
   if (!arr) return;
   const isIn = arr.includes(numero);
   let changed = false;

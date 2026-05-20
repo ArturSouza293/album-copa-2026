@@ -84,6 +84,8 @@ INSERT INTO public.stickers (selecao_codigo, numero) VALUES
   ('CRO', 3), ('CRO', 4), ('CRO', 5), ('CRO', 7), ('CRO', 8), ('CRO', 11), ('CRO', 13), ('CRO', 14), ('CRO', 16), ('CRO', 18), ('CRO', 20),
   ('GHA', 3), ('GHA', 4), ('GHA', 7), ('GHA', 8), ('GHA', 11), ('GHA', 12), ('GHA', 14), ('GHA', 16), ('GHA', 17), ('GHA', 18), ('GHA', 20),
   ('PAN', 1), ('PAN', 2), ('PAN', 3), ('PAN', 5), ('PAN', 8), ('PAN', 9), ('PAN', 10), ('PAN', 13), ('PAN', 14), ('PAN', 15), ('PAN', 18), ('PAN', 19), ('PAN', 20),
-  ('FWC', 0), ('FWC', 2), ('FWC', 3), ('FWC', 4), ('FWC', 9), ('FWC', 11), ('FWC', 13), ('FWC', 16), ('FWC', 17), ('FWC', 19)
+  ('FWC', 0), ('FWC', 2), ('FWC', 3), ('FWC', 4), ('FWC', 9), ('FWC', 11), ('FWC', 13), ('FWC', 16), ('FWC', 17), ('FWC', 19),
+  -- Coca-Cola "Time dos Sonhos" (CC1..CC14) — coleção promocional separada.
+  ('CC', 2), ('CC', 4), ('CC', 6), ('CC', 8), ('CC', 9)
 ON CONFLICT (selecao_codigo, numero) DO NOTHING;
 
