@@ -1,0 +1,38 @@
+# Blueprint do Render para o Álbum Copa 2026.
+# Site 100% estático (single index.html), sem build step — o Render só
+# publica a raiz do repo. O progresso do álbum NÃO mora aqui: fica no
+# Supabase (banco externo), então trocar de host não afeta os dados.
+#
+# Como usar: no painel do Render → New → Blueprint → conectar este repo.
+# Auto-deploy a cada push na branch main (igual ao Netlify).
+services:
+  - type: web
+    name: album-copa-2026
+    runtime: static
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+
+    # Headers de segurança e cache (equivalentes ao netlify.toml).
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: geolocation=(), microphone=(), camera=()
+      # HTML sempre revalida — queremos updates imediatos.
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+
+    # Fallback SPA: qualquer rota cai no index.html (paridade com o Netlify).
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -1,0 +1,4537 @@
+[
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  1,
+        "colado_em":  "2026-05-13T02:32:28.735554+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  3,
+        "colado_em":  "2026-05-14T21:13:51.313956+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  5,
+        "colado_em":  "2026-05-13T04:25:20.405395+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  7,
+        "colado_em":  "2026-05-14T21:13:55.275507+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  9,
+        "colado_em":  "2026-05-13T04:25:23.028628+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  10,
+        "colado_em":  "2026-05-14T21:13:56.996263+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  14,
+        "colado_em":  "2026-05-13T04:25:25.076586+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  15,
+        "colado_em":  "2026-05-14T21:14:02.598717+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  16,
+        "colado_em":  "2026-05-14T21:14:02.589286+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  18,
+        "colado_em":  "2026-05-20T20:16:17.053151+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  19,
+        "colado_em":  "2026-05-12T20:43:13.365885+00:00"
+    },
+    {
+        "selecao_codigo":  "ALG",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  5,
+        "colado_em":  "2026-05-12T20:42:46.605684+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  6,
+        "colado_em":  "2026-05-13T04:25:36.967876+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  9,
+        "colado_em":  "2026-05-14T20:23:29.612053+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  10,
+        "colado_em":  "2026-05-13T04:25:39.503792+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  15,
+        "colado_em":  "2026-05-12T20:50:18.484306+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  18,
+        "colado_em":  "2026-05-12T20:50:18.500865+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  19,
+        "colado_em":  "2026-05-16T21:10:44.505781+00:00"
+    },
+    {
+        "selecao_codigo":  "ARG",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  4,
+        "colado_em":  "2026-05-20T20:11:13.793839+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  7,
+        "colado_em":  "2026-05-12T20:57:12.846238+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  10,
+        "colado_em":  "2026-05-13T02:42:23.193918+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUS",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  4,
+        "colado_em":  "2026-05-13T02:33:49.799421+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  9,
+        "colado_em":  "2026-05-12T20:48:41.468709+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  13,
+        "colado_em":  "2026-05-12T04:24:11.097001+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  14,
+        "colado_em":  "2026-05-12T20:48:43.879166+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "AUT",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  1,
+        "colado_em":  "2026-05-12T20:38:39.887225+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  2,
+        "colado_em":  "2026-05-20T20:12:18.22848+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  6,
+        "colado_em":  "2026-05-12T20:38:41.804026+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  8,
+        "colado_em":  "2026-05-12T20:54:39.47088+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  10,
+        "colado_em":  "2026-05-12T20:38:44.37336+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  14,
+        "colado_em":  "2026-05-20T20:12:20.341192+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  16,
+        "colado_em":  "2026-05-15T18:28:09.134283+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BEL",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  1,
+        "colado_em":  "2026-05-16T20:43:11.199594+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  6,
+        "colado_em":  "2026-05-14T21:54:33.09468+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  7,
+        "colado_em":  "2026-05-16T20:43:21.345053+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  9,
+        "colado_em":  "2026-05-14T21:54:34.56347+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  13,
+        "colado_em":  "2026-05-15T20:39:05.146995+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  14,
+        "colado_em":  "2026-05-14T21:54:43.274158+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  18,
+        "colado_em":  "2026-05-15T20:36:49.75204+00:00"
+    },
+    {
+        "selecao_codigo":  "BIH",
+        "numero":  20,
+        "colado_em":  "2026-05-14T20:03:25.996046+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  7,
+        "colado_em":  "2026-05-15T18:29:12.089966+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  8,
+        "colado_em":  "2026-05-12T20:59:06.521091+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  11,
+        "colado_em":  "2026-05-15T18:29:13.350611+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  13,
+        "colado_em":  "2026-05-14T21:47:04.069248+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  16,
+        "colado_em":  "2026-05-13T04:28:39.406437+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "BRA",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  1,
+        "colado_em":  "2026-05-13T02:32:52.11471+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  10,
+        "colado_em":  "2026-05-12T20:33:24.167862+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  12,
+        "colado_em":  "2026-05-13T02:41:24.763156+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  15,
+        "colado_em":  "2026-05-13T04:29:28.700585+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  16,
+        "colado_em":  "2026-05-12T20:33:29.28472+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  17,
+        "colado_em":  "2026-05-20T20:02:25.33403+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  19,
+        "colado_em":  "2026-05-12T20:33:32.276758+00:00"
+    },
+    {
+        "selecao_codigo":  "CAN",
+        "numero":  20,
+        "colado_em":  "2026-05-14T21:55:40.052007+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  2,
+        "colado_em":  "2026-05-15T18:32:08.892105+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  6,
+        "colado_em":  "2026-05-14T20:18:48.97604+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  10,
+        "colado_em":  "2026-05-12T04:47:19.511598+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  12,
+        "colado_em":  "2026-05-13T04:27:48.386038+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  14,
+        "colado_em":  "2026-05-14T21:35:45.967658+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  15,
+        "colado_em":  "2026-05-13T02:34:52.073991+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CIV",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  1,
+        "colado_em":  "2026-05-12T04:53:58.181494+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  2,
+        "colado_em":  "2026-05-15T20:42:20.913009+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  3,
+        "colado_em":  "2026-05-15T17:54:51.753439+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  9,
+        "colado_em":  "2026-05-16T21:21:14.371355+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  10,
+        "colado_em":  "2026-05-13T04:24:13.259655+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  13,
+        "colado_em":  "2026-05-15T17:54:55.950262+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  15,
+        "colado_em":  "2026-05-13T04:24:15.747486+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COD",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  1,
+        "colado_em":  "2026-05-15T17:55:05.848123+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  4,
+        "colado_em":  "2026-05-15T17:55:08.222339+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  5,
+        "colado_em":  "2026-05-15T18:27:41.518322+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  6,
+        "colado_em":  "2026-05-13T02:33:24.010523+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  10,
+        "colado_em":  "2026-05-12T04:22:00.699493+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "COL",
+        "numero":  20,
+        "colado_em":  "2026-05-14T20:16:34.593579+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  1,
+        "colado_em":  "2026-05-15T20:37:58.325761+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  3,
+        "colado_em":  "2026-05-12T04:45:56.263524+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  4,
+        "colado_em":  "2026-05-20T20:13:36.93838+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  5,
+        "colado_em":  "2026-05-16T20:50:29.516486+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  9,
+        "colado_em":  "2026-05-12T20:53:20.13901+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  11,
+        "colado_em":  "2026-05-12T20:53:21.710277+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  14,
+        "colado_em":  "2026-05-12T20:53:26.53904+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  18,
+        "colado_em":  "2026-05-16T20:50:32.149687+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CPV",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  1,
+        "colado_em":  "2026-05-15T17:55:13.027945+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  2,
+        "colado_em":  "2026-05-12T20:44:51.097034+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  6,
+        "colado_em":  "2026-05-13T04:23:24.678453+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  9,
+        "colado_em":  "2026-05-16T21:27:07.459729+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  10,
+        "colado_em":  "2026-05-12T20:44:55.170445+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  12,
+        "colado_em":  "2026-05-14T21:20:52.637229+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  15,
+        "colado_em":  "2026-05-13T04:23:27.17663+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  17,
+        "colado_em":  "2026-05-14T21:04:50.747992+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  19,
+        "colado_em":  "2026-05-14T21:04:50.747994+00:00"
+    },
+    {
+        "selecao_codigo":  "CRO",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  3,
+        "colado_em":  "2026-05-13T02:40:07.67323+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  5,
+        "colado_em":  "2026-05-15T20:37:34.950495+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  6,
+        "colado_em":  "2026-05-15T20:40:06.121583+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  9,
+        "colado_em":  "2026-05-15T20:37:41.916138+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  10,
+        "colado_em":  "2026-05-12T20:56:31.877449+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  11,
+        "colado_em":  "2026-05-14T21:36:30.563756+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  15,
+        "colado_em":  "2026-05-14T21:36:42.774918+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  16,
+        "colado_em":  "2026-05-14T21:36:42.798908+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  19,
+        "colado_em":  "2026-05-12T04:47:50.699697+00:00"
+    },
+    {
+        "selecao_codigo":  "CUW",
+        "numero":  20,
+        "colado_em":  "2026-05-15T18:31:15.155389+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  6,
+        "colado_em":  "2026-05-14T21:56:34.18215+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  10,
+        "colado_em":  "2026-05-13T04:29:42.110227+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  16,
+        "colado_em":  "2026-05-15T20:38:58.803792+00:00"
+    },
+    {
+        "selecao_codigo":  "CZE",
+        "numero":  19,
+        "colado_em":  "2026-05-14T21:56:36.783579+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  4,
+        "colado_em":  "2026-05-14T21:35:18.54587+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  5,
+        "colado_em":  "2026-05-14T21:35:18.479402+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  7,
+        "colado_em":  "2026-05-14T20:18:37.972873+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  13,
+        "colado_em":  "2026-05-14T21:35:21.691234+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  14,
+        "colado_em":  "2026-05-16T20:31:10.705808+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  15,
+        "colado_em":  "2026-05-13T02:39:37.780164+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  18,
+        "colado_em":  "2026-05-13T04:27:35.568162+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  19,
+        "colado_em":  "2026-05-13T02:39:36.982301+00:00"
+    },
+    {
+        "selecao_codigo":  "ECU",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  1,
+        "colado_em":  "2026-05-15T20:37:50.655263+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  4,
+        "colado_em":  "2026-05-13T02:45:09.153452+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  8,
+        "colado_em":  "2026-05-14T21:24:34.888636+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  12,
+        "colado_em":  "2026-05-12T20:39:05.101031+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  17,
+        "colado_em":  "2026-05-12T20:39:08.696192+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  18,
+        "colado_em":  "2026-05-12T04:46:17.558273+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  19,
+        "colado_em":  "2026-05-14T21:24:50.456411+00:00"
+    },
+    {
+        "selecao_codigo":  "EGY",
+        "numero":  20,
+        "colado_em":  "2026-05-20T20:13:03.840398+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  2,
+        "colado_em":  "2026-05-12T20:44:33.386421+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  6,
+        "colado_em":  "2026-05-12T20:44:36.012283+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  11,
+        "colado_em":  "2026-05-14T20:16:25.481713+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  18,
+        "colado_em":  "2026-05-13T04:23:46.654433+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  19,
+        "colado_em":  "2026-05-13T04:23:46.972581+00:00"
+    },
+    {
+        "selecao_codigo":  "ENG",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  1,
+        "colado_em":  "2026-05-13T04:30:43.912747+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  10,
+        "colado_em":  "2026-05-14T20:17:31.175503+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  13,
+        "colado_em":  "2026-05-14T19:57:19.678378+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "ESP",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  1,
+        "colado_em":  "2026-05-16T21:01:56.439756+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  3,
+        "colado_em":  "2026-05-15T18:31:35.809006+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  5,
+        "colado_em":  "2026-05-12T20:52:13.820402+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  6,
+        "colado_em":  "2026-05-16T21:01:50.747369+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  10,
+        "colado_em":  "2026-05-12T04:45:15.621941+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  11,
+        "colado_em":  "2026-05-20T20:14:24.757938+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  12,
+        "colado_em":  "2026-05-15T20:40:50.571427+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  13,
+        "colado_em":  "2026-05-14T19:56:49.775263+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  16,
+        "colado_em":  "2026-05-14T20:23:57.907889+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  17,
+        "colado_em":  "2026-05-13T02:35:13.367459+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  18,
+        "colado_em":  "2026-05-12T20:52:17.362023+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FRA",
+        "numero":  20,
+        "colado_em":  "2026-05-14T21:18:21.08743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  0,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  1,
+        "colado_em":  "2026-05-14T20:03:39.969465+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  10,
+        "colado_em":  "2026-05-13T02:32:05.031713+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  12,
+        "colado_em":  "2026-05-12T04:54:14.76009+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  14,
+        "colado_em":  "2026-05-13T02:32:06.055994+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  15,
+        "colado_em":  "2026-05-14T20:03:43.754268+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  18,
+        "colado_em":  "2026-05-14T20:03:45.329989+00:00"
+    },
+    {
+        "selecao_codigo":  "FWC",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  1,
+        "colado_em":  "2026-05-12T04:53:39.655466+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  2,
+        "colado_em":  "2026-05-12T20:56:46.572735+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  3,
+        "colado_em":  "2026-05-15T18:28:19.248861+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  6,
+        "colado_em":  "2026-05-12T20:56:50.250065+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  7,
+        "colado_em":  "2026-05-12T04:48:16.612427+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  8,
+        "colado_em":  "2026-05-13T02:40:22.175555+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  10,
+        "colado_em":  "2026-05-20T20:11:32.237039+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  13,
+        "colado_em":  "2026-05-12T04:48:21.644109+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  16,
+        "colado_em":  "2026-05-14T21:38:31.383858+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GER",
+        "numero":  20,
+        "colado_em":  "2026-05-14T21:38:31.383902+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  2,
+        "colado_em":  "2026-05-12T20:45:20.20455+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  5,
+        "colado_em":  "2026-05-14T21:03:41.154622+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  6,
+        "colado_em":  "2026-05-12T20:45:23.351757+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  9,
+        "colado_em":  "2026-05-13T02:38:15.433166+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  10,
+        "colado_em":  "2026-05-12T20:45:27.042096+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  13,
+        "colado_em":  "2026-05-12T04:03:52.619897+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  15,
+        "colado_em":  "2026-05-12T20:45:30.021613+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  19,
+        "colado_em":  "2026-05-15T18:27:31.452693+00:00"
+    },
+    {
+        "selecao_codigo":  "GHA",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  4,
+        "colado_em":  "2026-05-15T20:39:48.258814+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  7,
+        "colado_em":  "2026-05-16T20:28:17.018771+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  8,
+        "colado_em":  "2026-05-15T20:39:18.037045+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  11,
+        "colado_em":  "2026-05-15T20:39:35.99416+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  16,
+        "colado_em":  "2026-05-14T21:44:49.239941+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  17,
+        "colado_em":  "2026-05-12T20:35:15.481916+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "HAI",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  5,
+        "colado_em":  "2026-05-14T20:17:53.270941+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  6,
+        "colado_em":  "2026-05-13T02:44:15.342261+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  9,
+        "colado_em":  "2026-05-14T20:17:55.866625+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  10,
+        "colado_em":  "2026-05-13T02:43:29.490617+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  13,
+        "colado_em":  "2026-05-13T02:44:18.097218+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  14,
+        "colado_em":  "2026-05-14T21:23:52.631032+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  18,
+        "colado_em":  "2026-05-20T20:13:16.928503+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRN",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  1,
+        "colado_em":  "2026-05-16T21:04:24.427269+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  4,
+        "colado_em":  "2026-05-12T20:51:05.903557+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  7,
+        "colado_em":  "2026-05-20T20:14:41.734431+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  8,
+        "colado_em":  "2026-05-12T20:51:08.610941+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  9,
+        "colado_em":  "2026-05-13T02:44:54.993063+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  12,
+        "colado_em":  "2026-05-15T20:41:42.809976+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  13,
+        "colado_em":  "2026-05-14T21:16:56.016571+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  14,
+        "colado_em":  "2026-05-12T04:45:02.494137+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  16,
+        "colado_em":  "2026-05-13T04:26:06.499088+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  17,
+        "colado_em":  "2026-05-15T20:38:33.608868+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  18,
+        "colado_em":  "2026-05-14T19:56:15.137839+00:00"
+    },
+    {
+        "selecao_codigo":  "IRQ",
+        "numero":  19,
+        "colado_em":  "2026-05-13T04:26:08.126117+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  4,
+        "colado_em":  "2026-05-12T20:44:10.99717+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  5,
+        "colado_em":  "2026-05-13T04:24:59.346097+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  7,
+        "colado_em":  "2026-05-12T04:23:46.168482+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  8,
+        "colado_em":  "2026-05-12T20:44:14.390119+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  9,
+        "colado_em":  "2026-05-14T21:13:23.447133+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  11,
+        "colado_em":  "2026-05-14T21:13:24.632173+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  14,
+        "colado_em":  "2026-05-14T21:13:30.859977+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  16,
+        "colado_em":  "2026-05-13T02:38:03.528113+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  17,
+        "colado_em":  "2026-05-14T21:13:30.904655+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JOR",
+        "numero":  20,
+        "colado_em":  "2026-05-14T21:13:33.149223+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  3,
+        "colado_em":  "2026-05-15T20:40:20.18939+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  5,
+        "colado_em":  "2026-05-12T20:55:22.341368+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  8,
+        "colado_em":  "2026-05-14T20:18:14.043737+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  9,
+        "colado_em":  "2026-05-14T21:29:16.308886+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  13,
+        "colado_em":  "2026-05-14T21:29:23.45419+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  14,
+        "colado_em":  "2026-05-13T04:27:18.437065+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  18,
+        "colado_em":  "2026-05-12T04:46:37.536187+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  19,
+        "colado_em":  "2026-05-13T02:43:03.342128+00:00"
+    },
+    {
+        "selecao_codigo":  "JPN",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  1,
+        "colado_em":  "2026-05-13T02:33:01.445059+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  2,
+        "colado_em":  "2026-05-13T04:29:57.221134+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  4,
+        "colado_em":  "2026-05-16T20:05:39.976324+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  6,
+        "colado_em":  "2026-05-14T20:19:44.579861+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  7,
+        "colado_em":  "2026-05-14T21:56:52.32298+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  8,
+        "colado_em":  "2026-05-12T04:51:10.301395+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  16,
+        "colado_em":  "2026-05-13T02:39:01.998004+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  17,
+        "colado_em":  "2026-05-12T20:32:57.10141+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KOR",
+        "numero":  20,
+        "colado_em":  "2026-05-13T04:33:42.313083+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  2,
+        "colado_em":  "2026-05-12T20:41:17.574972+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  4,
+        "colado_em":  "2026-05-13T02:45:33.891331+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  5,
+        "colado_em":  "2026-05-14T21:19:54.054438+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  6,
+        "colado_em":  "2026-05-13T02:45:36.360357+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  8,
+        "colado_em":  "2026-05-13T02:45:37.761771+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  9,
+        "colado_em":  "2026-05-14T20:24:15.812935+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  10,
+        "colado_em":  "2026-05-12T20:41:21.157964+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  12,
+        "colado_em":  "2026-05-14T21:19:52.135367+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  15,
+        "colado_em":  "2026-05-12T04:45:37.423953+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  17,
+        "colado_em":  "2026-05-16T20:53:17.721279+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  18,
+        "colado_em":  "2026-05-14T20:17:20.710168+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  19,
+        "colado_em":  "2026-05-20T20:13:49.55743+00:00"
+    },
+    {
+        "selecao_codigo":  "KSA",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  2,
+        "colado_em":  "2026-05-16T20:27:27.163041+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  3,
+        "colado_em":  "2026-05-14T21:47:11.197359+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  5,
+        "colado_em":  "2026-05-16T20:27:27.163049+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  6,
+        "colado_em":  "2026-05-16T20:27:40.737341+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  7,
+        "colado_em":  "2026-05-14T21:47:12.927734+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  8,
+        "colado_em":  "2026-05-15T18:28:52.721051+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  9,
+        "colado_em":  "2026-05-12T20:58:50.020638+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  10,
+        "colado_em":  "2026-05-14T21:47:15.419602+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  13,
+        "colado_em":  "2026-05-15T18:28:42.000664+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  19,
+        "colado_em":  "2026-05-14T21:47:17.131836+00:00"
+    },
+    {
+        "selecao_codigo":  "MAR",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  1,
+        "colado_em":  "2026-05-13T04:30:59.705313+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  4,
+        "colado_em":  "2026-05-12T16:38:43.724944+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  13,
+        "colado_em":  "2026-05-12T04:51:56.360014+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  17,
+        "colado_em":  "2026-05-12T20:32:48.773958+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  18,
+        "colado_em":  "2026-05-16T01:36:40.103451+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "MEX",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  3,
+        "colado_em":  "2026-05-14T21:31:49.049026+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  4,
+        "colado_em":  "2026-05-16T20:22:40.398496+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  7,
+        "colado_em":  "2026-05-15T16:54:18.215471+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  10,
+        "colado_em":  "2026-05-12T04:46:56.282123+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  11,
+        "colado_em":  "2026-05-14T21:32:26.071622+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  13,
+        "colado_em":  "2026-05-14T21:32:26.083+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  15,
+        "colado_em":  "2026-05-12T20:56:11.533137+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  16,
+        "colado_em":  "2026-05-14T21:32:33.35666+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  17,
+        "colado_em":  "2026-05-12T20:37:42.722037+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NED",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  2,
+        "colado_em":  "2026-05-12T20:43:48.380897+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  4,
+        "colado_em":  "2026-05-14T21:15:49.576379+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  6,
+        "colado_em":  "2026-05-20T20:16:07.918335+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  17,
+        "colado_em":  "2026-05-14T20:16:49.702692+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NOR",
+        "numero":  20,
+        "colado_em":  "2026-05-12T20:42:32.043981+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  1,
+        "colado_em":  "2026-05-15T18:30:45.717122+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  2,
+        "colado_em":  "2026-05-13T02:42:41.954466+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  3,
+        "colado_em":  "2026-05-13T02:42:41.995039+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  5,
+        "colado_em":  "2026-05-12T20:40:32.54886+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  6,
+        "colado_em":  "2026-05-13T02:42:45.937593+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  8,
+        "colado_em":  "2026-05-12T20:40:25.745336+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  12,
+        "colado_em":  "2026-05-12T20:40:16.16851+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  13,
+        "colado_em":  "2026-05-12T16:42:21.139992+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  14,
+        "colado_em":  "2026-05-12T20:40:09.925199+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  17,
+        "colado_em":  "2026-05-12T20:40:02.15855+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  18,
+        "colado_em":  "2026-05-12T20:40:01.703735+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "NZL",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  4,
+        "colado_em":  "2026-05-20T20:16:49.033089+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  6,
+        "colado_em":  "2026-05-14T21:02:19.923505+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  7,
+        "colado_em":  "2026-05-14T20:21:59.697806+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  11,
+        "colado_em":  "2026-05-14T21:02:18.003512+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  16,
+        "colado_em":  "2026-05-12T20:47:15.282141+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAN",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  1,
+        "colado_em":  "2026-05-20T20:10:57.426923+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  5,
+        "colado_em":  "2026-05-15T18:28:29.124006+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  6,
+        "colado_em":  "2026-05-14T20:19:02.935582+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  7,
+        "colado_em":  "2026-05-13T04:28:06.240401+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  9,
+        "colado_em":  "2026-05-20T20:11:03.256355+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  10,
+        "colado_em":  "2026-05-15T20:39:57.533162+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  11,
+        "colado_em":  "2026-05-12T04:48:45.644452+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  12,
+        "colado_em":  "2026-05-13T04:28:07.790202+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  19,
+        "colado_em":  "2026-05-20T20:11:05.726384+00:00"
+    },
+    {
+        "selecao_codigo":  "PAR",
+        "numero":  20,
+        "colado_em":  "2026-05-15T20:37:09.346002+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  4,
+        "colado_em":  "2026-05-14T21:13:09.697002+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  13,
+        "colado_em":  "2026-05-12T04:23:23.278727+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  17,
+        "colado_em":  "2026-05-13T04:40:55.682554+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "POR",
+        "numero":  20,
+        "colado_em":  "2026-05-13T04:24:37.757368+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  3,
+        "colado_em":  "2026-05-20T20:07:50.047467+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  5,
+        "colado_em":  "2026-05-13T04:29:15.045565+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  7,
+        "colado_em":  "2026-05-13T04:34:38.821488+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  10,
+        "colado_em":  "2026-05-13T02:46:05.766879+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  13,
+        "colado_em":  "2026-05-13T02:46:09.075778+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  15,
+        "colado_em":  "2026-05-13T02:46:10.671869+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  16,
+        "colado_em":  "2026-05-13T02:46:12.183536+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  19,
+        "colado_em":  "2026-05-14T21:51:47.217122+00:00"
+    },
+    {
+        "selecao_codigo":  "QAT",
+        "numero":  20,
+        "colado_em":  "2026-05-15T18:29:23.523059+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  3,
+        "colado_em":  "2026-05-12T04:51:45.805737+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  12,
+        "colado_em":  "2026-05-14T20:19:53.886064+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  13,
+        "colado_em":  "2026-05-19T16:50:30.246045+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  15,
+        "colado_em":  "2026-05-15T20:38:42.665202+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  17,
+        "colado_em":  "2026-05-14T20:27:33.901666+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  19,
+        "colado_em":  "2026-05-13T02:38:48.08065+00:00"
+    },
+    {
+        "selecao_codigo":  "RSA",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  1,
+        "colado_em":  "2026-05-15T18:30:30.781466+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  4,
+        "colado_em":  "2026-05-12T04:49:32.718026+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  5,
+        "colado_em":  "2026-05-14T20:19:29.128735+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  8,
+        "colado_em":  "2026-05-13T04:35:29.239892+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  9,
+        "colado_em":  "2026-05-12T04:49:29.80489+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  16,
+        "colado_em":  "2026-05-12T20:58:21.891312+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  17,
+        "colado_em":  "2026-05-14T21:43:34.302877+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  18,
+        "colado_em":  "2026-05-15T20:37:01.082061+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SCO",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  1,
+        "colado_em":  "2026-05-16T21:07:09.606885+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  4,
+        "colado_em":  "2026-05-12T04:43:52.669904+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  5,
+        "colado_em":  "2026-05-12T16:41:37.470202+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  6,
+        "colado_em":  "2026-05-12T20:42:05.084403+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  8,
+        "colado_em":  "2026-05-12T04:43:47.133782+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  12,
+        "colado_em":  "2026-05-12T04:43:43.612204+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  13,
+        "colado_em":  "2026-05-12T04:43:41.312272+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  14,
+        "colado_em":  "2026-05-14T21:17:28.724884+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  15,
+        "colado_em":  "2026-05-12T04:43:57.660558+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SEN",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  7,
+        "colado_em":  "2026-05-14T21:48:25.0854+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  8,
+        "colado_em":  "2026-05-13T04:29:01.176712+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  10,
+        "colado_em":  "2026-05-12T04:50:52.602864+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  11,
+        "colado_em":  "2026-05-13T04:29:04.105175+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  12,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  16,
+        "colado_em":  "2026-05-14T20:02:49.420496+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  17,
+        "colado_em":  "2026-05-20T20:08:02.968224+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  19,
+        "colado_em":  "2026-05-14T20:02:49.209927+00:00"
+    },
+    {
+        "selecao_codigo":  "SUI",
+        "numero":  20,
+        "colado_em":  "2026-05-15T16:52:49.751584+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  1,
+        "colado_em":  "2026-05-13T04:31:27.84261+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  2,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  3,
+        "colado_em":  "2026-05-14T19:59:02.455355+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  4,
+        "colado_em":  "2026-05-13T04:27:00.593442+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  5,
+        "colado_em":  "2026-05-20T20:11:58.201107+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  7,
+        "colado_em":  "2026-05-14T21:28:31.414336+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  10,
+        "colado_em":  "2026-05-16T20:33:25.32965+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  11,
+        "colado_em":  "2026-05-14T19:59:07.367842+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  12,
+        "colado_em":  "2026-05-20T20:11:59.84636+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  13,
+        "colado_em":  "2026-05-14T19:59:08.45563+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  15,
+        "colado_em":  "2026-05-14T19:59:18.757787+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  16,
+        "colado_em":  "2026-05-20T20:12:00.890189+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  18,
+        "colado_em":  "2026-05-14T19:59:19.051106+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "SWE",
+        "numero":  20,
+        "colado_em":  "2026-05-13T04:27:03.262107+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  1,
+        "colado_em":  "2026-05-15T20:40:26.002113+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  3,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  4,
+        "colado_em":  "2026-05-14T21:27:49.229022+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  6,
+        "colado_em":  "2026-05-15T20:40:29.808047+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  8,
+        "colado_em":  "2026-05-14T19:58:07.959884+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  9,
+        "colado_em":  "2026-05-12T20:54:56.361811+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  10,
+        "colado_em":  "2026-05-15T20:40:32.786247+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  11,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  12,
+        "colado_em":  "2026-05-14T19:58:10.503841+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  13,
+        "colado_em":  "2026-05-14T21:27:51.981708+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  15,
+        "colado_em":  "2026-05-14T21:27:52.299248+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  17,
+        "colado_em":  "2026-05-14T19:58:29.119227+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUN",
+        "numero":  20,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  3,
+        "colado_em":  "2026-05-16T20:29:55.924255+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  5,
+        "colado_em":  "2026-05-14T20:00:45.707366+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  8,
+        "colado_em":  "2026-05-14T20:00:47.997305+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  9,
+        "colado_em":  "2026-05-14T20:00:48.094748+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  11,
+        "colado_em":  "2026-05-15T20:37:21.316081+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  12,
+        "colado_em":  "2026-05-14T20:00:54.794779+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  13,
+        "colado_em":  "2026-05-14T20:25:30.544166+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  17,
+        "colado_em":  "2026-05-14T20:00:57.952916+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  19,
+        "colado_em":  "2026-05-15T20:37:28.037663+00:00"
+    },
+    {
+        "selecao_codigo":  "TUR",
+        "numero":  20,
+        "colado_em":  "2026-05-16T20:29:58.016681+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  4,
+        "colado_em":  "2026-05-15T20:38:18.013147+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  7,
+        "colado_em":  "2026-05-13T04:26:30.754006+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  10,
+        "colado_em":  "2026-05-14T20:24:08.373136+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  11,
+        "colado_em":  "2026-05-13T04:26:33.61084+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  12,
+        "colado_em":  "2026-05-13T04:26:34.839415+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  17,
+        "colado_em":  "2026-05-14T21:18:41.70071+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  18,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "URU",
+        "numero":  20,
+        "colado_em":  "2026-05-13T04:26:37.394725+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  1,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  4,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  5,
+        "colado_em":  "2026-05-12T20:57:43.518889+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  6,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  8,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  9,
+        "colado_em":  "2026-05-14T20:01:57.025+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  10,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  11,
+        "colado_em":  "2026-05-14T20:25:51.738982+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  12,
+        "colado_em":  "2026-05-14T20:01:59.168666+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  14,
+        "colado_em":  "2026-05-14T20:02:07.08843+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  15,
+        "colado_em":  "2026-05-13T02:35:46.309568+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  16,
+        "colado_em":  "2026-05-13T04:28:25.83949+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  18,
+        "colado_em":  "2026-05-13T04:28:25.925177+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "USA",
+        "numero":  20,
+        "colado_em":  "2026-05-14T21:42:27.340104+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  1,
+        "colado_em":  "2026-05-13T04:31:47.878468+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  2,
+        "colado_em":  "2026-05-15T20:42:24.789325+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  3,
+        "colado_em":  "2026-05-13T04:24:01.875927+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  4,
+        "colado_em":  "2026-05-14T19:55:25.589664+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  5,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  6,
+        "colado_em":  "2026-05-14T21:11:51.272416+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  7,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  8,
+        "colado_em":  "2026-05-14T19:55:27.97779+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  9,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  10,
+        "colado_em":  "2026-05-14T21:12:00.503839+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  12,
+        "colado_em":  "2026-05-15T20:42:28.714553+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  13,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  14,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  15,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  16,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  17,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  18,
+        "colado_em":  "2026-05-14T20:22:15.2539+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  19,
+        "colado_em":  "2026-05-12T03:41:40.922743+00:00"
+    },
+    {
+        "selecao_codigo":  "UZB",
+        "numero":  20,
+        "colado_em":  "2026-05-14T19:55:30.491449+00:00"
+    }
+]
