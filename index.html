@@ -575,6 +575,7 @@
     gap: 10px;
     margin-bottom: 14px;
   }
+  .rankings-grid.rankings-single { grid-template-columns: 1fr; }
   .ranking-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -3086,6 +3087,74 @@
     .teams-grid { gap: 4mm; }
     .progress-hero { page-break-after: avoid; }
   }
+
+  /* ============================================================
+   * COMPONENTES DA REFORMA — barra clicável, modal "Quem mais
+   * falta" e checagem rápida de figurinha.
+   * ============================================================ */
+  .ph-bar-clickable { cursor: pointer; border-radius: 12px; transition: transform 0.12s ease; }
+  .ph-bar-clickable:hover { transform: translateY(-1px); }
+  .ph-bar-clickable:hover .ph-bar { box-shadow: inset 0 2px 4px rgba(0,0,0,0.08), 0 0 0 2px color-mix(in srgb, var(--gold) 50%, transparent); }
+  .ph-bar-clickable:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+  .ph-hint { font-size: 11px; font-weight: 600; color: var(--text-muted); opacity: 0.85; cursor: pointer; white-space: nowrap; }
+  .ph-hint:hover { color: var(--gold); opacity: 1; }
+  .ph-hint:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+
+  /* Modal "Quem mais falta" */
+  .miss-head { margin-bottom: 14px; padding-right: 34px; }
+  .miss-title { font-size: 20px; font-weight: 800; margin: 0 0 3px; letter-spacing: -0.01em; }
+  .miss-sub { font-size: 12.5px; color: var(--text-muted); margin: 0; }
+  .miss-list { display: flex; flex-direction: column; gap: 6px; max-height: 62vh; overflow-y: auto; padding-right: 2px; }
+  .miss-row {
+    display: grid; grid-template-columns: 26px 30px 1fr 86px auto; align-items: center; gap: 10px;
+    width: 100%; text-align: left; background: var(--bg); color: var(--text); font: inherit;
+    border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer;
+    transition: transform 0.1s ease, border-color 0.1s ease, background 0.1s ease;
+  }
+  .miss-row:hover { transform: translateX(2px); border-color: color-mix(in srgb, var(--gold) 55%, var(--border)); background: var(--bg-card); }
+  .miss-row:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .miss-pos { font-weight: 800; color: var(--text-muted); font-size: 13px; text-align: center; }
+  .miss-flag { width: 30px; height: 20px; object-fit: cover; border-radius: 3px; box-shadow: 0 1px 2px rgba(0,0,0,0.25); }
+  .miss-name { font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .miss-bar { height: 7px; background: var(--slot-empty-bg); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .miss-bar-fill { display: block; height: 100%; background: linear-gradient(90deg, var(--slot-filled-bg), var(--gold)); }
+  .miss-count { font-size: 13px; color: var(--text-muted); white-space: nowrap; text-align: right; }
+  .miss-count strong { color: var(--text); font-size: 15px; }
+  .miss-row.miss-complete .miss-count { color: #10b981; }
+
+  /* Checagem rápida de figurinha */
+  .quickcheck {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 14px; margin-bottom: 14px; box-shadow: var(--shadow-sm);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  }
+  .quickcheck-title { font-size: 12.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-right: 2px; }
+  .quickcheck-field { display: flex; align-items: center; gap: 6px; }
+  .quickcheck select, .quickcheck input {
+    font: inherit; font-size: 14px; padding: 8px 10px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--bg); color: var(--text);
+  }
+  .quickcheck input { width: 70px; }
+  .quickcheck-result {
+    display: inline-flex; align-items: center; gap: 6px; margin-left: auto;
+    font-weight: 700; font-size: 14px; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--text-muted); white-space: nowrap;
+  }
+  .quickcheck-result.has { background: color-mix(in srgb, #10b981 16%, transparent); border-color: #10b981; color: #059669; }
+  .quickcheck-result.missing { background: color-mix(in srgb, #ef4444 14%, transparent); border-color: #ef4444; color: #dc2626; }
+  [data-theme="dark"] .quickcheck-result.has { color: #34d399; }
+  [data-theme="dark"] .quickcheck-result.missing { color: #f87171; }
+
+  @media (max-width: 560px) {
+    .quickcheck-result { margin-left: 0; width: 100%; justify-content: center; }
+    .header-actions { flex-wrap: wrap; row-gap: 8px; }
+    .header-search { order: 2; flex: 1 1 100%; }
+  }
+  @media (max-width: 480px) {
+    .miss-row { grid-template-columns: 22px 26px 1fr auto; gap: 8px; padding: 8px 10px; }
+    .miss-bar { display: none; }
+    .miss-title { font-size: 18px; }
+  }
 </style>
 </head>
 <body>
@@ -3105,18 +3174,8 @@
 
   <section class="progress-hero" id="progressHero"></section>
 
-  <nav class="tabs" id="tabs" role="tablist">
-    <button class="tab-btn active" data-tab="album" type="button" role="tab">
-      <span class="tab-label">Álbum</span>
-      <span class="tab-badge" id="tabBadgeAlbum">48</span>
-    </button>
-    <button class="tab-btn" data-tab="stats" type="button" role="tab">
-      <span class="tab-label">Estatísticas</span>
-      <span class="tab-badge tab-badge-accent">você</span>
-    </button>
-  </nav>
-
   <div class="view view-collection" id="viewCollection">
+  <section class="quickcheck" id="quickcheck"></section>
   <nav class="flag-nav">
     <div class="flag-nav-title">
       <span>Acesso rápido — 48 seleções</span>
@@ -3132,13 +3191,9 @@
 
   <section class="kpis" id="kpis"></section>
 
-  <section class="rankings-grid">
+  <section class="rankings-grid rankings-single">
     <div class="ranking-card">
-      <div class="ranking-title">▲ Top 5 mais completas</div>
-      <div class="rank-list" id="rankTop"></div>
-    </div>
-    <div class="ranking-card">
-      <div class="ranking-title">▼ Top 5 menos completas</div>
+      <div class="ranking-title">Quem mais falta — top 5</div>
       <div class="rank-list" id="rankBottom"></div>
     </div>
   </section>
@@ -3164,31 +3219,6 @@
   <section class="teams-grid" id="teams"></section>
   </div>
 
-  <!-- ============================================================
-       Aba 2: ESTATÍSTICAS
-       ============================================================ -->
-  <div class="view view-stats" id="viewStats" hidden>
-    <div class="analysis-header">
-      <h2 class="analysis-h">Estatísticas</h2>
-      <p class="analysis-sub">Suas métricas pessoais, comparação com o mercado, raridades disputadas e canais não usados.</p>
-    </div>
-    <div class="stats-section">
-      <div class="stats-section-title">VOCÊ</div>
-      <div class="stats-cards-grid" id="statsVoce"></div>
-    </div>
-    <div class="stats-section">
-      <div class="stats-section-title">VOCÊ <span class="stats-vs">vs</span> MERCADO</div>
-      <div class="analysis-card" id="statsVsMercado"></div>
-    </div>
-    <div class="stats-section">
-      <div class="stats-section-title">RARIDADES</div>
-      <div class="stats-rarities-grid" id="statsRaridades"></div>
-    </div>
-    <div class="stats-section">
-      <div class="stats-section-title">CANAIS EXCLUSIVOS NÃO USADOS</div>
-      <div class="stats-channels-grid" id="statsCanais"></div>
-    </div>
-  </div>
 
 </div>
 
@@ -3334,84 +3364,6 @@ const ALBUM = {
   }
 };
 
-/* ============================================================
- * STATS — Métricas pessoais e benchmarks de mercado.
- * Lê do album-data.js. Recalcule dinamicamente ou edite manualmente.
- * ============================================================ */
-const STATS = {
-  pessoal: {
-    inicioColecao: "2026-05-01",
-    metaPrazo: { de: "2026-06-11", ate: "2026-07-19", descricao: "Durante a Copa do Mundo" },
-    diasColecionando: 8,
-    diasAteInicioCopa: 33,
-    diasAteFimCopa: 71,
-    canaisUsados: ["pacotes_banca", "trocas_amigos"],
-    pacotesComprados: 105,
-    cromosComprados: 735,
-    investimentoReais: 735,
-    totalColado: 525,
-    coladasViaPacote_estimado: 502,
-    coladasViaTroca_estimado: 23,
-    repetidasGeradas_estimado: 233,
-    eficienciaPacote: 0.683,
-    eficienciaTotal: 0.714,
-    custoPorColada: 1.40,
-    velocidadeMediaDiaria: 53,
-    cromosFaltantes: 455,
-    cromosFaltantesIRQ: 20,
-    cromosFaltantesEspeciais: 58,
-    progressoPercentual: 0.5357
-  },
-  comparacaoMercado: {
-    custoMedianoSemTroca: 7098,
-    custoTipicoComTroca: 1400,
-    custoMinimoTeorico: 980,
-    seuCustoProjetadoSemTroca: 4300,
-    seuCustoProjetadoComTroca: 850,
-    economiaJaRealizada_vs_mediano: 6363,
-    fonte: "Itatiaia, Placar, ClubeDaCopa, TechKnow (abr-mai/2026)"
-  },
-  raridades: {
-    metalizadas: {
-      total: 68, jaColadas: 10, taxaAparicao: 0.083, esperadoEm80Pacotes: 8.7,
-      composicao: { escudosSelecoes: 48, logosFifaCopa: 2, trofeu: 1, mascotes: 3, lendas: 14 }
-    },
-    extraStickers: {
-      total: 80, taxaAparicao: 0.01, foraDoAlbum: true, esperadoEm80Pacotes: 0.9,
-      jogadores: ["Messi","Cristiano Ronaldo","Vinícius Jr.","Mbappé","Lamine Yamal","Haaland","Bellingham","Salah","Modrić"]
-    },
-    selecoesMaisDisputadas: {
-      lista: ["Iraque","Cabo Verde","Curaçao","Uzbequistão"],
-      motivo: "Estreantes na Copa — alta retenção por colecionadores especializados",
-      seuStatus: {
-        IRQ: { coladas: 0,  total: 20, percent: 0 },
-        CPV: { coladas: 10, total: 20, percent: 0.50 },
-        CUW: { coladas: 9,  total: 20, percent: 0.45 },
-        UZB: { coladas: 9,  total: 20, percent: 0.45 }
-      }
-    }
-  },
-  canaisExclusivos: {
-    mcDonalds: {
-      figurinhasExclusivas: 28, pacoteCusto: 5, cromosPorPacote: 5,
-      destaque: "Figurinha #13 de cada seleção (foto do time) é EXCLUSIVA McDonald's",
-      voceJaUsou: false, criticidade: "ALTA",
-      recomendacao: "Sem McDonald's é matematicamente impossível fechar as 48 #13 só por banca."
-    },
-    cocaCola: {
-      figurinhasExclusivas: 12,
-      ondeEncontrar: "Rótulos de Coca-Cola Zero 600ml destacáveis",
-      categoria: "Time dos Sonhos",
-      voceJaUsou: false, criticidade: "MEDIA",
-      recomendacao: "12 cromos exclusivos não saem em pacote nenhum."
-    },
-    paniniSiteOficial: {
-      vendaIndividualFigurinha: true, inicioVenda: "2026-07-01",
-      criticidade: "BAIXA",
-      recomendacao: "Reservar para Iraque e últimas especiais."
-    }
-  }
-};
 
 /* ============================================================
  * HELPERS — Utilitários para cálculos derivados.
@@ -3568,7 +3520,7 @@ function renderProgressHero() {
 
   document.getElementById('progressHero').innerHTML = `
     <div class="ph-header">
-      <div class="ph-title">Progresso do álbum</div>
+      <div class="ph-title">Progresso do álbum <span class="ph-hint" role="button" tabindex="0">› quem mais falta</span></div>
       <div class="ph-stats tabular">
         <span class="ph-stat"><strong>${s.totalColadoFull}</strong>/${s.totalAlbum} cromos</span>
         <span class="ph-sep">·</span>
@@ -3577,7 +3529,7 @@ function renderProgressHero() {
         <span class="ph-stat"><strong>${s.teamsComplete}</strong>/${N} completas</span>
       </div>
     </div>
-    <div class="ph-bar-wrap">
+    <div class="ph-bar-wrap ph-bar-clickable" role="button" tabindex="0" aria-label="Ver quais seleções mais faltam" title="Clique para ver quem mais falta">
       <div class="ph-bar">
         <div class="ph-bar-fill" style="width: ${pctClamp}%">
           <div class="ph-bar-glow"></div>
@@ -3974,6 +3926,40 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
+/** Modal "Quem mais falta": todas as seleções ordenadas por mais figurinhas faltando. */
+function openMissingModal() {
+  const items = teamsByMostMissing();
+  const totalMissing = items.reduce((a, it) => a + (it.stats.total - it.stats.colado), 0);
+  const rows = items.map((it, i) => {
+    const t = it.team, s = it.stats;
+    const missing = s.total - s.colado;
+    const complete = missing === 0;
+    const flagSrc = flagUrl(t.codigo, 40);
+    return `
+      <button class="miss-row${complete ? ' miss-complete' : ''}" type="button" data-codigo="${t.codigo}" aria-label="Abrir ${escapeHtml(t.nome)} — faltam ${missing}">
+        <span class="miss-pos tabular">${i + 1}</span>
+        <img class="miss-flag" src="${flagSrc}" alt="" loading="lazy">
+        <span class="miss-name">${escapeHtml(t.nome)}</span>
+        <span class="miss-bar"><span class="miss-bar-fill" style="width:${s.pct}%"></span></span>
+        <span class="miss-count tabular">${complete ? '✓ completa' : `<strong>${missing}</strong> faltam`}</span>
+      </button>
+    `;
+  }).join('');
+  state.openModalCodigo = null;
+  document.getElementById('modalContent').innerHTML = `
+    <button class="modal-close" id="modalCloseBtn" aria-label="Fechar">×</button>
+    <div class="miss-head">
+      <h2 class="miss-title">Quem mais falta</h2>
+      <p class="miss-sub tabular">${totalMissing} figurinhas de seleção faltando · ordenado da que mais falta para a que menos falta</p>
+    </div>
+    <div class="miss-list">${rows}</div>
+  `;
+  const modal = document.getElementById('modal');
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+}
+
 function scrollToTeam(codigo) {
   const el = document.querySelector(`.team-card[data-codigo="${codigo}"]`);
   if (!el) {
@@ -4007,155 +3993,6 @@ const fmt = {
   }
 };
 
-/* ============================================================
- * ABA 2 — ESTATÍSTICAS
- * ============================================================ */
-
-/** Bloco "Você": cards de pacotes, gasto, custo/colada, velocidade, eficiência. */
-function renderStatsVoce() {
-  const p = STATS.pessoal;
-  const cards = [
-    { label: 'Pacotes comprados',  value: fmt.num(p.pacotesComprados),     sub: fmt.num(p.cromosComprados) + ' cromos' },
-    { label: 'Investimento',       value: fmt.brl(p.investimentoReais),    sub: fmt.brl2(p.investimentoReais / p.pacotesComprados) + ' por pacote' },
-    { label: 'Custo por colada',   value: fmt.brl2(p.custoPorColada),      sub: 'R$ ' + p.custoPorColada.toFixed(2).replace('.', ',') + '/cromo único' },
-    { label: 'Velocidade média',   value: fmt.num(p.velocidadeMediaDiaria) + ' /dia', sub: p.diasColecionando + ' dias colecionando' },
-    { label: 'Eficiência total',   value: fmt.pct(p.eficienciaTotal, 1),   sub: 'pacote: ' + fmt.pct(p.eficienciaPacote, 1), highlight: true },
-    { label: 'Progresso',          value: fmt.pct(p.progressoPercentual, 2), sub: p.totalColado + ' / 980' }
-  ];
-  document.getElementById('statsVoce').innerHTML = cards.map(c => `
-    <div class="stats-card${c.highlight ? ' stats-card-gold' : ''}">
-      <div class="stats-card-label">${c.label}</div>
-      <div class="stats-card-value tabular">${c.value}</div>
-      <div class="stats-card-sub tabular">${c.sub}</div>
-    </div>
-  `).join('');
-}
-
-/** Bloco "Você vs Mercado": barras comparando seu projetado vs mediano sem-troca vs típico com-troca. */
-function renderStatsVsMercado() {
-  const m = STATS.comparacaoMercado;
-  const max = Math.max(m.custoMedianoSemTroca, m.seuCustoProjetadoComTroca, m.custoTipicoComTroca, m.custoMinimoTeorico);
-  const bar = (label, valor, klass, badge = '') => {
-    const w = (valor / max) * 100;
-    return `
-      <div class="vs-row">
-        <div class="vs-label">${label} ${badge ? `<span class="vs-badge ${klass}">${badge}</span>` : ''}</div>
-        <div class="vs-bar-track">
-          <div class="vs-bar-fill ${klass}" style="width:${w}%"></div>
-        </div>
-        <div class="vs-value tabular">${fmt.brl(valor)}</div>
-      </div>
-    `;
-  };
-  document.getElementById('statsVsMercado').innerHTML = `
-    <div class="analysis-title"><span>Custo total projetado para fechar o álbum</span></div>
-    ${bar('Sua projeção (com troca)',     m.seuCustoProjetadoComTroca, 'good',    'mais econômico')}
-    ${bar('Típico de mercado (com troca)', m.custoTipicoComTroca,       'neutral')}
-    ${bar('Sua projeção (sem troca)',     m.seuCustoProjetadoSemTroca, 'warn')}
-    ${bar('Mediano de mercado (sem troca)', m.custoMedianoSemTroca,    'bad',     'evitar')}
-    ${bar('Mínimo teórico (impossível)',  m.custoMinimoTeorico,        'min',     '980 cromos × R$1')}
-    <div class="analysis-note">
-      <strong>Economia já realizada</strong> vs mediano de mercado: <strong class="tabular">${fmt.brl(m.economiaJaRealizada_vs_mediano)}</strong>.
-      Fonte: ${m.fonte}.
-    </div>
-  `;
-}
-
-/** Bloco "Raridades": metalizadas, extra stickers, estreantes mais disputadas. */
-function renderStatsRaridades() {
-  const r = STATS.raridades;
-  const m = r.metalizadas, e = r.extraStickers, d = r.selecoesMaisDisputadas;
-  const metalizadasPct = m.jaColadas / m.total;
-  const codigos = { Iraque: 'IRQ', 'Cabo Verde': 'CPV', 'Curaçao': 'CUW', Uzbequistão: 'UZB' };
-
-  document.getElementById('statsRaridades').innerHTML = `
-    <div class="analysis-card">
-      <div class="analysis-title">
-        <span>Metalizadas</span>
-        <span class="tab-badge tab-badge-accent">${fmt.pct(m.taxaAparicao, 1)} por envelope</span>
-      </div>
-      <div class="rarity-big tabular">${m.jaColadas}<span class="small"> / ${m.total}</span></div>
-      <div class="rarity-bar"><div class="rarity-bar-fill" style="width:${metalizadasPct * 100}%"></div></div>
-      <div class="analysis-note">
-        Esperado em ${STATS.pessoal.pacotesComprados} pacotes: ~${m.esperadoEm80Pacotes.toFixed(1)}.
-        Composição: ${m.composicao.escudosSelecoes} escudos · ${m.composicao.lendas} lendas · ${m.composicao.mascotes} mascotes · ${m.composicao.trofeu} troféu · ${m.composicao.logosFifaCopa} logos FIFA.
-      </div>
-    </div>
-
-    <div class="analysis-card">
-      <div class="analysis-title">
-        <span>Extra Stickers (fora do álbum)</span>
-        <span class="tab-badge" style="background:var(--warning-bg);color:var(--warning)">~${fmt.pct(e.taxaAparicao, 1)} taxa</span>
-      </div>
-      <div class="rarity-big tabular">0<span class="small"> / ${e.total} esperado</span></div>
-      <div class="analysis-note">
-        Esperado em ${STATS.pessoal.pacotesComprados} pacotes: ~${e.esperadoEm80Pacotes.toFixed(1)} (taxa baixíssima).
-        Provavelmente saiu zero — é o resultado mais provável estatisticamente.
-        Estrelas: ${e.jogadores.slice(0, 5).join(', ')}…
-      </div>
-    </div>
-
-    <div class="analysis-card analysis-rarity-table">
-      <div class="analysis-title"><span>Estreantes mais disputadas</span></div>
-      <table class="rarity-table tabular">
-        <thead>
-          <tr><th>Seleção</th><th>Status</th><th>%</th></tr>
-        </thead>
-        <tbody>
-          ${d.lista.map(nome => {
-            const cod = codigos[nome] || '';
-            const s = d.seuStatus[cod];
-            if (!s) return '';
-            const isEmpty = s.coladas === 0;
-            return `
-              <tr class="${isEmpty ? 'row-warn' : ''}" data-codigo="${cod}">
-                <td>${nome}</td>
-                <td>${s.coladas}/${s.total}</td>
-                <td class="${isEmpty ? 'pct-warn' : ''}">${fmt.pct(s.percent, 0)}</td>
-              </tr>
-            `;
-          }).join('')}
-        </tbody>
-      </table>
-      <div class="analysis-note">${d.motivo}.</div>
-    </div>
-  `;
-}
-
-/** Bloco "Canais Exclusivos": Mc, Coca, Panini com criticidade. */
-function renderStatsCanais() {
-  const c = STATS.canaisExclusivos;
-  const order = ['mcDonalds', 'cocaCola', 'paniniSiteOficial'];
-  const meta = {
-    mcDonalds:        { titulo: "McDonald's",        cor: '#dc2626', sub: c.mcDonalds.destaque },
-    cocaCola:         { titulo: 'Coca-Cola',         cor: '#0ea5e9', sub: c.cocaCola.ondeEncontrar + ' · ' + c.cocaCola.categoria },
-    paniniSiteOficial:{ titulo: 'Panini (site)',     cor: '#10b981', sub: 'Venda individual a partir de ' + fmt.date(c.paniniSiteOficial.inicioVenda) }
-  };
-  document.getElementById('statsCanais').innerHTML = order.map(k => {
-    const x = c[k];
-    const m = meta[k];
-    const critClass = 'crit-' + x.criticidade.toLowerCase();
-    const exclusivas = x.figurinhasExclusivas ?? '—';
-    return `
-      <div class="channel-card ${critClass}">
-        <div class="channel-header">
-          <span class="channel-title">${m.titulo}</span>
-          <span class="channel-badge ${critClass}">${x.criticidade}</span>
-        </div>
-        ${x.figurinhasExclusivas ? `<div class="channel-stat tabular">${exclusivas}<span class="small"> exclusivas</span></div>` : ''}
-        <div class="channel-sub">${m.sub}</div>
-        <div class="analysis-note">${x.recomendacao}</div>
-      </div>
-    `;
-  }).join('');
-}
-
-function renderStats() {
-  renderStatsVoce();
-  renderStatsVsMercado();
-  renderStatsRaridades();
-  renderStatsCanais();
-}
 
 /* ============================================================
  * RANKINGS + cromos especiais (logo #1 / foto do time #13)
@@ -4172,56 +4009,81 @@ function countSpecialNumbers() {
   return { logos, fotos };
 }
 
-/** Top 5 mais e menos completas, com tiebreak alfabético em pt-BR. */
-function getRankings() {
-  const items = ALBUM.selecoes.map(team => ({ team, stats: computeTeamStats(team) }));
-  const top5 = [...items]
-    .sort((a, b) => b.stats.colado - a.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR'))
-    .slice(0, 5);
-  const bottom5 = [...items]
-    .sort((a, b) => a.stats.colado - b.stats.colado || a.team.nome.localeCompare(b.team.nome, 'pt-BR'))
-    .slice(0, 5);
-  return { top5, bottom5 };
+/** Todas as seleções ordenadas por mais figurinhas faltando (tiebreak alfabético pt-BR). */
+function teamsByMostMissing() {
+  return ALBUM.selecoes
+    .map(team => ({ team, stats: computeTeamStats(team) }))
+    .sort((a, b) => (b.stats.total - b.stats.colado) - (a.stats.total - a.stats.colado)
+                 || a.team.nome.localeCompare(b.team.nome, 'pt-BR'));
 }
 
-/** Renderiza Top 5 melhores e Top 5 piores na página principal. */
+/** Checagem rápida: escolhe seleção/coleção + número e diz na hora se tem ou falta. */
+function renderQuickCheck() {
+  const teamOpts = [...ALBUM.selecoes]
+    .sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'))
+    .map(t => `<option value="${t.codigo}">${escapeHtml(t.nome)} (${t.codigo})</option>`)
+    .join('');
+  document.getElementById('quickcheck').innerHTML = `
+    <span class="quickcheck-title">Tenho essa figurinha?</span>
+    <div class="quickcheck-field">
+      <select id="qcCollection" aria-label="Seleção ou coleção">
+        <optgroup label="Seleções">${teamOpts}</optgroup>
+        <optgroup label="Especiais">
+          <option value="FWC">Especiais FWC (00–19)</option>
+          <option value="CC">Coca-Cola (CC1–14)</option>
+        </optgroup>
+      </select>
+      <input type="number" id="qcNumber" min="1" max="20" placeholder="nº" inputmode="numeric" aria-label="Número da figurinha">
+    </div>
+    <span class="quickcheck-result" id="qcResult" role="status" aria-live="polite">Escolha o número</span>
+  `;
+}
+
+/** Recalcula o resultado da checagem rápida a partir do estado atual do ALBUM. */
+function updateQuickCheck() {
+  const sel = document.getElementById('qcCollection');
+  const numEl = document.getElementById('qcNumber');
+  const result = document.getElementById('qcResult');
+  if (!sel || !numEl || !result) return;
+  const codigo = sel.value;
+  const ranges = { FWC: [0, 19], CC: [1, 14] };
+  const [lo, hi] = ranges[codigo] || [1, 20];
+  numEl.min = lo; numEl.max = hi;
+  const num = parseInt(numEl.value, 10);
+  if (numEl.value === '' || Number.isNaN(num)) {
+    result.className = 'quickcheck-result';
+    result.textContent = 'Escolha o número';
+    return;
+  }
+  if (num < lo || num > hi) {
+    result.className = 'quickcheck-result';
+    result.textContent = `Fora do intervalo (${lo}–${hi})`;
+    return;
+  }
+  const arr = coladasArrayFor(codigo) || [];
+  const has = arr.includes(num);
+  result.className = 'quickcheck-result ' + (has ? 'has' : 'missing');
+  result.textContent = has ? '✓ Você tem!' : '✗ Falta essa';
+}
+
+/** Renderiza o top 5 de seleções que mais faltam na página principal. */
 function renderRankings() {
-  const { top5, bottom5 } = getRankings();
+  const worst = teamsByMostMissing().slice(0, 5);
   const renderRow = (item, i) => {
     const t = item.team;
     const s = item.stats;
     const flagSrc = flagUrl(t.codigo, 40);
+    const missing = s.total - s.colado;
     return `
-      <div class="rank-row" data-codigo="${t.codigo}" tabindex="0" role="button" aria-label="Abrir ${escapeHtml(t.nome)}">
+      <div class="rank-row" data-codigo="${t.codigo}" tabindex="0" role="button" aria-label="Abrir ${escapeHtml(t.nome)} — faltam ${missing}">
         <span class="rank-pos">${i + 1}</span>
         <img class="rank-flag" src="${flagSrc}" alt="" loading="lazy">
         <span class="rank-name">${escapeHtml(t.nome)}</span>
-        <span class="rank-stat tabular">${s.colado}/${s.total} <span class="pct">${s.pct.toFixed(0)}%</span></span>
+        <span class="rank-stat tabular"><strong>${missing}</strong> faltam <span class="pct">${s.colado}/${s.total}</span></span>
       </div>
     `;
   };
-  document.getElementById('rankTop').innerHTML = top5.map(renderRow).join('');
-  document.getElementById('rankBottom').innerHTML = bottom5.map(renderRow).join('');
-}
-
-/* ============================================================
- * SWITCH DE ABAS — gerencia qual view fica visível.
- * Render lazy: só renderiza ao ativar a aba pela primeira vez,
- * mas re-renderiza sempre que voltar (caso ALBUM tenha mudado).
- * ============================================================ */
-function activateTab(tab) {
-  document.querySelectorAll('#tabs .tab-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.tab === tab);
-  });
-  const map = {
-    album: 'viewCollection',
-    stats: 'viewStats'
-  };
-  Object.entries(map).forEach(([key, id]) => {
-    const el = document.getElementById(id);
-    if (el) el.hidden = key !== tab;
-  });
-  if (tab === 'stats') renderStats();
+  document.getElementById('rankBottom').innerHTML = worst.map(renderRow).join('');
 }
 
 /* ============================================================
@@ -4231,6 +4093,24 @@ function setupListeners() {
   document.getElementById('search').addEventListener('input', e => {
     state.search = e.target.value;
     renderTeams();
+  });
+
+  // Barra de progresso (ou o hint) → modal "Quem mais falta"
+  document.getElementById('progressHero').addEventListener('click', e => {
+    if (e.target.closest('.ph-bar-clickable') || e.target.closest('.ph-hint')) openMissingModal();
+  });
+  document.getElementById('progressHero').addEventListener('keydown', e => {
+    if ((e.key !== 'Enter' && e.key !== ' ')) return;
+    if (e.target.closest('.ph-bar-clickable') || e.target.closest('.ph-hint')) {
+      e.preventDefault();
+      openMissingModal();
+    }
+  });
+
+  // Linha do modal "Quem mais falta" → abre os detalhes da seleção
+  document.getElementById('modalContent').addEventListener('click', e => {
+    const missRow = e.target.closest('.miss-row');
+    if (missRow) openModal(missRow.dataset.codigo);
   });
 
   document.querySelectorAll('#statusFilter .filter-btn').forEach(btn => {
@@ -4246,6 +4126,9 @@ function setupListeners() {
     state.sort = e.target.value;
     renderTeams();
   });
+
+  document.getElementById('qcCollection').addEventListener('change', updateQuickCheck);
+  document.getElementById('qcNumber').addEventListener('input', updateQuickCheck);
 
   document.getElementById('themeToggle').addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
@@ -4282,21 +4165,7 @@ function setupListeners() {
     if (e.key === 'Escape' && !document.getElementById('modal').hidden) closeModal();
   });
 
-  // Tabs
-  document.getElementById('tabs').addEventListener('click', e => {
-    const btn = e.target.closest('.tab-btn');
-    if (!btn) return;
-    activateTab(btn.dataset.tab);
-  });
-
-  // Linhas da tabela de raridades (estreantes) abrem o modal da seleção
-  document.getElementById('viewStats').addEventListener('click', e => {
-    const row = e.target.closest('tr[data-codigo]');
-    if (!row) return;
-    openModal(row.dataset.codigo);
-  });
-
-  // Linhas dos rankings (top/bottom 5) na página principal também abrem o modal
+  // Linhas dos rankings na página principal abrem o modal
   document.getElementById('viewCollection').addEventListener('click', e => {
     const row = e.target.closest('.rank-row');
     if (!row) return;
@@ -4560,6 +4429,7 @@ function redrawAfterChange() {
   renderFlagNav();
   renderSpecial();
   renderTeams();
+  if (document.getElementById('qcResult')) updateQuickCheck();
   // Se o modal estiver aberto, re-renderiza o conteúdo dele
   if (state.openModalCodigo) {
     const team = ALBUM.selecoes.find(t => t.codigo === state.openModalCodigo);
@@ -4582,6 +4452,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderKPIs();
   renderRankings();
   renderSpecial();
+  renderQuickCheck();
   setupListeners();
   renderTeams();
   // 2) Carrega o estado real do Supabase (pode ter mudado em outro dispositivo)
